@@ -12,16 +12,22 @@
 		8938BDDE1FB07DBE00A6D4FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8938BDDC1FB07DBE00A6D4FB /* Main.storyboard */; };
 		8938BDE01FB07DBE00A6D4FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8938BDDF1FB07DBE00A6D4FB /* Assets.xcassets */; };
 		8938BDE31FB07DBE00A6D4FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8938BDE11FB07DBE00A6D4FB /* LaunchScreen.storyboard */; };
+		896924911FCC2257004A91AC /* CrimeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896924901FCC2257004A91AC /* CrimeList.swift */; };
+		896924931FCC22B8004A91AC /* CrimeMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896924921FCC22B8004A91AC /* CrimeMap.swift */; };
+		896924951FCC22D2004A91AC /* ReportCrime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896924941FCC22D2004A91AC /* ReportCrime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8938BDD51FB07DBE00A6D4FB /* UI Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UI Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8938BDD51FB07DBE00A6D4FB /* Crime Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crime Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8938BDD81FB07DBE00A6D4FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8938BDDA1FB07DBE00A6D4FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8938BDDD1FB07DBE00A6D4FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8938BDDF1FB07DBE00A6D4FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8938BDE21FB07DBE00A6D4FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8938BDE41FB07DBE00A6D4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		896924901FCC2257004A91AC /* CrimeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeList.swift; sourceTree = "<group>"; };
+		896924921FCC22B8004A91AC /* CrimeMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeMap.swift; sourceTree = "<group>"; };
+		896924941FCC22D2004A91AC /* ReportCrime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCrime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +52,7 @@
 		8938BDD61FB07DBE00A6D4FB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8938BDD51FB07DBE00A6D4FB /* UI Practice.app */,
+				8938BDD51FB07DBE00A6D4FB /* Crime Tracker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +62,9 @@
 			children = (
 				8938BDD81FB07DBE00A6D4FB /* AppDelegate.swift */,
 				8938BDDA1FB07DBE00A6D4FB /* ViewController.swift */,
+				896924901FCC2257004A91AC /* CrimeList.swift */,
+				896924921FCC22B8004A91AC /* CrimeMap.swift */,
+				896924941FCC22D2004A91AC /* ReportCrime.swift */,
 				8938BDDC1FB07DBE00A6D4FB /* Main.storyboard */,
 				8938BDDF1FB07DBE00A6D4FB /* Assets.xcassets */,
 				8938BDE11FB07DBE00A6D4FB /* LaunchScreen.storyboard */,
@@ -67,9 +76,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8938BDD41FB07DBE00A6D4FB /* UI Practice */ = {
+		8938BDD41FB07DBE00A6D4FB /* Crime Tracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8938BDE71FB07DBE00A6D4FB /* Build configuration list for PBXNativeTarget "UI Practice" */;
+			buildConfigurationList = 8938BDE71FB07DBE00A6D4FB /* Build configuration list for PBXNativeTarget "Crime Tracker" */;
 			buildPhases = (
 				8938BDD11FB07DBE00A6D4FB /* Sources */,
 				8938BDD21FB07DBE00A6D4FB /* Frameworks */,
@@ -79,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = "UI Practice";
+			name = "Crime Tracker";
 			productName = "UI Practice";
-			productReference = 8938BDD51FB07DBE00A6D4FB /* UI Practice.app */;
+			productReference = 8938BDD51FB07DBE00A6D4FB /* Crime Tracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -100,7 +109,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8938BDD01FB07DBE00A6D4FB /* Build configuration list for PBXProject "UI Practice" */;
+			buildConfigurationList = 8938BDD01FB07DBE00A6D4FB /* Build configuration list for PBXProject "Crime Tracker" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,7 +122,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8938BDD41FB07DBE00A6D4FB /* UI Practice */,
+				8938BDD41FB07DBE00A6D4FB /* Crime Tracker */,
 			);
 		};
 /* End PBXProject section */
@@ -137,7 +146,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8938BDDB1FB07DBE00A6D4FB /* ViewController.swift in Sources */,
+				896924911FCC2257004A91AC /* CrimeList.swift in Sources */,
 				8938BDD91FB07DBE00A6D4FB /* AppDelegate.swift in Sources */,
+				896924931FCC22B8004A91AC /* CrimeMap.swift in Sources */,
+				896924951FCC22D2004A91AC /* ReportCrime.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +315,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8938BDD01FB07DBE00A6D4FB /* Build configuration list for PBXProject "UI Practice" */ = {
+		8938BDD01FB07DBE00A6D4FB /* Build configuration list for PBXProject "Crime Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8938BDE51FB07DBE00A6D4FB /* Debug */,
@@ -312,7 +324,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8938BDE71FB07DBE00A6D4FB /* Build configuration list for PBXNativeTarget "UI Practice" */ = {
+		8938BDE71FB07DBE00A6D4FB /* Build configuration list for PBXNativeTarget "Crime Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8938BDE81FB07DBE00A6D4FB /* Debug */,

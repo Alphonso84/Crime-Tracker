@@ -1,24 +1,246 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wWR-Hw-jxg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MenuViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MenuViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="UI_Practice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="r28-Au-pph">
+                                <rect key="frame" x="0.0" y="65" width="375" height="602"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gEW-tv-p7y">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGT-WM-3VO">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="200.5"/>
+                                                <state key="normal" title="Report a Crime"/>
+                                                <connections>
+                                                    <segue destination="nJ2-hL-6Qk" kind="show" id="p4A-Uk-drN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WJf-9s-lHp">
+                                        <rect key="frame" x="0.0" y="200.5" width="375" height="201"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTm-ga-kM5">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="201"/>
+                                                <state key="normal" title="Crime List"/>
+                                                <connections>
+                                                    <segue destination="BoL-Pm-ZDZ" kind="show" id="eci-aR-cpY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="k7z-bk-dph">
+                                        <rect key="frame" x="0.0" y="401.5" width="375" height="200.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPf-jT-qpr">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="200.5"/>
+                                                <state key="normal" title="Crime Map"/>
+                                                <connections>
+                                                    <segue destination="u6f-hL-Z8l" kind="show" id="5Ne-Hv-t6M"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="r28-Au-pph" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Kn2-kJ-h94"/>
+                            <constraint firstAttribute="trailing" secondItem="r28-Au-pph" secondAttribute="trailing" id="ZvJ-85-Qpd"/>
+                            <constraint firstItem="r28-Au-pph" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="mQy-uv-CuR"/>
+                            <constraint firstItem="r28-Au-pph" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vNY-rW-R8j"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Alameda County Sheriff Crime Report" id="sEw-kI-msV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="506" y="81"/>
+        </scene>
+        <!--Report a Crime-->
+        <scene sceneID="9XQ-Vb-5RO">
+            <objects>
+                <viewController title="Report a Crime" id="nJ2-hL-6Qk" customClass="ReportCrime" customModule="Crime_Tracker" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p8q-q8-nFc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shi-c8-0uB">
+                                <rect key="frame" x="82" y="271" width="211" height="125"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Call 911"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="shi-c8-0uB" firstAttribute="top" secondItem="Gr4-Nv-rTx" secondAttribute="top" constant="207" id="1bF-7c-2Vw"/>
+                            <constraint firstItem="shi-c8-0uB" firstAttribute="leading" secondItem="Gr4-Nv-rTx" secondAttribute="leading" constant="82" id="5uT-oC-6qD"/>
+                            <constraint firstItem="shi-c8-0uB" firstAttribute="centerY" secondItem="p8q-q8-nFc" secondAttribute="centerY" id="N9h-fn-09X"/>
+                            <constraint firstItem="shi-c8-0uB" firstAttribute="centerX" secondItem="p8q-q8-nFc" secondAttribute="centerX" id="VtQ-TO-YLj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gr4-Nv-rTx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CJe-Do-GH0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1317.5999999999999" y="-596.85157421289364"/>
+        </scene>
+        <!--Crime List-->
+        <scene sceneID="oJb-5l-Dhz">
+            <objects>
+                <viewController title="Crime List" id="BoL-Pm-ZDZ" customClass="CrimeList" customModule="Crime_Tracker" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Jj-zx-Eo8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lm4-EH-x6Q">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lm4-EH-x6Q" firstAttribute="bottom" secondItem="yut-NO-sdC" secondAttribute="bottom" id="4Y9-pw-VVr"/>
+                            <constraint firstAttribute="trailing" secondItem="Lm4-EH-x6Q" secondAttribute="trailing" id="bVe-5r-7wI"/>
+                            <constraint firstItem="Lm4-EH-x6Q" firstAttribute="top" secondItem="yut-NO-sdC" secondAttribute="top" id="sGc-0V-VGd"/>
+                            <constraint firstItem="Lm4-EH-x6Q" firstAttribute="leading" secondItem="5Jj-zx-Eo8" secondAttribute="leading" id="zWd-u1-HSK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yut-NO-sdC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kue-Nu-xqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1317.5999999999999" y="86.806596701649184"/>
+        </scene>
+        <!--Crime Map-->
+        <scene sceneID="snU-x6-GA3">
+            <objects>
+                <viewController title="Crime Map" id="u6f-hL-Z8l" customClass="CrimeMap" customModule="Crime_Tracker" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dxs-Od-ma7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hNO-hA-vGI">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hNO-hA-vGI" firstAttribute="bottom" secondItem="jVq-w8-7UP" secondAttribute="bottom" id="0hO-vl-YNy"/>
+                            <constraint firstAttribute="trailing" secondItem="hNO-hA-vGI" secondAttribute="trailing" id="NQq-6s-GsN"/>
+                            <constraint firstItem="hNO-hA-vGI" firstAttribute="leading" secondItem="Dxs-Od-ma7" secondAttribute="leading" id="fVy-Jm-dmC"/>
+                            <constraint firstItem="hNO-hA-vGI" firstAttribute="top" secondItem="jVq-w8-7UP" secondAttribute="top" id="xkg-rJ-iQT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jVq-w8-7UP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RGn-Up-Qel" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1245.5999999999999" y="818.14092953523243"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Su2-jz-iuh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wWR-Hw-jxg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zS2-ha-S3B">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Xmc-DG-nUi" kind="relationship" relationship="rootViewController" id="CgM-os-pG6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EF1-16-xLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1310" y="81"/>
+        </scene>
+        <!--MainViewController-->
+        <scene sceneID="zga-TJ-dgV">
+            <objects>
+                <viewController title="MainViewController" id="Xmc-DG-nUi" customClass="ViewController" customModule="Crime_Tracker" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IKd-yy-tsR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="53q-vF-qGJ">
+                                <rect key="frame" x="107" y="318" width="160" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter A City Below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NgG-Zc-jz3">
+                                <rect key="frame" x="62" y="261" width="251" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="ufg-mL-cjy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="zcK-Df-Pua">
+                                <rect key="frame" x="67" y="86" width="240" height="167"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="167" id="hgt-1J-7p7"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="you-Mf-Cbv">
+                                <rect key="frame" x="107" y="378" width="160" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="JFe-Db-Mfd"/>
+                                </constraints>
+                                <state key="normal" title="GET CRIME RESULTS"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Igj-nn-IHu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zcK-Df-Pua" firstAttribute="centerX" secondItem="IKd-yy-tsR" secondAttribute="centerX" id="FDT-aI-LhM"/>
+                            <constraint firstItem="zcK-Df-Pua" firstAttribute="leading" secondItem="X4I-YM-OJV" secondAttribute="leading" constant="67" id="FNn-Ls-LUI"/>
+                            <constraint firstItem="NgG-Zc-jz3" firstAttribute="top" secondItem="zcK-Df-Pua" secondAttribute="bottom" constant="8" symbolic="YES" id="GlR-Y8-yW0"/>
+                            <constraint firstItem="zcK-Df-Pua" firstAttribute="top" secondItem="X4I-YM-OJV" secondAttribute="top" constant="22" id="OEO-GG-uLl"/>
+                            <constraint firstItem="you-Mf-Cbv" firstAttribute="trailing" secondItem="53q-vF-qGJ" secondAttribute="trailing" id="R9o-tb-Iba"/>
+                            <constraint firstItem="you-Mf-Cbv" firstAttribute="leading" secondItem="53q-vF-qGJ" secondAttribute="leading" id="Swl-R1-80O"/>
+                            <constraint firstItem="53q-vF-qGJ" firstAttribute="top" secondItem="NgG-Zc-jz3" secondAttribute="bottom" constant="8" symbolic="YES" id="U99-i5-JcR"/>
+                            <constraint firstItem="53q-vF-qGJ" firstAttribute="leading" secondItem="X4I-YM-OJV" secondAttribute="leading" constant="107" id="YS0-NX-80G"/>
+                            <constraint firstItem="NgG-Zc-jz3" firstAttribute="leading" secondItem="X4I-YM-OJV" secondAttribute="leading" constant="62" id="YSJ-RN-dAW"/>
+                            <constraint firstItem="53q-vF-qGJ" firstAttribute="centerX" secondItem="NgG-Zc-jz3" secondAttribute="centerX" id="n6d-pL-0Kn"/>
+                            <constraint firstItem="53q-vF-qGJ" firstAttribute="centerX" secondItem="zcK-Df-Pua" secondAttribute="centerX" id="sqb-DP-9RN"/>
+                            <constraint firstItem="you-Mf-Cbv" firstAttribute="top" secondItem="53q-vF-qGJ" secondAttribute="bottom" constant="30" id="zf4-YN-NNe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="X4I-YM-OJV"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Alameda County Sheriff Crime Reports" id="Woa-tb-j1D"/>
+                    <connections>
+                        <outlet property="citySelection" destination="53q-vF-qGJ" id="Y1T-ry-wlP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nLo-gF-aL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-303.19999999999999" y="86.806596701649184"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Icon" width="666" height="666"/>
+    </resources>
 </document>
