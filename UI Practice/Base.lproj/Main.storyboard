@@ -213,6 +213,7 @@
                                 </constraints>
                                 <state key="normal" title="GET CRIME RESULTS"/>
                                 <connections>
+                                    <action selector="GetCrimeDataButton:" destination="Xmc-DG-nUi" eventType="touchUpInside" id="fIR-IL-XJQ"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="Igj-nn-IHu"/>
                                 </connections>
                             </button>

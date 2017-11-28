@@ -19,41 +19,45 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         
-        
+        parseJSON()
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     
+    @IBAction func GetCrimeDataButton(_ sender: Any) {
+        
+    }
+    
+    typealias JSON = [String : String]
     
     func parseJSON() {
         var userCity = citySelection.text
+        let urlString = "https://data.acgov.org/resource/js8f-yfqf.json"
+        let url = URL(string: urlString)
         
-        let url = URL(string:"https://data.acgov.org/resource/js8f-yfqf.json")
-        var task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            guard error == nil else {
-                print("returned error")
-                return
-            }
-            if error != nil {
+        
+        let unwrappedURL = url
+        
+        let session = URLSession.shared
+        let task = session.dataTask(with: unwrappedURL!) { (data, response, error) in
+            print("Start")
+            guard let unwrappedData = data else {return}
+            do {
+                let responseJSON = try JSONSerialization.jsonObject(with: unwrappedData, options: JSONSerialization.ReadingOptions.mutableContainers)
                 
-            }else{
-                print("returned error")
+                print("Got Data")
+                print(responseJSON)
+                
+            } catch {
+                print(error)
             }
-            
-            guard let content = data else {
-                print("No data")
-                return
         }
-            
-            guard let json = (try? JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers)) as? [String:Any] else {
-                print("not containing JSON")
-                return
-            }
-    }
+        task.resume()
+        }
     
 }
     
     
-}
+
 
