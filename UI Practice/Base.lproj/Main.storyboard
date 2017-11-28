@@ -12,7 +12,7 @@
         <!--MenuViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="MenuViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="UI_Practice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MenuViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Crime_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,6 +124,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yut-NO-sdC"/>
                     </view>
+                    <connections>
+                        <outlet property="CrimeListTable" destination="Lm4-EH-x6Q" id="4dQ-vc-Qfm"/>
+                        <outlet property="TableView" destination="Lm4-EH-x6Q" id="T9F-lF-2uZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kue-Nu-xqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -153,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGn-Up-Qel" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1245.5999999999999" y="818.14092953523243"/>
+            <point key="canvasLocation" x="1318" y="835"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Su2-jz-iuh">
