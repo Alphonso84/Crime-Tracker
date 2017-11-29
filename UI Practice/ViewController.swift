@@ -11,29 +11,30 @@ import Foundation
 
 
 
+
 class ViewController: UIViewController {
+    var CrimeReport: Dictionary<String, String> = [:]
     
     @IBOutlet weak var citySelection: UITextField!
     var tableArray = [String] ()
    
 
     override func viewDidLoad() {
-        
-        parseJSON()
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
     
     
     @IBAction func GetCrimeDataButton(_ sender: Any) {
-        
+        parseJSON()
     }
     
     typealias JSON = [String : String]
     
     func parseJSON() {
-        var userCity = citySelection.text
-        let urlString = "https://data.acgov.org/resource/js8f-yfqf.json"
+        var userCity = citySelection.text!
+        let urlString = "https://data.acgov.org/resource/js8f-yfqf.json?city=\(userCity)"
         let url = URL(string: urlString)
         
         
@@ -44,7 +45,7 @@ class ViewController: UIViewController {
             print("Start")
             guard let unwrappedData = data else {return}
             do {
-                let responseJSON = try JSONSerialization.jsonObject(with: unwrappedData, options: JSONSerialization.ReadingOptions.mutableContainers)
+                let responseJSON = try JSONSerialization.jsonObject(with: unwrappedData, options: .allowFragments)
                 
                 print("Got Data")
                 print(responseJSON)
