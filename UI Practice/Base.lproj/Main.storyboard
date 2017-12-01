@@ -12,7 +12,7 @@
         <!--MenuViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="MenuViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Crime_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MenuViewController" id="BYZ-38-t0r" customClass="MenuViewController" customModule="Crime_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -113,6 +113,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lm4-EH-x6Q">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="5Jj-zx-Eo8" id="ep4-jT-qZN"/>
+                                    <outlet property="delegate" destination="5Jj-zx-Eo8" id="Mdq-wz-gGe"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -126,7 +130,6 @@
                     </view>
                     <connections>
                         <outlet property="CrimeListTable" destination="Lm4-EH-x6Q" id="4dQ-vc-Qfm"/>
-                        <outlet property="TableView" destination="Lm4-EH-x6Q" id="T9F-lF-2uZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kue-Nu-xqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -180,7 +183,7 @@
         <!--MainViewController-->
         <scene sceneID="zga-TJ-dgV">
             <objects>
-                <viewController title="MainViewController" id="Xmc-DG-nUi" customClass="ViewController" customModule="Crime_Tracker" sceneMemberID="viewController">
+                <viewController title="MainViewController" id="Xmc-DG-nUi" customClass="MainViewController" customModule="Crime_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IKd-yy-tsR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -232,6 +235,7 @@
                             <constraint firstItem="HRT-ia-JxC" firstAttribute="centerX" secondItem="you-Mf-Cbv" secondAttribute="centerX" id="gkv-v2-uC7"/>
                             <constraint firstItem="zcK-Df-Pua" firstAttribute="top" secondItem="X4I-YM-OJV" secondAttribute="top" constant="22" id="hmC-0J-T03"/>
                             <constraint firstItem="zcK-Df-Pua" firstAttribute="trailing" secondItem="HRT-ia-JxC" secondAttribute="trailing" id="w12-zk-qpZ"/>
+                            <constraint firstItem="X4I-YM-OJV" firstAttribute="trailing" secondItem="NgG-Zc-jz3" secondAttribute="trailing" constant="113" id="yJz-sr-mLg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X4I-YM-OJV"/>
                     </view>

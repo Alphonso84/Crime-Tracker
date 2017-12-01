@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		8938BDD91FB07DBE00A6D4FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8938BDD81FB07DBE00A6D4FB /* AppDelegate.swift */; };
-		8938BDDB1FB07DBE00A6D4FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8938BDDA1FB07DBE00A6D4FB /* ViewController.swift */; };
+		8938BDDB1FB07DBE00A6D4FB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8938BDDA1FB07DBE00A6D4FB /* MainViewController.swift */; };
 		8938BDDE1FB07DBE00A6D4FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8938BDDC1FB07DBE00A6D4FB /* Main.storyboard */; };
 		8938BDE01FB07DBE00A6D4FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8938BDDF1FB07DBE00A6D4FB /* Assets.xcassets */; };
 		8938BDE31FB07DBE00A6D4FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8938BDE11FB07DBE00A6D4FB /* LaunchScreen.storyboard */; };
 		896924911FCC2257004A91AC /* CrimeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896924901FCC2257004A91AC /* CrimeList.swift */; };
 		896924931FCC22B8004A91AC /* CrimeMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896924921FCC22B8004A91AC /* CrimeMap.swift */; };
 		896924951FCC22D2004A91AC /* ReportCrime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896924941FCC22D2004A91AC /* ReportCrime.swift */; };
+		89B599801FD13874009133B9 /* APIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B5997F1FD13874009133B9 /* APIData.swift */; };
+		89B599821FD13C61009133B9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B599811FD13C61009133B9 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8938BDD51FB07DBE00A6D4FB /* Crime Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crime Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8938BDD81FB07DBE00A6D4FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8938BDDA1FB07DBE00A6D4FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8938BDDA1FB07DBE00A6D4FB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8938BDDD1FB07DBE00A6D4FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8938BDDF1FB07DBE00A6D4FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8938BDE21FB07DBE00A6D4FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -28,6 +30,8 @@
 		896924901FCC2257004A91AC /* CrimeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeList.swift; sourceTree = "<group>"; };
 		896924921FCC22B8004A91AC /* CrimeMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeMap.swift; sourceTree = "<group>"; };
 		896924941FCC22D2004A91AC /* ReportCrime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCrime.swift; sourceTree = "<group>"; };
+		89B5997F1FD13874009133B9 /* APIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIData.swift; sourceTree = "<group>"; };
+		89B599811FD13C61009133B9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +65,9 @@
 			isa = PBXGroup;
 			children = (
 				8938BDD81FB07DBE00A6D4FB /* AppDelegate.swift */,
-				8938BDDA1FB07DBE00A6D4FB /* ViewController.swift */,
+				8938BDDA1FB07DBE00A6D4FB /* MainViewController.swift */,
+				89B5997F1FD13874009133B9 /* APIData.swift */,
+				89B599811FD13C61009133B9 /* MenuViewController.swift */,
 				896924901FCC2257004A91AC /* CrimeList.swift */,
 				896924921FCC22B8004A91AC /* CrimeMap.swift */,
 				896924941FCC22D2004A91AC /* ReportCrime.swift */,
@@ -145,8 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8938BDDB1FB07DBE00A6D4FB /* ViewController.swift in Sources */,
+				89B599801FD13874009133B9 /* APIData.swift in Sources */,
+				8938BDDB1FB07DBE00A6D4FB /* MainViewController.swift in Sources */,
 				896924911FCC2257004A91AC /* CrimeList.swift in Sources */,
+				89B599821FD13C61009133B9 /* MenuViewController.swift in Sources */,
 				8938BDD91FB07DBE00A6D4FB /* AppDelegate.swift in Sources */,
 				896924931FCC22B8004A91AC /* CrimeMap.swift in Sources */,
 				896924951FCC22D2004A91AC /* ReportCrime.swift in Sources */,

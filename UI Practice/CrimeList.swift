@@ -10,6 +10,14 @@ import UIKit
 
 class CrimeList: UITableViewController {
 
+    
+    struct Crime {
+        var City: String
+        var Date: Date
+        var Discription: String
+        var Block: String
+        
+    }
     @IBOutlet weak var CrimeListTable: UITableView!
     
     
