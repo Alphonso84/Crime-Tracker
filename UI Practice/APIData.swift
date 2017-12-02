@@ -8,9 +8,19 @@
 
 import UIKit
 
-protocol APIDelegate {
+
     
+
+struct CrimeReportData {
+     let city: String
+     let crimeCode: String
+     let crimeDescription: String
+     let crimeID: Int
+     let datetime: String
 }
+
+// ARRAY OF TYPE CRIMEREPORTDATA
+var CrimeReports = [CrimeReportData].self
 
 class APIData: MainViewController {
     
@@ -20,7 +30,7 @@ class APIData: MainViewController {
     //RETRIEVE DATA METHOD
     func parseJSON() {
         //URL FILTER LIMITS RESULTS RETURNED
-        let numberOfResults = "&$limit=25"
+        let numberOfResults = "&$limit=10"
         //URL FILTER ORDERS BY MOST RECENT
         let sortOrder = "&$order=datetime DESC"
         //URL FILTER ORDERS RESULTS BY CITY(GLOBAL VARIABLE)
@@ -39,16 +49,19 @@ class APIData: MainViewController {
             print("Start")
             guard let unwrappedData = data else {return}
             do {
-                let responseJSON = try JSONSerialization.jsonObject(with: unwrappedData, options: [])
+                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as? [[String: AnyObject]]
                 
                 print("Got Data")
-                print(responseJSON)
+                print(jsonData)
                 } catch {
+                    
+                    
                 print(error)
             }
             
         }
         task.resume()
+        
     }
 }
     
