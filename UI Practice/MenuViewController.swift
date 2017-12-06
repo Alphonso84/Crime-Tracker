@@ -7,30 +7,51 @@
 //
 
 import UIKit
-
+import CoreLocation
 class MenuViewController: UIViewController {
+    lazy var geocoder = CLGeocoder()
     @IBOutlet weak var cityLabel: UILabel!
     
+    @IBAction func getCrimeMap(_ sender: Any) {
+        let address = "\(crimeBlock as! String),\(crimeCity as! String),\(crimeState as! String)"
+        print(address)
+        geocoder.geocodeAddressString(address) { (placemarks, error) in
+            self.processResponse(withPlacemarks: placemarks, error: error)
+    }
+    }
+        
+        func processResponse(withPlacemarks placemarks: [CLPlacemark]?, error: Error?) {
+            // Update View
+            
+            
+            if let error = error {
+                print("Unable to Forward Geocode Address (\(error))")
+                print("Unable to Find Location for Address")
+                
+            } else {
+                var location: CLLocation?
+                
+                if let placemarks = placemarks, placemarks.count > 0 {
+                    location = placemarks.first?.location
+                }
+                
+                if let location = location {
+                    let coordinate = location.coordinate
+                    print(coordinate.latitude)
+                    print(coordinate.longitude)
+                } else {
+                    print("No Matching Location Found")
+                }
+            }
+        }
+    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 cityLabel.text = city
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

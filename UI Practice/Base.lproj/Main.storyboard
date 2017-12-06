@@ -51,6 +51,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="182.5"/>
                                                 <state key="normal" title="Crime Map"/>
                                                 <connections>
+                                                    <action selector="getCrimeMap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LX9-HC-B4X"/>
                                                     <segue destination="u6f-hL-Z8l" kind="show" id="5Ne-Hv-t6M"/>
                                                 </connections>
                                             </button>

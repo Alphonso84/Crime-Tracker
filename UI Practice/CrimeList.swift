@@ -12,7 +12,7 @@ class CrimeList: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
-    let datasource = APIData().info
+    let datasource = crimeStats
     
     
     
@@ -35,13 +35,13 @@ class CrimeList: UIViewController {
 
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return crimeStats.count
     }
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-         cell.detailTextLabel?.text = datasource
+         cell.detailTextLabel?.text = city
         // Configure the cell...
 
         return cell

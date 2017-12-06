@@ -12,9 +12,15 @@ import UIKit
 var urlString = ""
 //EMPTY STRUCT FOR JSON DATA
 
-var crimeStats = [String: AnyObject]()
+var crimeStats: [String:Any] = ["state" : ""]
 
-
+var crimeDate = Date() as Any
+var crimeZip = Float() as Any
+var crimeState = String() as Any
+var crimeCity = String() as Any
+var crimeBlock = String() as Any
+var keys = String()
+var values = String() as Any
 
 class APIData: MainViewController {
    
@@ -26,7 +32,7 @@ class APIData: MainViewController {
     func buildUrl(constructedUrl: String) -> URL{
         let baseURL = "https://data.acgov.org/resource/js8f-yfqf.json"
         //URL FILTER LIMITS RESULTS RETURNED
-        let numberOfResults = "&$limit=1"
+        let numberOfResults = "&$limit=5"
         //URL FILTER ORDERS BY MOST RECENT
         let sortOrder = "&$order=datetime DESC"
         //URL FILTER ORDERS RESULTS BY CITY(GLOBAL VARIABLE)
@@ -55,14 +61,30 @@ class APIData: MainViewController {
             guard let unwrappedData = data else {return}
             do {
                 //JSONDATA IS AN ARRAY OF DICTIONARIES
-                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as? [[String: AnyObject]]
+                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as? [[String:Any]]
                 //CRIMESTATS SHEDS THE ARRAY by using [0] AND BECOMES A DICTIONARY
                 crimeStats = jsonData![0]
                 
-              
                 
-                print("Got Data")
-                print(crimeStats)
+                crimeDate = crimeStats["datetime"]!
+                //crimeZip = crimeStats["zip"]!
+                crimeState = crimeStats["state"]!
+                crimeCity = crimeStats["city"]!
+                crimeBlock = crimeStats["block"]!
+                for (key , value) in crimeStats {
+                    values = (value)
+                    keys = (key)
+                    
+                }
+                
+                
+               // print(values)
+                 print(crimeDate)
+//                print(crimeBlock)
+//                print(crimeCity)
+//                print(crimeState)
+//                //print(crimeZip)
+//                print(crimeStats)
                 
                 //Trying to iterate through dictionary to pull out keys and values
                

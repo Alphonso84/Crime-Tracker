@@ -9,22 +9,29 @@
 import Foundation
 import UIKit
 import MapKit
+import CoreLocation
 
+
+var coordinate = CLLocationCoordinate2D()
 
 class CrimeMap: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
-    let regionRadius: CLLocationDistance = 75000
-    func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
-                                                                  regionRadius, regionRadius)
-        mapView.setRegion(coordinateRegion, animated: true)
-    }
+    
+    let regionRadius: CLLocationDistance = 10000
+    
+   
+      
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let initialLocation = CLLocation(latitude: 37.652807, longitude: -122.032741)
-        centerMapOnLocation(location: initialLocation)
+        mapView.showsUserLocation = true
+        
+        
+        
     }
     
 }
+
+
