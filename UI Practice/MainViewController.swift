@@ -15,7 +15,7 @@ var city = String()
 class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     //LIST OF CITIES TO CHOOSE FROM
-    var AlamedaCountyCities = ["OAKLAND","FREMONT","HAYWARD","BERKELEY","SAN LEANDRO","LIVERMORE","PLEASANTON","ALAMEDA","UNION CITY","DUBLIN","NEWARK","ALBANY","EMERYVILLE","PIEDMONT"]
+    var AlamedaCountyCities = ["OAKLAND","FREMONT","HAYWARD","BERKELEY","SAN LEANDRO","LIVERMORE","PLEASANTON","ALAMEDA","UNION CITY","DUBLIN","NEWARK","EMERYVILLE","PIEDMONT"]
 
    //PICKERVIEW TO CHOOSE CITIES
     @IBOutlet weak var citySelection: UIPickerView?
