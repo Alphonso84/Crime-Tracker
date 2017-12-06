@@ -9,10 +9,11 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-
+    @IBOutlet weak var cityLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+cityLabel.text = city
         // Do any additional setup after loading the view.
     }
 

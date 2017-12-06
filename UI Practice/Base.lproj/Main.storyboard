@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="r28-Au-pph">
-                                <rect key="frame" x="0.0" y="65" width="375" height="602"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gEW-tv-p7y">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="182.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGT-WM-3VO">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="200.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="182.5"/>
                                                 <state key="normal" title="Report a Crime"/>
                                                 <connections>
                                                     <segue destination="nJ2-hL-6Qk" kind="show" id="p4A-Uk-drN"/>
@@ -33,10 +33,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WJf-9s-lHp">
-                                        <rect key="frame" x="0.0" y="200.5" width="375" height="201"/>
+                                        <rect key="frame" x="0.0" y="182.5" width="375" height="182"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTm-ga-kM5">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="201"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="182"/>
                                                 <state key="normal" title="Crime List"/>
                                                 <connections>
                                                     <segue destination="BoL-Pm-ZDZ" kind="show" id="eci-aR-cpY"/>
@@ -45,10 +45,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="k7z-bk-dph">
-                                        <rect key="frame" x="0.0" y="401.5" width="375" height="200.5"/>
+                                        <rect key="frame" x="0.0" y="364.5" width="375" height="182.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPf-jT-qpr">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="200.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="182.5"/>
                                                 <state key="normal" title="Crime Map"/>
                                                 <connections>
                                                     <segue destination="u6f-hL-Z8l" kind="show" id="5Ne-Hv-t6M"/>
@@ -58,21 +58,36 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GK3-RU-2Xf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="bcC-0l-tHx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="r28-Au-pph" firstAttribute="top" secondItem="GK3-RU-2Xf" secondAttribute="bottom" id="3fR-PW-ei0"/>
                             <constraint firstItem="r28-Au-pph" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Kn2-kJ-h94"/>
+                            <constraint firstItem="GK3-RU-2Xf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LuB-7X-rf6"/>
+                            <constraint firstItem="GK3-RU-2Xf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MA2-MC-yoi"/>
                             <constraint firstAttribute="trailing" secondItem="r28-Au-pph" secondAttribute="trailing" id="ZvJ-85-Qpd"/>
-                            <constraint firstItem="r28-Au-pph" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="mQy-uv-CuR"/>
+                            <constraint firstItem="GK3-RU-2Xf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pOg-l7-o8c"/>
                             <constraint firstItem="r28-Au-pph" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vNY-rW-R8j"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Alameda County Sheriff Crime Report" id="sEw-kI-msV"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="GK3-RU-2Xf" id="RjF-GG-LhA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="506" y="81"/>
+            <point key="canvasLocation" x="504.80000000000001" y="80.50974512743629"/>
         </scene>
         <!--Report a Crime-->
         <scene sceneID="9XQ-Vb-5RO">
@@ -105,41 +120,27 @@
         <!--Crime List-->
         <scene sceneID="oJb-5l-Dhz">
             <objects>
-                <viewController title="Crime List" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BoL-Pm-ZDZ" customClass="CrimeList" customModule="Crime_Tracker" sceneMemberID="viewController">
+                <viewController title="Crime List" id="BoL-Pm-ZDZ" customClass="CrimeList" customModule="Crime_Tracker" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Jj-zx-Eo8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lm4-EH-x6Q" userLabel="TableView">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XAf-AH-KsT">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Q2c-kf-7Wc">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q2c-kf-7Wc" id="C6u-eX-gXo">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="5Jj-zx-Eo8" id="ep4-jT-qZN"/>
-                                    <outlet property="delegate" destination="5Jj-zx-Eo8" id="Mdq-wz-gGe"/>
-                                </connections>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Lm4-EH-x6Q" firstAttribute="bottom" secondItem="yut-NO-sdC" secondAttribute="bottom" id="4Y9-pw-VVr"/>
-                            <constraint firstAttribute="trailing" secondItem="Lm4-EH-x6Q" secondAttribute="trailing" id="bVe-5r-7wI"/>
-                            <constraint firstItem="Lm4-EH-x6Q" firstAttribute="top" secondItem="yut-NO-sdC" secondAttribute="top" id="sGc-0V-VGd"/>
-                            <constraint firstItem="Lm4-EH-x6Q" firstAttribute="leading" secondItem="5Jj-zx-Eo8" secondAttribute="leading" id="zWd-u1-HSK"/>
+                            <constraint firstAttribute="trailing" secondItem="XAf-AH-KsT" secondAttribute="trailing" id="37P-af-bb2"/>
+                            <constraint firstItem="XAf-AH-KsT" firstAttribute="bottom" secondItem="yut-NO-sdC" secondAttribute="bottom" id="ASB-yG-RQp"/>
+                            <constraint firstItem="XAf-AH-KsT" firstAttribute="top" secondItem="yut-NO-sdC" secondAttribute="top" id="cf6-wW-Jww"/>
+                            <constraint firstItem="XAf-AH-KsT" firstAttribute="leading" secondItem="5Jj-zx-Eo8" secondAttribute="leading" id="z7g-39-Ix6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yut-NO-sdC"/>
                     </view>
                     <connections>
-                        <outlet property="CrimeListTable" destination="Lm4-EH-x6Q" id="4dQ-vc-Qfm"/>
+                        <outlet property="tableView" destination="XAf-AH-KsT" id="g84-qn-cjp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kue-Nu-xqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -154,7 +155,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hNO-hA-vGI">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hNO-hA-vGI">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </mapView>
                         </subviews>

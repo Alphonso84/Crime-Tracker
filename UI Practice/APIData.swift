@@ -8,23 +8,13 @@
 
 import UIKit
 
-
-    
-
-struct CrimeReportData {
-     var city: String
-     var crimeCode: String
-     var crimeDescription: String
-     var crimeID: String
-     var datetime: String
-}
-
-// ARRAY OF TYPE CRIMEREPORTDATA
-//var CrimeReports = [Any].self
 //EMPTY STRING FOR URL
 var urlString = ""
-//EMPTY ARRAY FOR JSON DATA
+//EMPTY STRUCT FOR JSON DATA
+
 var crimeStats = [String: AnyObject]()
+
+
 
 class APIData: MainViewController {
    
@@ -36,7 +26,7 @@ class APIData: MainViewController {
     func buildUrl(constructedUrl: String) -> URL{
         let baseURL = "https://data.acgov.org/resource/js8f-yfqf.json"
         //URL FILTER LIMITS RESULTS RETURNED
-        let numberOfResults = "&$limit=5"
+        let numberOfResults = "&$limit=1"
         //URL FILTER ORDERS BY MOST RECENT
         let sortOrder = "&$order=datetime DESC"
         //URL FILTER ORDERS RESULTS BY CITY(GLOBAL VARIABLE)
@@ -66,7 +56,7 @@ class APIData: MainViewController {
             do {
                 //JSONDATA IS AN ARRAY OF DICTIONARIES
                 let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as? [[String: AnyObject]]
-                //CRIMESTATS SHEDS THE ARRAY AND BECOMES A DICTIONARY
+                //CRIMESTATS SHEDS THE ARRAY by using [0] AND BECOMES A DICTIONARY
                 crimeStats = jsonData![0]
                 
               

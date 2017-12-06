@@ -9,12 +9,13 @@
 import UIKit
 
 class CrimeList: UIViewController {
-
+    @IBOutlet weak var tableView: UITableView!
+    
     
     let datasource = APIData().info
     
     
-    @IBOutlet weak var CrimeListTable: UITableView!
+    
     
     
     override func viewDidLoad() {
