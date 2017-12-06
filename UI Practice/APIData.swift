@@ -14,6 +14,7 @@ var urlString = ""
 
 var crimeStats: [String:Any] = ["state" : ""]
 
+var crimeDescription = String() as Any
 var crimeDate = Date() as Any
 var crimeZip = Float() as Any
 var crimeState = String() as Any
@@ -65,7 +66,8 @@ class APIData: MainViewController {
                 //CRIMESTATS SHEDS THE ARRAY by using [0] AND BECOMES A DICTIONARY
                 crimeStats = jsonData![0]
                 
-                
+                crimeDescription = crimeStats["crimedescription"]!
+                coordinate = crimeStats["location_1"]!
                 crimeDate = crimeStats["datetime"]!
                 //crimeZip = crimeStats["zip"]!
                 crimeState = crimeStats["state"]!
@@ -79,12 +81,14 @@ class APIData: MainViewController {
                 
                 
                // print(values)
-                 print(crimeDate)
+                // print(crimeDate)
 //                print(crimeBlock)
 //                print(crimeCity)
 //                print(crimeState)
 //                //print(crimeZip)
-//                print(crimeStats)
+              print(crimeStats)
+                //print(crimeStats["location_1"])
+              
                 
                 //Trying to iterate through dictionary to pull out keys and values
                
