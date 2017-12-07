@@ -12,16 +12,17 @@ import UIKit
 var urlString = ""
 //EMPTY STRUCT FOR JSON DATA
 
-var crimeStats: [String:Any] = ["state" : ""]
 
-var crimeDescription = String() as Any
-var crimeDate = Date() as Any
-var crimeZip = Float() as Any
-var crimeState = String() as Any
-var crimeCity = String() as Any
-var crimeBlock = String() as Any
-var keys = String()
-var values = String() as Any
+//var crimeStats: [String:Any] = ["state" : ""]
+//
+//var crimeDescription = String() as Any
+//var crimeDate = Date() as Any
+//var crimeZip = Float() as Any
+//var crimeState = String() as Any
+//var crimeCity = String() as Any
+//var crimeBlock = String() as Any
+//var keys = String()
+//var values = String() as Any
 
 class APIData: MainViewController {
    
@@ -33,7 +34,7 @@ class APIData: MainViewController {
     func buildUrl(constructedUrl: String) -> URL{
         let baseURL = "https://data.acgov.org/resource/js8f-yfqf.json"
         //URL FILTER LIMITS RESULTS RETURNED
-        let numberOfResults = "&$limit=5"
+        let numberOfResults = "&$limit=30"
         //URL FILTER ORDERS BY MOST RECENT
         let sortOrder = "&$order=datetime DESC"
         //URL FILTER ORDERS RESULTS BY CITY(GLOBAL VARIABLE)
