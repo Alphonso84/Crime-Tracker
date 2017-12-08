@@ -52,7 +52,7 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
 // GET DATA ACTION
     @IBAction func GetCrimeDataButton(_ sender: Any) {
-       APIData().parseJSON()
+      
        
     }
 }

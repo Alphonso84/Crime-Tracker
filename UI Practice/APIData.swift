@@ -2,11 +2,12 @@
 //
 //
 
+
 import Foundation
 
 typealias CrimeReport = [PurpleCrimeReport]
 
-struct CrimeReport: Decodable {
+struct PurpleCrimeReport: Codable {
     let agencyid: String
     let block: String
     let city: String
@@ -14,54 +15,54 @@ struct CrimeReport: Decodable {
     let crimedescription: String
     let crimeid: String
     let datetime: String
+    let location1: Location1
     let state: String
     let zip: String?
-    
-    
-    struct Location1 {
-        let coordinates: [Double]
-        let type: String
-    }
 }
 
+struct Location1: Codable {
+    let coordinates: [Double]
+    let type: String
+}
 
 // MARK: Top-level extensions -
 
-extension Array where Element == CrimeReport {
-    static func from(json: String, using encoding: String.Encoding = .utf8) -> [CrimeReport]? {
+extension Array where Element == PurpleCrimeReport {
+    static func from(json: String, using encoding: String.Encoding = .utf8) -> [PurpleCrimeReport]? {
         guard let data = json.data(using: encoding) else { return nil }
-   
         return from(data: data)
     }
     
-    static func from(data: Data) -> [CrimeReport]? {
+    
+    static func from(data: Data) -> [PurpleCrimeReport]? {
         let decoder = JSONDecoder()
         return try? decoder.decode([PurpleCrimeReport].self, from: data)
     }
     
-    static func from(url urlString: String) -> [CrimeReport]? {
+    static func from(url urlString: String) -> [PurpleCrimeReport]? {
         guard let url = URL(string: urlString) else { return nil }
         guard let data = try? Data(contentsOf: url) else { return nil }
+        
         return from(data: data)
+       
     }
     
     var jsonData: Data? {
         let encoder = JSONEncoder()
+         let crimeReport = CrimeReport.from(json: jsonString!)!
+        print(crimeReport)
         return try? encoder.encode(self)
     }
-
+    
     var jsonString: String? {
-        
         guard let data = self.jsonData else { return nil }
         return String(data: data, encoding: .utf8)
-        
     }
-    
 }
 
 // MARK: Codable extensions -
 
-extension CrimeReport {
+extension PurpleCrimeReport {
     enum CodingKeys: String, CodingKey {
         case agencyid = "agencyid"
         case block = "block"
@@ -76,7 +77,8 @@ extension CrimeReport {
     }
 }
 
-extension Locatio {
+
+extension Location1 {
     enum CodingKeys: String, CodingKey {
         case coordinates = "coordinates"
         case type = "type"
@@ -92,7 +94,6 @@ class JSONNull: Codable {
     public required init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         if !container.decodeNil() {
-         
             throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
         }
     }

@@ -26,6 +26,8 @@
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+	<key>CrimeReport.url</key>
+	<string>https://data.acgov.org/resource/js8f-yfqf.json?$$app_token=BEyC2oP4D1T8CaKegklvf4ExN&amp;city=LIVERMORE&amp;$order=datetime%20DESC&amp;$limit=30</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
