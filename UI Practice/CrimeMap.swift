@@ -42,8 +42,8 @@ class CrimeMap: UIViewController {
                 StringResponse = String(describing: response)
                 //Create Annotations
                 let annotation = MKPointAnnotation()
-                annotation.title = String(describing: crimeDescription)
-                annotation.subtitle = String(describing: crimeDate)
+                //annotation.title = String(describing: crimeDescription)
+                //annotation.subtitle = String(describing: crimeDate)
                 annotation.coordinate = CLLocationCoordinate2DMake(latitude, longitude)
                 self.mapView.addAnnotation(annotation)
                 
