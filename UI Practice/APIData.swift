@@ -8,12 +8,14 @@
 
 import UIKit
 
+
+
 //EMPTY STRING FOR URL
 var urlString = ""
 //EMPTY STRUCT FOR JSON DATA
 
-var crimeStats: [String:Any] = ["state" : ""]
 
+struct CrimeReport {
 var crimeDescription = String() as Any
 var crimeDate = Date() as Any
 var crimeZip = Float() as Any
@@ -22,6 +24,10 @@ var crimeCity = String() as Any
 var crimeBlock = String() as Any
 var keys = String()
 var values = String() as Any
+}
+var CrimeArray = [CrimeReport].self
+
+var crimeStats = [String:Any]()
 
 class APIData: MainViewController {
    
@@ -33,7 +39,7 @@ class APIData: MainViewController {
     func buildUrl(constructedUrl: String) -> URL{
         let baseURL = "https://data.acgov.org/resource/js8f-yfqf.json"
         //URL FILTER LIMITS RESULTS RETURNED
-        let numberOfResults = "&$limit=5"
+        let numberOfResults = "&$limit=20"
         //URL FILTER ORDERS BY MOST RECENT
         let sortOrder = "&$order=datetime DESC"
         //URL FILTER ORDERS RESULTS BY CITY(GLOBAL VARIABLE)
@@ -66,9 +72,10 @@ class APIData: MainViewController {
                 //CRIMESTATS SHEDS THE ARRAY by using [0] AND BECOMES A DICTIONARY
                 crimeStats = jsonData![0]
                 
-                crimeDescription = crimeStats["crimedescription"]!
-                coordinate = crimeStats["location_1"]!
-                crimeDate = crimeStats["datetime"]!
+                
+                crimeDescription = crimeStats.
+                coordinate = crimeStats["location_1"]
+                crimeStats = crimeStats["datetime"]!
                 //crimeZip = crimeStats["zip"]!
                 crimeState = crimeStats["state"]!
                 crimeCity = crimeStats["city"]!
@@ -86,7 +93,7 @@ class APIData: MainViewController {
 //                print(crimeCity)
 //                print(crimeState)
 //                //print(crimeZip)
-              print(crimeStats)
+                print(jsonData![1])
                 //print(crimeStats["location_1"])
               
                 
