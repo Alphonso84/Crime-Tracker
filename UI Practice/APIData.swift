@@ -4,6 +4,7 @@
 
 
 import Foundation
+ var formattedUrlString = ""
 
 typealias CrimeReport = [PurpleCrimeReport]
 
@@ -39,8 +40,26 @@ extension Array where Element == PurpleCrimeReport {
         return try? decoder.decode([PurpleCrimeReport].self, from: data)
     }
     
-    static func from(url urlString: String) -> [PurpleCrimeReport]? {
-        guard let url = URL(string: urlString) else { return nil }
+    func buildUrl(constructedUrl: String) -> URL{
+        let token = "BEyC2oP4D1T8CaKegklvf4ExN"
+        let baseURL = "https://data.acgov.org/resource/js8f-yfqf.json"
+        //URL FILTER LIMITS RESULTS RETURNED
+        let numberOfResults = "&$limit=5"
+        //URL FILTER ORDERS BY MOST RECENT
+        let sortOrder = "&$order=datetime DESC"
+        //URL FILTER ORDERS RESULTS BY CITY(GLOBAL VARIABLE)
+        let userCity = "&city=\(city)"
+        // print(MainViewController.CityString().city)
+        
+        let urlString = "\(baseURL)\(token)\(userCity)\(sortOrder)\(numberOfResults)"
+            formattedUrlString = urlString.replacingOccurrences(of: " ", with: "%20")
+        let url = URL(string: formattedUrlString)
+        return url!
+        
+    }
+    
+    static func from(url urlString: String?) -> [PurpleCrimeReport]? {
+        guard let url = URL(string: formattedUrlString) else { return nil }
         guard let data = try? Data(contentsOf: url) else { return nil }
         
         return from(data: data)
@@ -56,6 +75,7 @@ extension Array where Element == PurpleCrimeReport {
     
     var jsonString: String? {
         guard let data = self.jsonData else { return nil }
+        print(data)
         return String(data: data, encoding: .utf8)
     }
 }
