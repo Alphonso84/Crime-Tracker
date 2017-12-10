@@ -49,7 +49,7 @@ extension Array where Element == PurpleCrimeReport {
     
     var jsonData: Data? {
         let encoder = JSONEncoder()
-         let crimeReport = CrimeReport.from(json: jsonString!)!
+        let crimeReport = CrimeReport.from(json: jsonString!)!
         print(crimeReport)
         return try? encoder.encode(self)
     }
