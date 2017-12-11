@@ -12,22 +12,35 @@ import UIKit
 
 //EMPTY STRING FOR URL
 var urlString = ""
-//EMPTY STRUCT FOR JSON DATA
+//STRUCT MODEL FOR JSON DATA
 
 
-struct CrimeReport {
-var crimeDescription = String() as Any
-var crimeDate = Date() as Any
-var crimeZip = Float() as Any
-var crimeState = String() as Any
-var crimeCity = String() as Any
-var crimeBlock = String() as Any
-var keys = String()
-var values = String() as Any
+class CrimeReport {
+    var crimeDescription = String() as Any
+    var crimeDate = String() as Any
+    var crimeZip = String() as Any
+    var crimeState = String() as Any
+    var crimeCity = String() as Any
+    var crimeBlock = String() as Any
+let keys = String()
+let values = String() as Any
+    
+    init(crimeDescription: String, crimeDate: String, crimeZip: String, crimeState: String, crimeCity: String, crimeBlock: String) {
+        self.crimeDescription = crimeDescription
+        self.crimeDate = crimeDate
+        self.crimeCity = crimeCity
+        self.crimeBlock = crimeBlock
+        self.crimeZip = crimeZip
+        self.crimeState = crimeState
+        
+        
+    }
 }
-var CrimeArray = [CrimeReport].self
 
-var crimeStats = [String:Any]()
+//ARRAY OF STRUCT CRIMEREPORT
+var CrimeArray = [CrimeReport].self
+//DICTIONARY FROM JSON DATA
+var crimeStats = [String]()
 
 class APIData: MainViewController {
    
@@ -39,7 +52,7 @@ class APIData: MainViewController {
     func buildUrl(constructedUrl: String) -> URL{
         let baseURL = "https://data.acgov.org/resource/js8f-yfqf.json"
         //URL FILTER LIMITS RESULTS RETURNED
-        let numberOfResults = "&$limit=20"
+        let numberOfResults = "&$limit=5"
         //URL FILTER ORDERS BY MOST RECENT
         let sortOrder = "&$order=datetime DESC"
         //URL FILTER ORDERS RESULTS BY CITY(GLOBAL VARIABLE)
@@ -68,23 +81,29 @@ class APIData: MainViewController {
             guard let unwrappedData = data else {return}
             do {
                 //JSONDATA IS AN ARRAY OF DICTIONARIES
-                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as? [[String:Any]]
+                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as? [String]
                 //CRIMESTATS SHEDS THE ARRAY by using [0] AND BECOMES A DICTIONARY
-                crimeStats = jsonData![0]
+                crimeStats = jsonData!
+                
+                 let crimeReport = CrimeReport(crimeDescription: "crimedescription", crimeDate: "datetime", crimeZip: "zip", crimeState:"state", crimeCity: "city", crimeBlock: "block")
+                
+                var firstReport = crimeStats[0] as! CrimeReport
+                var secondReport = crimeStats[1] as! CrimeReport
+                var thirdReport = crimeStats[2] as! CrimeReport
+                var fourthReport = crimeStats[3] as! CrimeReport
+                var fifthReport = crimeStats[4] as! CrimeReport
+                var sixthReport = crimeStats[5] as! CrimeReport
                 
                 
-                crimeDescription = crimeStats.
-                coordinate = crimeStats["location_1"]
-                crimeStats = crimeStats["datetime"]!
-                //crimeZip = crimeStats["zip"]!
-                crimeState = crimeStats["state"]!
-                crimeCity = crimeStats["city"]!
-                crimeBlock = crimeStats["block"]!
-                for (key , value) in crimeStats {
-                    values = (value)
-                    keys = (key)
-                    
-                }
+                
+            
+            
+               
+                
+               
+                
+                
+               
                 
                 
                // print(values)
@@ -93,7 +112,7 @@ class APIData: MainViewController {
 //                print(crimeCity)
 //                print(crimeState)
 //                //print(crimeZip)
-                print(jsonData![1])
+                print(thirdReport)
                 //print(crimeStats["location_1"])
               
                 
