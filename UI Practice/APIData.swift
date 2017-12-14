@@ -16,14 +16,14 @@ var urlString = ""
 
 
 class CrimeReport {
-    var crimeDescription = String() as Any
-    var crimeDate = String() as Any
-    var crimeZip = String() as Any
-    var crimeState = String() as Any
-    var crimeCity = String() as Any
-    var crimeBlock = String() as Any
+    var crimeDescription = String()
+    var crimeDate = String()
+    var crimeZip = String()
+    var crimeState = String()
+    var crimeCity = String()
+    var crimeBlock = String()
 let keys = String()
-let values = String() as Any
+let values = String()
     
     init(crimeDescription: String, crimeDate: String, crimeZip: String, crimeState: String, crimeCity: String, crimeBlock: String) {
         self.crimeDescription = crimeDescription
@@ -38,9 +38,10 @@ let values = String() as Any
 }
 
 //ARRAY OF STRUCT CRIMEREPORT
-var CrimeArray = [CrimeReport].self
+var CrimeArray = [[String:Any]]()
+var CArray = [CrimeReport( crimeDescription: "crimedescription", crimeDate: "datetime", crimeZip: "zip", crimeState: "state", crimeCity: "city", crimeBlock: "block")]
 //DICTIONARY FROM JSON DATA
-var crimeStats = [String]()
+var crimeStats = [Any]()
 
 class APIData: MainViewController {
    
@@ -81,39 +82,24 @@ class APIData: MainViewController {
             guard let unwrappedData = data else {return}
             do {
                 //JSONDATA IS AN ARRAY OF DICTIONARIES
-                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as? [String]
+                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as? [[String:Any]]
                 //CRIMESTATS SHEDS THE ARRAY by using [0] AND BECOMES A DICTIONARY
                 crimeStats = jsonData!
+            
                 
                  let crimeReport = CrimeReport(crimeDescription: "crimedescription", crimeDate: "datetime", crimeZip: "zip", crimeState:"state", crimeCity: "city", crimeBlock: "block")
-                
-                var firstReport = crimeStats[0] as! CrimeReport
-                var secondReport = crimeStats[1] as! CrimeReport
-                var thirdReport = crimeStats[2] as! CrimeReport
-                var fourthReport = crimeStats[3] as! CrimeReport
-                var fifthReport = crimeStats[4] as! CrimeReport
-                var sixthReport = crimeStats[5] as! CrimeReport
-                
+                CrimeArray.append(crimeStats[0] as! [String : Any])
+                CrimeArray.append(crimeStats[1] as! [String : Any])
+                CrimeArray.append(crimeStats[2] as! [String : Any])
+                CrimeArray.append(crimeStats[3] as! [String : Any])
+         
+               var CrimeArrayString = CrimeArray.description
                 
                 
-            
-            
-               
-                
-               
                 
                 
-               
-                
-                
-               // print(values)
-                // print(crimeDate)
-//                print(crimeBlock)
-//                print(crimeCity)
-//                print(crimeState)
-//                //print(crimeZip)
-                print(thirdReport)
-                //print(crimeStats["location_1"])
+              
+                print(CrimeArrayString)
               
                 
                 //Trying to iterate through dictionary to pull out keys and values
