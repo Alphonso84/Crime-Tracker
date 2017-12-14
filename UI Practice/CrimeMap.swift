@@ -25,12 +25,14 @@ class CrimeMap: UIViewController {
     
     func LocalSearch() {
         let request = MKLocalSearchRequest()
-        request.naturalLanguageQuery = address
+        request.naturalLanguageQuery = address1
+        print(address1)
         request.region = mapView.region
         let search = MKLocalSearch(request: request)
         search.start { response, error in
             if response == nil {
-                print("Error")
+                
+                print("Error here")
             } else {
                 //Remove Annotations
                 let annotations = self.mapView.annotations
@@ -42,8 +44,8 @@ class CrimeMap: UIViewController {
                 StringResponse = String(describing: response)
                 //Create Annotations
                 let annotation = MKPointAnnotation()
-              //  annotation.title = String(describing: CrimeReport.init(crimeDescription: "crimedescription"))
-               // annotation.subtitle = String(describing: crimeDate)
+               annotation.title = crimeDescription1
+               annotation.subtitle = date1
                 annotation.coordinate = CLLocationCoordinate2DMake(latitude, longitude)
                 self.mapView.addAnnotation(annotation)
                 
