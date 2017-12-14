@@ -12,7 +12,7 @@ class CrimeList: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
-    let datasource = crimeStats
+    let datasource = CrimeArray
     
     
     
@@ -35,7 +35,7 @@ class CrimeList: UIViewController {
 
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return crimeStats.count
+        return datasource.count
     }
 
     
