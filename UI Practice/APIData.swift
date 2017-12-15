@@ -30,6 +30,7 @@ var block3 = String()
 var block4 = String()
 var block5 = String()
 
+
 var crimeDescription1 = String()
 var crimeDescription2 = String()
 var crimeDescription3 = String()

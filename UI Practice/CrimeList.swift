@@ -43,10 +43,13 @@ tableView.reloadData()
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        let crimeDescription = CrimeArray[indexPath.row]["crimedescription"] as! String
+        let date = CrimeArray[indexPath.row]["datetime"] as! String
         // Configure the cell...
         
-        cell.textLabel?.text = String(describing: CrimeArray[indexPath.row]["crimedescription"])
-        cell.detailTextLabel?.text = String(describing: CrimeArray[indexPath.row]["datetime"])
+        cell.textLabel?.text = crimeDescription
+        cell.detailTextLabel?.text = date
         
         
 
