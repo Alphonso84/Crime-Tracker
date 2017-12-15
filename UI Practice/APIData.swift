@@ -18,6 +18,12 @@ var urlString = ""
 //ARRAY OF DICTIONARIES
 var CrimeArray = [[String:Any]]()
 
+var block1 = String()
+var block2 = String()
+var block3 = String()
+var block4 = String()
+var block5 = String()
+
 var crimeDescription1 = String()
 var crimeDescription2 = String()
 var crimeDescription3 = String()
@@ -35,6 +41,12 @@ var date2 = String()
 var date3 = String()
 var date4 = String()
 var date5 = String()
+
+var state1 = String()
+var state2 = String()
+var state3 = String()
+var state4 = String()
+var state5 = String()
 
 
 class APIData: MainViewController {
@@ -55,6 +67,7 @@ class APIData: MainViewController {
        // print(MainViewController.CityString().city)
         
         urlString = "\(baseURL)\(token)\(userCity)\(sortOrder)\(numberOfResults)"
+       
         let FormattedUrlString = urlString.replacingOccurrences(of: " ", with: "%20")
         let url = URL(string: FormattedUrlString)
         return url!
@@ -87,43 +100,41 @@ class APIData: MainViewController {
                 var crimeDictionary4 = CrimeArray[3]
                 var crimeDictionary5 = CrimeArray[4]
                 
-                 let block1 = crimeDictionary1["block"]
-                 let block2 = crimeDictionary2["block"]
-                 let block3 = crimeDictionary3["block"]
-                 let block4 = crimeDictionary4["block"]
-                 let block5 = crimeDictionary5["block"]
+                 block1 = crimeDictionary1["block"] as! String
+                 block2 = crimeDictionary2["block"] as! String
+                 block3 = crimeDictionary3["block"] as! String
+                 block4 = crimeDictionary4["block"] as! String
+                 block5 = crimeDictionary5["block"] as! String
                 
-                let crimeDescription1 = crimeDictionary1["crimedescription"]
-                let crimeDescription2 = crimeDictionary2["crimedescription"]
-                let crimeDescription3 = crimeDictionary3["crimedescription"]
-                let crimeDescription4 = crimeDictionary4["crimedescription"]
-                let crimeDescription5 = crimeDictionary5["crimedescription"]
+                crimeDescription1 = crimeDictionary1["crimedescription"] as! String
+                crimeDescription2 = crimeDictionary2["crimedescription"] as! String
+                crimeDescription3 = crimeDictionary3["crimedescription"] as! String
+                crimeDescription4 = crimeDictionary4["crimedescription"] as! String
+                crimeDescription5 = crimeDictionary5["crimedescription"] as! String
                 
-                let date1 = crimeDictionary1["datetime"]
-                let date2 = crimeDictionary2["datetime"]
-                let date3 = crimeDictionary3["datetime"]
-                let date4 = crimeDictionary4["datetime"]
-                let date5 = crimeDictionary5["datetime"]
+                date1 = crimeDictionary1["datetime"] as! String
+                date2 = crimeDictionary2["datetime"] as! String
+                date3 = crimeDictionary3["datetime"] as! String
+                date4 = crimeDictionary4["datetime"] as! String
+                date5 = crimeDictionary5["datetime"] as! String
                 
-                 let state1 = crimeDictionary1["state"]
-                 let state2 = crimeDictionary2["state"]
-                 let state3 = crimeDictionary3["state"]
-                 let state4 = crimeDictionary4["state"]
-                 let state5 = crimeDictionary5["state"]
-                
-                
-                let address1 = (String(describing: block1 ),"\(city)")
-                let address2 = (String(describing: block2 ),"\(city)")
-                let address3 = "\(block3 )\(city)"
-                let address4 = "\(block4 )\(city)"
-                let address5 = "\(block5 )\(city)"
+                 state1 = crimeDictionary1["state"] as! String
+                 state2 = crimeDictionary2["state"] as! String
+                 state3 = crimeDictionary3["state"] as! String
+                 state4 = crimeDictionary4["state"] as! String
+                 state5 = crimeDictionary5["state"] as! String
                 
                 
-                // ACESSING SPECIFIC VALUES BY USING THE KEY NAME OF DESIRED VALUE
+                address1 = "\(block1)\(" ")\(city)"
+                address2 = "\(block2 )\(" ")\(city)"
+                address3 = "\(block3 )\(" ")\(city)"
+                address4 = "\(block4 )\(" ")\(city)"
+                address5 = "\(block5 )\(" ")\(city)"
+                
+                
+                
                 print(address1)
                 
-                
-                //Trying to iterate through dictionary to pull out keys and values
                
                 } catch {
                 print(error)

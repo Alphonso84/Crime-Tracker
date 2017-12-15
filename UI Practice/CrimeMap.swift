@@ -42,6 +42,8 @@ class CrimeMap: UIViewController {
                 let latitude = response!.boundingRegion.center.latitude
                 let longitude = response!.boundingRegion.center.longitude
                 StringResponse = String(describing: response)
+                
+                
                 //Create Annotations
                 let annotation = MKPointAnnotation()
                annotation.title = crimeDescription1
@@ -61,7 +63,7 @@ class CrimeMap: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(address1)
         LocalSearch()
        
        
