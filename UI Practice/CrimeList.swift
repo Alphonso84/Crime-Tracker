@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CrimeList: UIViewController {
+class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -20,7 +20,9 @@ class CrimeList: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.delegate = self
+        tableView.dataSource = self
+tableView.reloadData()
        
     }
 
@@ -41,8 +43,12 @@ class CrimeList: UIViewController {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-         cell.detailTextLabel?.text = city
         // Configure the cell...
+        
+        cell.textLabel?.text = String(describing: CrimeArray[indexPath.row]["crimedescription"])
+        cell.detailTextLabel?.text = String(describing: CrimeArray[indexPath.row]["datetime"])
+        
+        
 
         return cell
     }

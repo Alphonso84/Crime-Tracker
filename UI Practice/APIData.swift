@@ -18,6 +18,12 @@ var urlString = ""
 //ARRAY OF DICTIONARIES
 var CrimeArray = [[String:Any]]()
 
+var crimeDictionary1 = [String:Any]()
+var crimeDictionary2 = [String:Any]()
+var crimeDictionary3 = [String:Any]()
+var crimeDictionary4 = [String:Any]()
+var crimeDictionary5 = [String:Any]()
+
 var block1 = String()
 var block2 = String()
 var block3 = String()
@@ -59,7 +65,7 @@ class APIData: MainViewController {
     func buildUrl(constructedUrl: String) -> URL{
         let baseURL = "https://data.acgov.org/resource/js8f-yfqf.json"
         //URL FILTER LIMITS RESULTS RETURNED
-        let numberOfResults = "&$limit=5"
+        let numberOfResults = "&$limit=20"
         //URL FILTER ORDERS BY MOST RECENT
         let sortOrder = "&$order=datetime DESC"
         //URL FILTER ORDERS RESULTS BY CITY(GLOBAL VARIABLE)
@@ -93,18 +99,19 @@ class APIData: MainViewController {
                   //JSONDATA IS AN ARRAY OF DICTIONARIES
                 CrimeArray = jsonData!
                 
-                  // ACESSING THE DICTIONARIES IN THE ARRAY(The first dictionary is the most recent by default)
-                var crimeDictionary1 = CrimeArray[0]
-                var crimeDictionary2 = CrimeArray[1]
-                var crimeDictionary3 = CrimeArray[2]
-                var crimeDictionary4 = CrimeArray[3]
-                var crimeDictionary5 = CrimeArray[4]
+                  // ACESSING THE ARRAY AND CREATING DICTIONARY INSTANCES (The first dictionary is the most recent by default)
+               crimeDictionary1 = CrimeArray[0]
+               crimeDictionary2 = CrimeArray[1]
+               crimeDictionary3 = CrimeArray[2]
+               crimeDictionary4 = CrimeArray[3]
+               crimeDictionary5 = CrimeArray[4]
                 
-                 block1 = crimeDictionary1["block"] as! String
-                 block2 = crimeDictionary2["block"] as! String
-                 block3 = crimeDictionary3["block"] as! String
-                 block4 = crimeDictionary4["block"] as! String
-                 block5 = crimeDictionary5["block"] as! String
+                //CREATING STRING INSTANCES OF DICTIONARY VALUES
+                block1 = crimeDictionary1["block"] as! String
+                block2 = crimeDictionary2["block"] as! String
+                block3 = crimeDictionary3["block"] as! String
+                block4 = crimeDictionary4["block"] as! String
+                block5 = crimeDictionary5["block"] as! String
                 
                 crimeDescription1 = crimeDictionary1["crimedescription"] as! String
                 crimeDescription2 = crimeDictionary2["crimedescription"] as! String
@@ -118,11 +125,11 @@ class APIData: MainViewController {
                 date4 = crimeDictionary4["datetime"] as! String
                 date5 = crimeDictionary5["datetime"] as! String
                 
-                 state1 = crimeDictionary1["state"] as! String
-                 state2 = crimeDictionary2["state"] as! String
-                 state3 = crimeDictionary3["state"] as! String
-                 state4 = crimeDictionary4["state"] as! String
-                 state5 = crimeDictionary5["state"] as! String
+                state1 = crimeDictionary1["state"] as! String
+                state2 = crimeDictionary2["state"] as! String
+                state3 = crimeDictionary3["state"] as! String
+                state4 = crimeDictionary4["state"] as! String
+                state5 = crimeDictionary5["state"] as! String
                 
                 
                 address1 = "\(block1)\(" ")\(city)"
