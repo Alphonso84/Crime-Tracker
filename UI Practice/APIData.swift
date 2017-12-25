@@ -52,7 +52,7 @@ class APIData: MainViewController {
     
     //URL SESSION PARSING JSON DATA
     func parseJSON() {
-        let unwrappedURL = buildUrl(constructedUrl: urlString)
+        let unwrappedURL = self.buildUrl(constructedUrl: urlString)
         //URL SESSION
         let session = URLSession.shared
         let task = session.dataTask(with: (unwrappedURL)) { (data, response, error) in
@@ -69,7 +69,7 @@ class APIData: MainViewController {
                 CrimeData = jsonData
                 
                 //PRINTING OUT CRIMEDATA ARRAY OF TYPE CRIMEREPORT
-                print(CrimeData[1])
+                print(CrimeData)
   
                 } catch {
                 print(error)

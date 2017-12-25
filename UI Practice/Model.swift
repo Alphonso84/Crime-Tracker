@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MapKit
 
 struct CrimeReport: Codable {
     var block: String

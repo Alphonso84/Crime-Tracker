@@ -16,13 +16,12 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-tableView.reloadData()
+        tableView.reloadData()
        
     }
 
-   
 
-    // MARK: - Table view data source
+    // MARK: - TABLEVIEW CONFIG
 
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -43,6 +42,10 @@ tableView.reloadData()
     
         return cell
     }
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        <#code#>
+//    }
     
 
 }
