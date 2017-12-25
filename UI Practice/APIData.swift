@@ -31,7 +31,7 @@ class APIData: MainViewController {
         let numberOfResults = "&$limit=30"
         //URL FILTER ORDERS BY MOST RECENT
         let sortOrder = "&$order=datetime DESC"
-        //URL FILTER ORDERS RESULTS BY CITY(GLOBAL VARIABLE)
+        //URL FILTER ORDERS RESULTS BY CITY(GLOBAL VARIABLE SET IN MAINVIEWCONTROLLER)
         let userCity = "&city=\(city)"
        // print(MainViewController.CityString().city)
         
@@ -39,7 +39,7 @@ class APIData: MainViewController {
        
         let FormattedUrlString = urlString.replacingOccurrences(of: " ", with: "%20")
         let url = URL(string: FormattedUrlString)
-        //print(urlString)
+    
         return url!
         
     }
@@ -68,10 +68,8 @@ class APIData: MainViewController {
                 CrimeData = jsonData
                 
                 //PRINTING OUT CRIMEDATA ARRAY OF TYPE CRIMEREPORT
-               print(CrimeData[0].location1.coordinates)
+                print(CrimeData)
                 
-                
-  
                 } catch {
                 print(error)
                 }

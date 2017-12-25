@@ -11,9 +11,13 @@ import CoreLocation
 import MapKit
 
 class MenuViewController: UIViewController {
-    lazy var geocoder = CLGeocoder()
+    
+    
+    
     @IBOutlet weak var cityLabel: UILabel!
     
+    
+    //Get Map Button
     @IBAction func getCrimeMap(_ sender: Any) {
        
     }
@@ -22,10 +26,10 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-cityLabel.text = city
+        cityLabel.text = city
         
         
-        // Do any additional setup after loading the view.
+        
     }
 
 

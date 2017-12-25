@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import MapKit
 
+//MODEL BASED ON RETURNED JSON DATA
 struct CrimeReport: Codable {
     var block: String
     var crimeDescription: String
