@@ -15,55 +15,18 @@ var urlString = ""
 
 
 
-//ARRAY OF DICTIONARIES
-var CrimeArray = [[String:Any]]()
-
-var crimeDictionary1 = [String:Any]()
-var crimeDictionary2 = [String:Any]()
-var crimeDictionary3 = [String:Any]()
-var crimeDictionary4 = [String:Any]()
-var crimeDictionary5 = [String:Any]()
-
-var block1 = String()
-var block2 = String()
-var block3 = String()
-var block4 = String()
-var block5 = String()
-
-
-var crimeDescription1 = String()
-var crimeDescription2 = String()
-var crimeDescription3 = String()
-var crimeDescription4 = String()
-var crimeDescription5 = String()
-
-var address1 = String()
-var address2 = String()
-var address3 = String()
-var address4 = String()
-var address5 = String()
-
-var date1 = String()
-var date2 = String()
-var date3 = String()
-var date4 = String()
-var date5 = String()
-
-var state1 = String()
-var state2 = String()
-var state3 = String()
-var state4 = String()
-var state5 = String()
+//ARRAY OF MODEL TYPE CRIMEREPORT
+var CrimeData = [CrimeReport]()
 
 
 class APIData: MainViewController {
    
-    var info = "Testing"
+    //var info = "Testing"
     //API TOKEN
     private let token = "?$$app_token=BEyC2oP4D1T8CaKegklvf4ExN"
     
     //METHOD FOR BUILDING API URL
-    func buildUrl(constructedUrl: String) -> URL{
+   public func buildUrl(constructedUrl: String) -> URL{
         let baseURL = "https://data.acgov.org/resource/js8f-yfqf.json"
         //URL FILTER LIMITS RESULTS RETURNED
         let numberOfResults = "&$limit=20"
@@ -77,6 +40,7 @@ class APIData: MainViewController {
        
         let FormattedUrlString = urlString.replacingOccurrences(of: " ", with: "%20")
         let url = URL(string: FormattedUrlString)
+        print(urlString)
         return url!
         
     }
@@ -96,54 +60,17 @@ class APIData: MainViewController {
             guard let unwrappedData = data else {return}
             do {
               
-                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as? [[String:Any]]
-                  //JSONDATA IS AN ARRAY OF DICTIONARIES
-                CrimeArray = jsonData!
+                let jsonDecoder = JSONDecoder()
+                let jsonData = try jsonDecoder.decode(Array<CrimeReport>.self, from: data!)
+                //USE BELOW IF DECODER DOESNT WORK
+                //JSONSerialization.jsonObject(with: unwrappedData, options: []) as? [[String:Any]]
                 
-                  // ACESSING THE ARRAY AND CREATING DICTIONARY INSTANCES (The first dictionary is the most recent by default)
-               crimeDictionary1 = CrimeArray[0]
-               crimeDictionary2 = CrimeArray[1]
-               crimeDictionary3 = CrimeArray[2]
-               crimeDictionary4 = CrimeArray[3]
-               crimeDictionary5 = CrimeArray[4]
+                //CRIMEDATA IS AN ARRAY OF STRUCT TYPE CRIMEREPORT
+                CrimeData = jsonData
                 
-                //CREATING STRING INSTANCES OF DICTIONARY VALUES
-                block1 = crimeDictionary1["block"] as! String
-                block2 = crimeDictionary2["block"] as! String
-                block3 = crimeDictionary3["block"] as! String
-                block4 = crimeDictionary4["block"] as! String
-                block5 = crimeDictionary5["block"] as! String
-                
-                crimeDescription1 = crimeDictionary1["crimedescription"] as! String
-                crimeDescription2 = crimeDictionary2["crimedescription"] as! String
-                crimeDescription3 = crimeDictionary3["crimedescription"] as! String
-                crimeDescription4 = crimeDictionary4["crimedescription"] as! String
-                crimeDescription5 = crimeDictionary5["crimedescription"] as! String
-                
-                date1 = crimeDictionary1["datetime"] as! String
-                date2 = crimeDictionary2["datetime"] as! String
-                date3 = crimeDictionary3["datetime"] as! String
-                date4 = crimeDictionary4["datetime"] as! String
-                date5 = crimeDictionary5["datetime"] as! String
-                
-                state1 = crimeDictionary1["state"] as! String
-                state2 = crimeDictionary2["state"] as! String
-                state3 = crimeDictionary3["state"] as! String
-                state4 = crimeDictionary4["state"] as! String
-                state5 = crimeDictionary5["state"] as! String
-                
-                
-                address1 = "\(block1)\(" ")\(city)"
-                address2 = "\(block2 )\(" ")\(city)"
-                address3 = "\(block3 )\(" ")\(city)"
-                address4 = "\(block4 )\(" ")\(city)"
-                address5 = "\(block5 )\(" ")\(city)"
-                
-                
-                
-                print(address1)
-                
-               
+                //PRINTING OUT CRIMEDATA ARRAY OF TYPE CRIMEREPORT
+                print(CrimeData[1])
+  
                 } catch {
                 print(error)
                 }

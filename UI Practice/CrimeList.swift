@@ -12,12 +12,6 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     
-    let datasource = CrimeArray
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -37,22 +31,16 @@ tableView.reloadData()
 
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return datasource.count
+        return CrimeData.count
     }
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
-        let crimeDescription = CrimeArray[indexPath.row]["crimedescription"] as! String
-        let date = CrimeArray[indexPath.row]["datetime"] as! String
         // Configure the cell...
-        
-        cell.textLabel?.text = crimeDescription
-        cell.detailTextLabel?.text = date
-        
-        
-
+        cell.textLabel?.text = CrimeData[indexPath.row].crimeDescription
+        cell.detailTextLabel?.text = CrimeData[indexPath.row].date
+    
         return cell
     }
     
