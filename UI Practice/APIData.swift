@@ -40,7 +40,7 @@ class APIData: MainViewController {
        
         let FormattedUrlString = urlString.replacingOccurrences(of: " ", with: "%20")
         let url = URL(string: FormattedUrlString)
-        print(urlString)
+        //print(urlString)
         return url!
         
     }
@@ -69,7 +69,7 @@ class APIData: MainViewController {
                 CrimeData = jsonData
                 
                 //PRINTING OUT CRIMEDATA ARRAY OF TYPE CRIMEREPORT
-                print(CrimeData)
+                //print(CrimeData)
   
                 } catch {
                 print(error)

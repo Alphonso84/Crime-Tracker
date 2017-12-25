@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 import MapKit
-var address = String()
+
 class MenuViewController: UIViewController {
     lazy var geocoder = CLGeocoder()
     @IBOutlet weak var cityLabel: UILabel!
