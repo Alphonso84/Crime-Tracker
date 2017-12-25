@@ -69,7 +69,7 @@ class APIData: MainViewController {
                 CrimeData = jsonData
                 
                 //PRINTING OUT CRIMEDATA ARRAY OF TYPE CRIMEREPORT
-                //print(CrimeData)
+                print(CrimeData)
   
                 } catch {
                 print(error)

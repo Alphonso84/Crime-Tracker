@@ -14,6 +14,7 @@ struct CrimeReport: Codable {
     var block: String
     var crimeDescription: String
     var city: String
+    var location1 : Location1
     var date: String
     var state: String
     
@@ -23,5 +24,10 @@ struct CrimeReport: Codable {
         case city = "city"
         case date = "datetime"
         case state = "state"
+        case location1 = "location_1"
     }
+}
+struct Location1: Codable {
+    let type: String
+    let coordinates: [Double]
 }

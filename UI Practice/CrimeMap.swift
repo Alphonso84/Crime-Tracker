@@ -27,7 +27,7 @@ class CrimeMap: UIViewController {
         address = "\(CrimeData[0].block ) \(CrimeData[0].city ) \(CrimeData[0].state)"
         let request = MKLocalSearchRequest()
         request.naturalLanguageQuery = address
-        print(address)
+        //print(address)
         request.region = mapView.region
         let search = MKLocalSearch(request: request)
         search.start { response, error in
@@ -81,7 +81,7 @@ class CrimeMap: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(address)
+        //print(address)
         LocalSearch()
         
        
