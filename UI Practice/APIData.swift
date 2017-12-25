@@ -86,7 +86,7 @@ class APIData: MainViewController {
         
     }
     
-    
+    //URL SESSION PARSING JSON DATA
     func parseJSON() {
         let unwrappedURL = buildUrl(constructedUrl: urlString)
         //URL SESSION
