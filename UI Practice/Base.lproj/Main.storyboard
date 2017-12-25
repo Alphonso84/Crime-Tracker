@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -188,6 +189,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kue-Nu-xqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2177" y="86"/>
+        </scene>
+        <!--CrimeInstanceView-->
+        <scene sceneID="nA4-qE-m1H">
+            <objects>
+                <viewController restorationIdentifier="CrimeInstanceView" storyboardIdentifier="CrimeInstanceView" title="CrimeInstanceView" id="cdt-ea-OCv" customClass="CrimeInstanceView" customModule="Crime_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rFJ-26-pV3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crime Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdr-8C-MZ2">
+                                <rect key="frame" x="13" y="152" width="343" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="yre-x5-Vuj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Block, City, State" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1M-Ke-0kw">
+                                <rect key="frame" x="16" y="220" width="340" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="2J7-kX-eyG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSg-ko-TE4">
+                                <rect key="frame" x="112" y="590" width="151" height="75"/>
+                                <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="See On Map"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ql3-2g-RLL">
+                                <rect key="frame" x="67" y="315" width="240" height="182"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ql3-2g-RLL" firstAttribute="centerY" secondItem="rFJ-26-pV3" secondAttribute="centerY" id="0Ay-ed-TrB"/>
+                            <constraint firstItem="hdr-8C-MZ2" firstAttribute="top" secondItem="P5N-W5-Iwb" secondAttribute="top" constant="108" id="49c-C6-JUZ"/>
+                            <constraint firstItem="P5N-W5-Iwb" firstAttribute="trailing" secondItem="hdr-8C-MZ2" secondAttribute="trailing" constant="19" id="5Bo-cm-YZW"/>
+                            <constraint firstItem="Ql3-2g-RLL" firstAttribute="leading" secondItem="P5N-W5-Iwb" secondAttribute="leading" constant="67" id="MYI-BZ-kz9"/>
+                            <constraint firstItem="QSg-ko-TE4" firstAttribute="leading" secondItem="P5N-W5-Iwb" secondAttribute="leading" constant="112" id="NnV-6S-Kso"/>
+                            <constraint firstItem="Ql3-2g-RLL" firstAttribute="centerX" secondItem="QSg-ko-TE4" secondAttribute="centerX" id="O9L-ie-ajx"/>
+                            <constraint firstItem="G1M-Ke-0kw" firstAttribute="top" secondItem="hdr-8C-MZ2" secondAttribute="bottom" constant="8" symbolic="YES" id="SRZ-GR-X4e"/>
+                            <constraint firstItem="Ql3-2g-RLL" firstAttribute="top" secondItem="G1M-Ke-0kw" secondAttribute="bottom" constant="35" id="Ucv-lM-jdU"/>
+                            <constraint firstItem="hdr-8C-MZ2" firstAttribute="leading" secondItem="P5N-W5-Iwb" secondAttribute="leading" constant="13" id="anO-so-nBD"/>
+                            <constraint firstItem="Ql3-2g-RLL" firstAttribute="centerX" secondItem="rFJ-26-pV3" secondAttribute="centerX" id="hU1-ip-nJF"/>
+                            <constraint firstItem="hdr-8C-MZ2" firstAttribute="trailing" secondItem="G1M-Ke-0kw" secondAttribute="trailing" id="lYY-Ju-8gx"/>
+                            <constraint firstItem="QSg-ko-TE4" firstAttribute="top" secondItem="Ql3-2g-RLL" secondAttribute="bottom" constant="93" id="nTf-Bp-rOw"/>
+                            <constraint firstItem="P5N-W5-Iwb" firstAttribute="bottom" secondItem="QSg-ko-TE4" secondAttribute="bottom" constant="113" id="ucF-rH-vr8"/>
+                            <constraint firstItem="G1M-Ke-0kw" firstAttribute="leading" secondItem="rFJ-26-pV3" secondAttribute="leadingMargin" id="zmO-ZQ-8fT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="P5N-W5-Iwb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qXN-dh-yIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3165.5999999999999" y="91.625615763546804"/>
         </scene>
         <!--Crime Map-->
         <scene sceneID="snU-x6-GA3">

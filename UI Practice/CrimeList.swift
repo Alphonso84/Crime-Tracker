@@ -44,9 +44,25 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailViewController = storyboard?.instantiateInitialViewController(withIdentifier: "CrimeInstanceView") as! CrimeInstanceView
+    }
     
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
