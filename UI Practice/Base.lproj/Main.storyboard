@@ -221,6 +221,9 @@
                                 <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="See On Map"/>
+                                <connections>
+                                    <action selector="SeeOnMapButton:" destination="cdt-ea-OCv" eventType="touchUpInside" id="mqA-UW-RTt"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ql3-2g-RLL">
                                 <rect key="frame" x="67" y="315" width="240" height="182"/>
@@ -245,6 +248,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P5N-W5-Iwb"/>
                     </view>
+                    <connections>
+                        <outlet property="blockCityStateLabel" destination="G1M-Ke-0kw" id="0V4-ti-zbJ"/>
+                        <outlet property="crimeDescriptionLabel" destination="hdr-8C-MZ2" id="izM-zP-kRR"/>
+                        <outlet property="crimeInstanceImage" destination="Ql3-2g-RLL" id="uxq-Is-Ily"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qXN-dh-yIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

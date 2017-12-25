@@ -11,10 +11,15 @@ import UIKit
 
 class CrimeInstanceView: UIViewController {
     
-  
+    @IBOutlet weak var crimeDescriptionLabel: UILabel!
+    
+    @IBOutlet weak var blockCityStateLabel: UILabel!
+    
+    @IBOutlet weak var crimeInstanceImage: UIImageView!
     
     
-    
+    @IBAction func SeeOnMapButton(_ sender: Any) {
+    }
     
     
     

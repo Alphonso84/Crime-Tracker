@@ -45,7 +45,9 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailViewController = storyboard?.instantiateInitialViewController(withIdentifier: "CrimeInstanceView") as! CrimeInstanceView
+        let detailViewController = storyboard?.instantiateInitialViewController() as! CrimeInstanceView
+        
+        
     }
     
 
