@@ -20,7 +20,7 @@ var CrimeData = [CrimeReport]()
 
 class APIData: MainViewController {
    
-    //var info = "Testing"
+  
     //API TOKEN
     private let token = "?$$app_token=BEyC2oP4D1T8CaKegklvf4ExN"
     

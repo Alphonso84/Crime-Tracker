@@ -63,8 +63,7 @@
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="getCrimeMap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LX9-HC-B4X"/>
-                                                    <segue destination="u6f-hL-Z8l" kind="show" id="5Ne-Hv-t6M"/>
+                                                    <segue destination="u6f-hL-Z8l" kind="show" id="BUI-sz-wns"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -188,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kue-Nu-xqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1317.5999999999999" y="86.453201970443359"/>
+            <point key="canvasLocation" x="2177" y="86"/>
         </scene>
         <!--Crime Map-->
         <scene sceneID="snU-x6-GA3">

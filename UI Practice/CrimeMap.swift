@@ -11,23 +11,18 @@ import UIKit
 import MapKit
 import CoreGraphics
 
-var address = String()
-var StringResponse = String()
-//var coordinate = String() as Any
+
 
 class CrimeMap: UIViewController {
-    //var CrimeLocationData:[MKMapItem] = []
-    var AnnotationArray: [MKPointAnnotation] = []
     
     @IBOutlet weak var mapView: MKMapView!
     
-
+//MAP ANNOTATION AND LOCATION METHOD
     func LocalSearch() {
         
-        address = "\(CrimeData[0].block ) \(CrimeData[0].city ) \(CrimeData[0].state)"
+        let address = "\(CrimeData[0].block ) \(CrimeData[0].city ) \(CrimeData[0].state)"
         let request =  MKLocalSearchRequest()
         request.naturalLanguageQuery = address
-        //print(address)
         request.region = mapView.region
         let search = MKLocalSearch(request: request)
         search.start { response, error in
@@ -42,7 +37,7 @@ class CrimeMap: UIViewController {
                    //Getting Data
                    let latitude = response!.boundingRegion.center.latitude
                    let longitude = response!.boundingRegion.center.longitude
-                   StringResponse = String(describing: response)
+                   _ = String(describing: response)
                 
                 
                    //Create Annotations
@@ -50,7 +45,6 @@ class CrimeMap: UIViewController {
                    annotation.title = CrimeData[0].crimeDescription
                    annotation.subtitle = CrimeData[0].date
                    annotation.coordinate = CLLocationCoordinate2DMake(latitude, longitude)
-                   self.AnnotationArray.append(annotation)
                    self.mapView.addAnnotation(annotation)
                 
                    //Zooming In On Annotation
@@ -66,7 +60,7 @@ class CrimeMap: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //print(address)
+       
         LocalSearch()
        
     }

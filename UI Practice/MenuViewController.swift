@@ -12,26 +12,15 @@ import MapKit
 
 class MenuViewController: UIViewController {
     
-    
-    
     @IBOutlet weak var cityLabel: UILabel!
-    
-    
-    //Get Map Button
-    @IBAction func getCrimeMap(_ sender: Any) {
-       
-    }
-    
-  
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         cityLabel.text = city
         
-        
-        
     }
-
-
-
+    
+   
+    
 }
