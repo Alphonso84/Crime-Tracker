@@ -18,7 +18,6 @@ var urlString = ""
 //ARRAY OF MODEL TYPE CRIMEREPORT
 var CrimeData = [CrimeReport]()
 
-
 class APIData: MainViewController {
    
     //var info = "Testing"
@@ -29,7 +28,7 @@ class APIData: MainViewController {
    public func buildUrl(constructedUrl: String) -> URL{
         let baseURL = "https://data.acgov.org/resource/js8f-yfqf.json"
         //URL FILTER LIMITS RESULTS RETURNED
-        let numberOfResults = "&$limit=20"
+        let numberOfResults = "&$limit=30"
         //URL FILTER ORDERS BY MOST RECENT
         let sortOrder = "&$order=datetime DESC"
         //URL FILTER ORDERS RESULTS BY CITY(GLOBAL VARIABLE)
@@ -69,7 +68,9 @@ class APIData: MainViewController {
                 CrimeData = jsonData
                 
                 //PRINTING OUT CRIMEDATA ARRAY OF TYPE CRIMEREPORT
-                print(CrimeData)
+               print(CrimeData[0].location1.coordinates)
+                
+                
   
                 } catch {
                 print(error)

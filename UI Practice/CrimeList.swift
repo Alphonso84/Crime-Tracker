@@ -37,6 +37,7 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         // Configure the cell...
+        
         cell.textLabel?.text = CrimeData[indexPath.row].crimeDescription
         cell.detailTextLabel?.text = CrimeData[indexPath.row].date
     

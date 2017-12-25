@@ -13,7 +13,7 @@ import CoreGraphics
 
 var address = String()
 var StringResponse = String()
-var coordinate = String() as Any
+//var coordinate = String() as Any
 
 class CrimeMap: UIViewController {
     //var CrimeLocationData:[MKMapItem] = []
@@ -25,7 +25,7 @@ class CrimeMap: UIViewController {
     func LocalSearch() {
         
         address = "\(CrimeData[0].block ) \(CrimeData[0].city ) \(CrimeData[0].state)"
-        let request = MKLocalSearchRequest()
+        let request =  MKLocalSearchRequest()
         request.naturalLanguageQuery = address
         //print(address)
         request.region = mapView.region
@@ -33,46 +33,31 @@ class CrimeMap: UIViewController {
         search.start { response, error in
             if response == nil {
                 
-                print("Error here")
-            } else {
-                //Remove Annotations
-                let annotations = self.mapView.annotations
-                self.mapView.removeAnnotations(annotations)
+            print("Error here")
+                } else {
+                   //Remove Annotations
+                   let annotations = self.mapView.annotations
+                   self.mapView.removeAnnotations(annotations)
                 
-                //Getting Data
-                let latitude = response!.boundingRegion.center.latitude
-                let longitude = response!.boundingRegion.center.longitude
-                StringResponse = String(describing: response)
-                
-                
-                //Create Annotations
-                let annotation = MKPointAnnotation()
-                annotation.title = CrimeData[0].crimeDescription
-               annotation.subtitle = CrimeData[0].date
-                annotation.coordinate = CLLocationCoordinate2DMake(latitude, longitude)
-                self.AnnotationArray.append(annotation)
-                self.mapView.addAnnotation(annotation)
-                
-                let annotation1 = MKPointAnnotation()
-                annotation1.title = CrimeData[1].crimeDescription
-                annotation1.subtitle = CrimeData[1].date
-                annotation1.coordinate = CLLocationCoordinate2DMake(latitude, longitude)
-                self.AnnotationArray.append(annotation1)
-                self.mapView.addAnnotation(annotation1)
-                
-                let annotation2 = MKPointAnnotation()
-                annotation2.title = CrimeData[2].crimeDescription
-                annotation2.subtitle = CrimeData[2].date
-                annotation2.coordinate = CLLocationCoordinate2DMake(latitude, longitude)
-                self.AnnotationArray.append(annotation2)
-                self.mapView.addAnnotation(annotation2)
+                   //Getting Data
+                   let latitude = response!.boundingRegion.center.latitude
+                   let longitude = response!.boundingRegion.center.longitude
+                   StringResponse = String(describing: response)
                 
                 
-                //Zooming In On Annotation
-                let coordinates:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
-                let span = MKCoordinateSpanMake(0.1, 0.1)
-                let region = MKCoordinateRegionMake(coordinates, span)
-                self.mapView.setRegion(region, animated: true)
+                   //Create Annotations
+                   let annotation = MKPointAnnotation()
+                   annotation.title = CrimeData[0].crimeDescription
+                   annotation.subtitle = CrimeData[0].date
+                   annotation.coordinate = CLLocationCoordinate2DMake(latitude, longitude)
+                   self.AnnotationArray.append(annotation)
+                   self.mapView.addAnnotation(annotation)
+                
+                   //Zooming In On Annotation
+                   let coordinates: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+                   let span = MKCoordinateSpanMake(0.1, 0.1)
+                   let region = MKCoordinateRegionMake(coordinates, span)
+                   self.mapView.setRegion(region, animated: true)
                 
                 
             }
@@ -83,8 +68,6 @@ class CrimeMap: UIViewController {
         super.viewDidLoad()
         //print(address)
         LocalSearch()
-        
-       
        
     }
     
