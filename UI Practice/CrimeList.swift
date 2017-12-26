@@ -8,6 +8,9 @@
 
 import UIKit
 
+var crimeDescription = String()
+
+
 class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
@@ -45,8 +48,17 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailViewController = storyboard?.instantiateInitialViewController() as! CrimeInstanceView
         
+        
+        let NewViewController = storyboard?.instantiateViewController(withIdentifier: "CrimeInstanceView") as! CrimeInstanceView
+        
+        NewViewController.stringForCrimeDescriptionLabel = CrimeData[indexPath.row].crimeDescription
+        print(CrimeData[indexPath.row].crimeDescription)
+        
+        
+        NewViewController.stringForblockCityStateLabel = "\(CrimeData[indexPath.row].block) ,\(CrimeData[indexPath.row].city ) ,\(CrimeData[indexPath.row].state)"
+        
+        navigationController?.show(NewViewController, sender: tableView)
         
     }
     

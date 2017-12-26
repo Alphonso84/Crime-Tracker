@@ -9,20 +9,29 @@
 
 import UIKit
 
-class CrimeInstanceView: UIViewController {
+class CrimeInstanceView: UIViewController, UITableViewDelegate {
     
-    @IBOutlet weak var crimeDescriptionLabel: UILabel!
+    
+    @IBOutlet weak var crimeDescriptionLabel: UILabel! 
     
     @IBOutlet weak var blockCityStateLabel: UILabel!
     
     @IBOutlet weak var crimeInstanceImage: UIImageView!
     
+    var stringForCrimeDescriptionLabel: String!
+    var stringForblockCityStateLabel: String!
+    var photoForCrimeInstanceImage: UIImage!
     
     @IBAction func SeeOnMapButton(_ sender: Any) {
+        
     }
     
-    
-    
-    
-    
+    override func viewDidLoad() {
+        
+        crimeInstanceImage.image = photoForCrimeInstanceImage
+        blockCityStateLabel.text = stringForblockCityStateLabel
+        crimeDescriptionLabel.text = stringForCrimeDescriptionLabel
+        
+    }
+
 }
