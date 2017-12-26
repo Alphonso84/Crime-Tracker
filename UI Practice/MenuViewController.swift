@@ -11,7 +11,7 @@ import CoreLocation
 import MapKit
 
 class MenuViewController: UIViewController {
-    var CityBackGrounds = [#imageLiteral(resourceName: "OAKLAND"),#imageLiteral(resourceName: "FREMONT"),#imageLiteral(resourceName: "HAYWARD"),#imageLiteral(resourceName: "BERKELEY"),#imageLiteral(resourceName: "LIVERMORE"),#imageLiteral(resourceName: "ALAMEDA"),#imageLiteral(resourceName: "UNION CITY")]
+    var CityBackGrounds = [#imageLiteral(resourceName: "OAKLAND"),#imageLiteral(resourceName: "FREMONT"),#imageLiteral(resourceName: "HAYWARD"),#imageLiteral(resourceName: "BERKELEY"),#imageLiteral(resourceName: "LIVERMORE"),#imageLiteral(resourceName: "ALAMEDA"),#imageLiteral(resourceName: "UNION CITY"),#imageLiteral(resourceName: "NEWARK"),#imageLiteral(resourceName: "EMERYVILLE"),#imageLiteral(resourceName: "PIEDMONT")]
     
     @IBOutlet weak var cityBackGroundImage: UIImageView!
     
