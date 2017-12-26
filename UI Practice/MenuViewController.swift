@@ -11,13 +11,18 @@ import CoreLocation
 import MapKit
 
 class MenuViewController: UIViewController {
+    var CityBackGrounds = [#imageLiteral(resourceName: "OAKLAND"),#imageLiteral(resourceName: "FREMONT"),#imageLiteral(resourceName: "HAYWARD"),#imageLiteral(resourceName: "BERKELEY"),#imageLiteral(resourceName: "LIVERMORE"),#imageLiteral(resourceName: "ALAMEDA"),#imageLiteral(resourceName: "UNION CITY")]
+    
+    @IBOutlet weak var cityBackGroundImage: UIImageView!
     
     @IBOutlet weak var cityLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //SETS LABEL AT TOP OF MENUVIEW CONTROLLER
         cityLabel.text = city
+        //SETS MENU VIEW BACKGROUND IMAGE TO IMAGE OF SELECTED CITY
+        cityBackGroundImage.image = UIImage(named: city)
         
     }
     

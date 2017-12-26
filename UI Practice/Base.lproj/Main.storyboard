@@ -18,18 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oakland" translatesAutoresizingMaskIntoConstraints="NO" id="dQy-OF-Ebt">
+                                <rect key="frame" x="0.0" y="144" width="375" height="634"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="r28-Au-pph">
                                 <rect key="frame" x="0.0" y="144" width="375" height="634"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gEW-tv-p7y">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="211.33333333333334"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGT-WM-3VO">
+                                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGT-WM-3VO">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="211.33333333333334"/>
                                                 <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="31"/>
                                                 <state key="normal" title="Report a Crime">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="nJ2-hL-6Qk" kind="show" id="p4A-Uk-drN"/>
@@ -40,12 +43,12 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WJf-9s-lHp">
                                         <rect key="frame" x="0.0" y="211.33333333333331" width="375" height="211.33333333333331"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTm-ga-kM5">
+                                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTm-ga-kM5">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="211.33333333333334"/>
                                                 <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="31"/>
                                                 <state key="normal" title="Crime List">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="BoL-Pm-ZDZ" kind="show" id="eci-aR-cpY"/>
@@ -53,15 +56,15 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="k7z-bk-dph">
+                                    <stackView opaque="NO" contentMode="center" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="k7z-bk-dph">
                                         <rect key="frame" x="0.0" y="422.66666666666657" width="375" height="211.33333333333331"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPf-jT-qpr">
+                                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPf-jT-qpr">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="211.33333333333334"/>
                                                 <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="31"/>
                                                 <state key="normal" title="Crime Map">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="u6f-hL-Z8l" kind="show" id="BUI-sz-wns"/>
@@ -85,11 +88,15 @@
                         <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="r28-Au-pph" firstAttribute="top" secondItem="GK3-RU-2Xf" secondAttribute="bottom" id="3fR-PW-ei0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dQy-OF-Ebt" secondAttribute="bottom" id="4Xe-n5-34V"/>
                             <constraint firstItem="r28-Au-pph" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Kn2-kJ-h94"/>
                             <constraint firstItem="GK3-RU-2Xf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LuB-7X-rf6"/>
                             <constraint firstItem="GK3-RU-2Xf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MA2-MC-yoi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dQy-OF-Ebt" secondAttribute="trailing" id="Udx-qF-GRe"/>
+                            <constraint firstItem="dQy-OF-Ebt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="V7d-ps-vAd"/>
                             <constraint firstAttribute="trailing" secondItem="r28-Au-pph" secondAttribute="trailing" id="ZvJ-85-Qpd"/>
                             <constraint firstItem="r28-Au-pph" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="k7W-Co-B5Y"/>
+                            <constraint firstItem="dQy-OF-Ebt" firstAttribute="top" secondItem="GK3-RU-2Xf" secondAttribute="bottom" id="oQj-32-lbt"/>
                             <constraint firstItem="GK3-RU-2Xf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pOg-l7-o8c"/>
                             <constraint firstItem="r28-Au-pph" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vNY-rW-R8j"/>
                         </constraints>
@@ -97,12 +104,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Alameda County Sheriff Crime Report" id="sEw-kI-msV"/>
                     <connections>
+                        <outlet property="cityBackGroundImage" destination="dQy-OF-Ebt" id="vuu-JQ-wKH"/>
                         <outlet property="cityLabel" destination="GK3-RU-2Xf" id="RjF-GG-LhA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="504.80000000000001" y="80.50974512743629"/>
+            <point key="canvasLocation" x="504.80000000000001" y="79.802955665024641"/>
         </scene>
         <!--Report a Crime-->
         <scene sceneID="9XQ-Vb-5RO">
@@ -394,5 +402,6 @@
     </scenes>
     <resources>
         <image name="Icon" width="666" height="666"/>
+        <image name="Oakland" width="468" height="310"/>
     </resources>
 </document>
