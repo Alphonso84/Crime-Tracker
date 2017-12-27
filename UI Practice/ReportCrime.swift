@@ -27,18 +27,47 @@ class ReportCrime: UIViewController {
     let URLForEmeryville = "http://www.ci.emeryville.ca.us/123/Police"
     let URLForPiedmont = "http://www.ci.piedmont.ca.us/police/"
     
-    var URLForCityArray = [String]()
+    var url: URL!
     
-    func URLforCitySelected() -> String {
-        
-    return ""
-    }
+    
+    
     
     override func viewDidLoad() {
-        URLForCityArray = [URLForOakland,URLForFremont,URLForHayward,URLForBerkeley,URLForSanLeandro,URLForLivermore,URLForPleasanton,URLForAlameda,URLForUnionCity,URLForDublin,URLForNewark,URLForEmeryville,URLForPiedmont]
+       
+        
+       //SWITCH STATEMENT CONTROLS WHICH WEBSITE LOADS DEPENDING ON CITY SELECTED IN PICKER IN (MAINVIEWCONTROLLER)
+        switch city {
+        case "OAKLAND":
+            url = URL(string: URLForOakland)
+        case "FREMONT":
+            url = URL(string: URLForFremont)
+        case "HAYWARD":
+            url = URL(string: URLForHayward)
+        case "BERKELEY":
+            url = URL(string: URLForBerkeley)
+        case "SAN LEANDRO":
+            url = URL(string: URLForSanLeandro)
+        case "LIVERMORE":
+            url = URL(string: URLForLivermore)
+        case "PLEASANTON":
+            url = URL(string: URLForPleasanton)
+        case "ALAMEDA":
+            url = URL(string: URLForAlameda)
+        case "UNION CITY":
+            url = URL(string: URLForUnionCity)
+        case "DUBLIN":
+            url = URL(string: URLForDublin)
+        case "NEWARK":
+            url = URL(string: URLForNewark)
+        case "EMERYVILLE":
+            url = URL(string: URLForEmeryville)
+        case "PIEDMONT":
+            url = URL(string: URLForPiedmont)
+        default:
+            url = URL(string: URLForOakland)
+        }
         
         
-        let url = URL(string:URLForFremont)
-        WebView.load(URLRequest(url: url!))
+        WebView.load(URLRequest(url: url))
     }
 }
