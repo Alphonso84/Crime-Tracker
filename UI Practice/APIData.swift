@@ -8,12 +8,8 @@
 
 import UIKit
 
-
-
 //EMPTY STRING FOR URL
 var urlString = ""
-
-
 
 //ARRAY OF MODEL TYPE CRIMEREPORT
 var CrimeData = [CrimeReport]()
