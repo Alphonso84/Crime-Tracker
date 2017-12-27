@@ -14,7 +14,7 @@ var urlString = ""
 //ARRAY OF MODEL TYPE CRIMEREPORT
 var CrimeData = [CrimeReport]()
 
-var coordinatesArray = [[Double]]()
+var coordinatesArray = [Double]()
 var crimeTitle = [String]()
 class APIData: MainViewController {
    
@@ -66,11 +66,11 @@ class APIData: MainViewController {
                 CrimeData = jsonData
                 
                 //USING MAP METHOD TO TRANSFORM CRIMEDATA ARRAY INTO ARRAY OF COORDINATES FOR USE IN CRIME MAP
-                coordinatesArray = CrimeData.map {$0.location1.coordinates}
+                coordinatesArray = CrimeData.map {$0.location1.coordinates[0]}
                 crimeTitle = CrimeData.map {$0.crimeDescription}
                 //PRINTING OUT ANY DATA COMBINATION HERE
-                print(coordinatesArray[0][0])
-                print(coordinatesArray[0][1])
+                print(coordinatesArray)
+                //print(coordinatesArray[0][1])
                 
                 } catch {
                 print(error)
