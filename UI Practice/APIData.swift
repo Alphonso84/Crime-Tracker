@@ -5,7 +5,7 @@
 //  Created by user on 11/30/17.
 //  Copyright © 2017 Alphonso. All rights reserved.
 //
-
+import MapKit
 import UIKit
 
 //EMPTY STRING FOR URL
@@ -14,6 +14,8 @@ var urlString = ""
 //ARRAY OF MODEL TYPE CRIMEREPORT
 var CrimeData = [CrimeReport]()
 
+var coordinatesArray = [[Double]]()
+var crimeTitle = [String]()
 class APIData: MainViewController {
    
   
@@ -63,8 +65,12 @@ class APIData: MainViewController {
                 //CRIMEDATA IS AN ARRAY OF STRUCT TYPE CRIMEREPORT
                 CrimeData = jsonData
                 
-                //PRINTING OUT CRIMEDATA ARRAY OF TYPE CRIMEREPORT
-                print(CrimeData)
+                //USING MAP METHOD TO TRANSFORM CRIMEDATA ARRAY INTO ARRAY OF COORDINATES FOR USE IN CRIME MAP
+                coordinatesArray = CrimeData.map {$0.location1.coordinates}
+                crimeTitle = CrimeData.map {$0.crimeDescription}
+                //PRINTING OUT ANY DATA COMBINATION HERE
+                print(coordinatesArray[0][0])
+                print(coordinatesArray[0][1])
                 
                 } catch {
                 print(error)

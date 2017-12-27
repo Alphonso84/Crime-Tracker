@@ -32,3 +32,5 @@ struct Location1: Codable {
     let type: String
     let coordinates: [Double]
 }
+
+
