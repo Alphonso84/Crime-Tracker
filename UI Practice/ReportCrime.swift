@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 import WebKit
 
-class ReportCrime: UIViewController {
+class ReportCrime: UIViewController, WKNavigationDelegate {
+    @IBOutlet weak var ActivityView: UIActivityIndicatorView!
     
     @IBOutlet weak var WebView: WKWebView!
     let URLForFremont = "https://www.fremontpolice.org/index.aspx?nid=89"
@@ -29,11 +30,11 @@ class ReportCrime: UIViewController {
     
     var url: URL!
     
-    
-    
+   
     
     override func viewDidLoad() {
-       
+      
+        WebView.navigationDelegate = self
         
        //SWITCH STATEMENT CONTROLS WHICH WEBSITE LOADS DEPENDING ON CITY SELECTED IN PICKER IN (MAINVIEWCONTROLLER)
         switch city {
@@ -66,8 +67,18 @@ class ReportCrime: UIViewController {
         default:
             url = URL(string: URLForOakland)
         }
-        
-        
-        WebView.load(URLRequest(url: url))
+
+       WebView.load(URLRequest(url: url))
+       
+        }
+    
+    func WebView(_ webView: WKWebView,didStart navigation: WKNavigation!) {
+        print("Start Page Loading")
+        ActivityView.startAnimating()
+    }
+    
+    func webView(_ webView: WKWebView,didFinish navigation: WKNavigation!) {
+        print("Page loaded")
+        ActivityView.stopAnimating()
     }
 }

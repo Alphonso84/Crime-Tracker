@@ -69,7 +69,7 @@ class APIData {
                 coordinatesArray = CrimeData.map {$0.location1.coordinates}
                 crimeTitle = CrimeData.map {$0.crimeDescription}
                 //PRINTING OUT ANY DATA COMBINATION HERE
-               // print(CrimeData)
+                // print(CrimeData)
                 print("NEXT")
                 
                 //print(coordinatesArray[0][1])

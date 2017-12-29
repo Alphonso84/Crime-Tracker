@@ -58,7 +58,8 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
         //Assigns value to variable in CrimeIntanceView
         NewViewController.stringForblockCityStateLabel = "\(CrimeData[indexPath.row].block) ,\(CrimeData[indexPath.row].city ) ,\(CrimeData[indexPath.row].state)"
         
-      print( CrimeData[indexPath.row].location1.coordinates)
+        print( CrimeData[indexPath.row].location1.coordinates)
+        //Assigns value to variable in CrimeIntanceView
         NewViewController.stringForDateLabel = CrimeData[indexPath.row].date
         
             
