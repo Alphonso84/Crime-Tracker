@@ -12,7 +12,7 @@ import MapKit
 import CoreGraphics
 
 
-
+var annotations = [MKPointAnnotation]()
 class CrimeMap: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
@@ -20,8 +20,8 @@ class CrimeMap: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-      var annotations = [MKPointAnnotation]()
         
+       // annotations = [MKPointAnnotation(coordinatesArray)]
         
        
     }

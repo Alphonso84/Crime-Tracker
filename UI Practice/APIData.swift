@@ -16,7 +16,7 @@ var CrimeData = [CrimeReport]()
 
 var coordinatesArray = [Double]()
 var crimeTitle = [String]()
-class APIData: MainViewController {
+class APIData {
    
   
     //API TOKEN
@@ -26,7 +26,7 @@ class APIData: MainViewController {
    public func buildUrl(constructedUrl: String) -> URL{
         let baseURL = "https://data.acgov.org/resource/js8f-yfqf.json"
         //URL FILTER LIMITS RESULTS RETURNED
-        let numberOfResults = "&$limit=30"
+        let numberOfResults = "&$limit=50"
         //URL FILTER ORDERS BY MOST RECENT
         let sortOrder = "&$order=datetime DESC"
         //URL FILTER ORDERS RESULTS BY CITY(GLOBAL VARIABLE SET IN MAINVIEWCONTROLLER)
@@ -42,8 +42,8 @@ class APIData: MainViewController {
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  func viewDidLoad() {
+    
         
     }
     

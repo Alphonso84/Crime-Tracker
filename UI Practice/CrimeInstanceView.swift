@@ -11,16 +11,18 @@ import UIKit
 
 class CrimeInstanceView: UIViewController, UITableViewDelegate {
     
-    
+    //Outlets For View
     @IBOutlet weak var crimeDescriptionLabel: UILabel! 
     
     @IBOutlet weak var blockCityStateLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
-    @IBOutlet weak var crimeInstanceImage: UIImageView!
+   
     
+    //Variables that recieve data passed from CrimeList
     var stringForCrimeDescriptionLabel: String!
     var stringForblockCityStateLabel: String!
-    var photoForCrimeInstanceImage: UIImage!
+    var stringForDateLabel: String!
     
     @IBAction func SeeOnMapButton(_ sender: Any) {
         
@@ -28,10 +30,10 @@ class CrimeInstanceView: UIViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         
-        crimeInstanceImage.image = photoForCrimeInstanceImage
+        //Value is Actually Assigned in CrimeList Controller in didSelectRow
         blockCityStateLabel.text = stringForblockCityStateLabel
         crimeDescriptionLabel.text = stringForCrimeDescriptionLabel
-        
+        dateLabel.text? = stringForDateLabel
     }
 
 }
