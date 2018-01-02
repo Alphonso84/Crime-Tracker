@@ -14,6 +14,8 @@ var urlString = ""
 //ARRAY OF MODEL TYPE CRIMEREPORT
 var CrimeData = [CrimeReport]()
 
+
+var LatLong = [Double]()
 var coordinatesArray = [[Double]]()
 var crimeTitle = [String]()
 class APIData {
@@ -67,12 +69,20 @@ class APIData {
                 
                 //USING MAP METHOD TO TRANSFORM CRIMEDATA ARRAY INTO ARRAY OF COORDINATES FOR USE IN CRIME MAP
                 coordinatesArray = CrimeData.map {$0.location1.coordinates}
+           
                 crimeTitle = CrimeData.map {$0.crimeDescription}
                 //PRINTING OUT ANY DATA COMBINATION HERE
                 // print(CrimeData)
-                print("NEXT")
+               
+                //Accessing data model location data
+                for location in CrimeData {
+                    print(location.location1.coordinates)
+                    LatLong = location.location1.coordinates
+                    
+                }
                 
-                //print(coordinatesArray[0][1])
+                print(coordinatesArray)
+                
                 
                 } catch {
                 print(error)

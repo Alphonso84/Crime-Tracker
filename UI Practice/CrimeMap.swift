@@ -20,59 +20,42 @@ class CrimeMap: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        LocalSearch()
        // annotations = [MKPointAnnotation(coordinatesArray)]
         
        
     }
-    
-}
 
-////MAP ANNOTATION AND LOCATION METHOD
-//func LocalSearch() {
-//
-//    let address = "\(CrimeData[0].block ) \(CrimeData[0].city ) \(CrimeData[0].state)"
-//    let request =  MKLocalSearchRequest()
-//    request.naturalLanguageQuery = address
-//    request.region = mapView.region
-//    let search = MKLocalSearch(request: request)
-//    search.start { response, error in
-//        if response == nil {
-//
-//            print("Error here")
-//        } else {
-//            //Remove Annotations
-//            let annotations = [MKPointAnnotation]()
-//            self.mapView.removeAnnotations(annotations)
-//
-//            //Getting Data
-//
-//            let latitude = coordinatesArray[0][1]
-//            let longitude = coordinatesArray[0][0]
-//            //                    response!.boundingRegion.center.longitude
-//            _ = String(describing: response)
-//
-//
-//            //Create Annotations
-//
-//            let annotation = MKPointAnnotation()
-//            annotation.title = CrimeData[0].crimeDescription
-//            annotation.subtitle = CrimeData[0].date
-//            annotation.coordinate = CLLocationCoordinate2DMake(latitude, longitude)
-//            self.mapView.addAnnotation(annotation)
-//
-//
-//
-//            //Zooming In On Annotation
-//            let coordinates: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
-//            let span = MKCoordinateSpanMake(0.1, 0.1)
-//            let region = MKCoordinateRegionMake(coordinates, span)
-//            self.mapView.setRegion(region, animated: true)
-//
-//
-//        }
-//
-//    }
-//}
+
+
+//MAP ANNOTATION AND LOCATION METHOD
+func LocalSearch() {
+
+
+            //Remove Annotations
+            let annotations = [MKAnnotation]()
+
+            let latitude = 37.25666
+            let longitude = -121.38749
+
+            //Create Annotations
+  
+            let annotation = MKPointAnnotation()
+            annotation.title = CrimeData[0].crimeDescription
+            annotation.subtitle = CrimeData[0].date
+    annotation.coordinate = CLLocationCoordinate2DMake(latitude, longitude)
+            self.mapView.addAnnotation(annotation)
+    
+
+            //Zooming In On Annotation
+            let coordinates: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+            let span = MKCoordinateSpanMake(0.1, 0.1)
+            let region = MKCoordinateRegionMake(coordinates, span)
+            self.mapView.setRegion(region, animated: true)
+
+        }
+
+    }
+
 
 
