@@ -49,11 +49,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8901661520080E71002836E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8938BDDA1FB07DBE00A6D4FB /* MainViewController.swift */,
+				89B599811FD13C61009133B9 /* MenuViewController.swift */,
+				896924901FCC2257004A91AC /* CrimeList.swift */,
+				896924921FCC22B8004A91AC /* CrimeMap.swift */,
+				897FD3C61FF19DB4007B6FED /* CrimeInstanceView.swift */,
+				896924941FCC22D2004A91AC /* ReportCrime.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8901661620080ED4002836E7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8938BDD81FB07DBE00A6D4FB /* AppDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8901661720080EF1002836E7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				89B5997F1FD13874009133B9 /* APIData.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		8938BDCC1FB07DBE00A6D4FB = {
 			isa = PBXGroup;
 			children = (
-				8938BDD71FB07DBE00A6D4FB /* UI Practice */,
+				8938BDD71FB07DBE00A6D4FB /* Model */,
+				8901661520080E71002836E7 /* View */,
+				8901661620080ED4002836E7 /* Controller */,
+				8901661720080EF1002836E7 /* Networking */,
 				8938BDD61FB07DBE00A6D4FB /* Products */,
+				8938BDDC1FB07DBE00A6D4FB /* Main.storyboard */,
+				8938BDDF1FB07DBE00A6D4FB /* Assets.xcassets */,
+				8938BDE11FB07DBE00A6D4FB /* LaunchScreen.storyboard */,
+				8938BDE41FB07DBE00A6D4FB /* Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,24 +101,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8938BDD71FB07DBE00A6D4FB /* UI Practice */ = {
+		8938BDD71FB07DBE00A6D4FB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8938BDD81FB07DBE00A6D4FB /* AppDelegate.swift */,
-				8938BDDA1FB07DBE00A6D4FB /* MainViewController.swift */,
 				89E172CA1FF0C8C900605539 /* Model.swift */,
-				89B5997F1FD13874009133B9 /* APIData.swift */,
-				89B599811FD13C61009133B9 /* MenuViewController.swift */,
-				896924901FCC2257004A91AC /* CrimeList.swift */,
-				897FD3C61FF19DB4007B6FED /* CrimeInstanceView.swift */,
-				896924921FCC22B8004A91AC /* CrimeMap.swift */,
-				896924941FCC22D2004A91AC /* ReportCrime.swift */,
-				8938BDDC1FB07DBE00A6D4FB /* Main.storyboard */,
-				8938BDDF1FB07DBE00A6D4FB /* Assets.xcassets */,
-				8938BDE11FB07DBE00A6D4FB /* LaunchScreen.storyboard */,
-				8938BDE41FB07DBE00A6D4FB /* Info.plist */,
 			);
-			path = "UI Practice";
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
