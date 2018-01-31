@@ -18,6 +18,8 @@ var CrimeData = [CrimeReport]()
 var LatLong = [Double]()
 var coordinatesArray = [[Double]]()
 var crimeTitle = [String]()
+var crimeDate = [String]()
+var crimeBlock = [String]()
 class APIData {
    
   
@@ -60,7 +62,7 @@ class APIData {
             do {
               
                 let jsonDecoder = JSONDecoder()
-                let jsonData = try jsonDecoder.decode(Array<CrimeReport>.self, from: data!)
+                let jsonData = try jsonDecoder.decode(Array<CrimeReport>.self, from: unwrappedData)
                 //USE BELOW IF DECODER DOESNT WORK
                 //JSONSerialization.jsonObject(with: unwrappedData, options: []) as? [[String:Any]]
                 
@@ -69,21 +71,13 @@ class APIData {
                 
                 //USING MAP METHOD TO TRANSFORM CRIMEDATA ARRAY INTO ARRAY OF COORDINATES FOR USE IN CRIME MAP
                 coordinatesArray = CrimeData.map {$0.location1.coordinates}
-           
                 crimeTitle = CrimeData.map {$0.crimeDescription}
+                crimeDate = CrimeData.map {$0.date}
+                crimeBlock = CrimeData.map {$0.date}
+                
                 //PRINTING OUT ANY DATA COMBINATION HERE
-                // print(CrimeData)
-               
-                //Accessing data model location data
-                for location in CrimeData {
-                    print(location.location1.coordinates)
-                    LatLong = location.location1.coordinates
-                    
-                }
-                
-                print(coordinatesArray)
-                
-                
+                 print(CrimeData)
+   
                 } catch {
                 print(error)
                 }

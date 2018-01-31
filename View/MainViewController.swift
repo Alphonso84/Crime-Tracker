@@ -41,9 +41,12 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         city = AlamedaCountyCities[row]
     }
     
+ 
+    
     //SETS VALUE IF USER DOESNT SELECT A CITY (DEFAULT)
     override func viewWillAppear(_ animated: Bool) {
         city = AlamedaCountyCities[0]
+        
     }
     //VIEW DID LOAD
     override func viewDidLoad() {

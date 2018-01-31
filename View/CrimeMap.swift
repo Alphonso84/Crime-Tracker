@@ -32,7 +32,7 @@ class CrimeMap: UIViewController {
 func LocalSearch() {
 
 
-            //Remove Annotations
+    
             let annotations = [MKAnnotation]()
 
             let latitude = 37.25666

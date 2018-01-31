@@ -40,9 +40,12 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         // Configure the cell...
+        let dates = CrimeData[indexPath.row].date
+        let description = crimeTitle[indexPath.row]
+       // CrimeData[indexPath.row].crimeDescription
+        cell.textLabel?.text = description
+        cell.detailTextLabel?.text = dates
         
-        cell.textLabel?.text = CrimeData[indexPath.row].crimeDescription
-        cell.detailTextLabel?.text = CrimeData[indexPath.row].date
     
         return cell
     }
