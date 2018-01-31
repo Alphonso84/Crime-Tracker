@@ -75,8 +75,8 @@ class APIData {
                 crimeDate = CrimeData.map {$0.date}
                 crimeBlock = CrimeData.map {$0.date}
                 
-                //PRINTING OUT ANY DATA COMBINATION HERE
-                 print(CrimeData)
+                //PRINT OUT ANY DATA COMBINATION HERE
+                 print(coordinatesArray[0])
    
                 } catch {
                 print(error)

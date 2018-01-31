@@ -33,7 +33,7 @@ func LocalSearch() {
 
 
     
-            let annotations = [MKAnnotation]()
+            //let annotations = [MKAnnotation]()
 
             let latitude = 37.25666
             let longitude = -121.38749
