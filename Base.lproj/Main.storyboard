@@ -451,7 +451,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X4I-YM-OJV"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Alameda County Sheriff Crime Reports" id="Woa-tb-j1D"/>
+                    <navigationItem key="navigationItem" title="Alameda County - Crime Tracker" id="Woa-tb-j1D"/>
                     <connections>
                         <outlet property="citySelection" destination="HRT-ia-JxC" id="kbq-bb-Ley"/>
                     </connections>
@@ -462,7 +462,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icon" width="666" height="666"/>
+        <image name="Icon" width="266" height="266"/>
         <image name="Image" width="435" height="87"/>
         <image name="Oakland" width="468" height="310"/>
     </resources>
