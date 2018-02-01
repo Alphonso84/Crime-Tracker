@@ -16,6 +16,7 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     //LIST OF CITIES TO CHOOSE FROM
     var AlamedaCountyCities = ["OAKLAND","FREMONT","HAYWARD","BERKELEY","SAN LEANDRO","LIVERMORE","PLEASANTON","ALAMEDA","UNION CITY","DUBLIN","NEWARK","EMERYVILLE","PIEDMONT"]
+    
 
    //PICKERVIEW TO CHOOSE CITIES
     @IBOutlet weak var citySelection: UIPickerView?
@@ -30,6 +31,7 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     }
         //NUMBER OF ROWS
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+       
         return AlamedaCountyCities.count
     }
         //TITLE OF SAID ROWS
@@ -60,6 +62,7 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
 // GET DATA ACTION
     @IBAction func GetCrimeDataButton(_ sender: Any) {
        APIData().parseJSON()
+       
        
     }
 }

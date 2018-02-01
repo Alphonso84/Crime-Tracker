@@ -61,7 +61,12 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
         //Assigns value to variable in CrimeIntanceView
         NewViewController.stringForblockCityStateLabel = "\(CrimeData[indexPath.row].block) ,\(CrimeData[indexPath.row].city ) ,\(CrimeData[indexPath.row].state)"
         
-        print( CrimeData[indexPath.row].location1.coordinates)
+        
+        //Assigning Global Variables to be used in CrimeMap
+        dateCrime = CrimeData[indexPath.row].date
+        stringCrime = CrimeData[indexPath.row].crimeDescription
+        lat = CrimeData[indexPath.row].location1.coordinates[1]
+        long = CrimeData[indexPath.row].location1.coordinates[0]
         //Assigns value to variable in CrimeIntanceView
         NewViewController.stringForDateLabel = CrimeData[indexPath.row].date
         

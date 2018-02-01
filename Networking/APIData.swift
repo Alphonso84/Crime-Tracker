@@ -14,12 +14,19 @@ var urlString = ""
 //ARRAY OF MODEL TYPE CRIMEREPORT
 var CrimeData = [CrimeReport]()
 
+var Locations = [CLLocationCoordinate2D]()
 
-var LatLong = [Double]()
+var latitude = [Double]()
+var longitude = [Double]()
+var crimeString = [String]()
+
+
 var coordinatesArray = [[Double]]()
 var crimeTitle = [String]()
 var crimeDate = [String]()
 var crimeBlock = [String]()
+
+
 class APIData {
    
   
@@ -69,15 +76,27 @@ class APIData {
                 //CRIMEDATA IS AN ARRAY OF STRUCT TYPE CRIMEREPORT
                 CrimeData = jsonData
                 
-                //USING MAP METHOD TO TRANSFORM CRIMEDATA ARRAY INTO ARRAY OF COORDINATES FOR USE IN CRIME MAP
+                //USING MAP METHOD TO TRANSFORM CRIMEDATA ARRAY INTO ARRAY OF GLOBAL VARIABLES
                 coordinatesArray = CrimeData.map {$0.location1.coordinates}
                 crimeTitle = CrimeData.map {$0.crimeDescription}
                 crimeDate = CrimeData.map {$0.date}
                 crimeBlock = CrimeData.map {$0.date}
                 
                 //PRINT OUT ANY DATA COMBINATION HERE
-                 print(coordinatesArray[0])
-   
+                //Loop through Arrays created above to grab creat array of each value
+                for item in coordinatesArray {
+                    
+                    latitude.append(item[1])
+                    longitude.append(item[0])
+                    
+                }
+                
+
+                
+//                print(latitude)
+//                print(longitude)
+//
+//                print(crimeDate)
                 } catch {
                 print(error)
                 }
@@ -85,8 +104,6 @@ class APIData {
         task.resume()
         
     }
-    
-    
     
 }
     

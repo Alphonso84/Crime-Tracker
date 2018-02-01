@@ -6,56 +6,43 @@
 //  Copyright © 2017 Alphonso. All rights reserved.
 //
 
-
+import Foundation
 import UIKit
 import MapKit
 import CoreGraphics
 
 
+var stringCrime = String()
+var dateCrime = String()
+var lat = Double()
+var long = Double()
 var annotations = [MKPointAnnotation]()
+
+
 class CrimeMap: UIViewController {
+    
     
     @IBOutlet weak var mapView: MKMapView!
     
-
+    
+    
+    let locations = CLLocationCoordinate2DMake(lat , long)
+    // let crimeLocations = CLLocationCoordinate2DMake(
+    
+    override func viewWillAppear(_ animated: Bool) {
+      
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        LocalSearch()
-       // annotations = [MKPointAnnotation(coordinatesArray)]
+      mapView.setRegion(MKCoordinateRegionMakeWithDistance(locations, 2000, 2000), animated: true)
+let crimes = PinAnnotation(title: "\(stringCrime)", subtitle: "\(dateCrime)", coordinate: locations)
         
-       
+        mapView.addAnnotation(crimes)
     }
 
 
-
-//MAP ANNOTATION AND LOCATION METHOD
-func LocalSearch() {
-
-
-    
-            //let annotations = [MKAnnotation]()
-
-            let latitude = 37.25666
-            let longitude = -121.38749
-
-            //Create Annotations
-  
-            let annotation = MKPointAnnotation()
-            annotation.title = CrimeData[0].crimeDescription
-            annotation.subtitle = CrimeData[0].date
-    annotation.coordinate = CLLocationCoordinate2DMake(latitude, longitude)
-            self.mapView.addAnnotation(annotation)
-    
-
-            //Zooming In On Annotation
-            let coordinates: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
-            let span = MKCoordinateSpanMake(0.1, 0.1)
-            let region = MKCoordinateRegionMake(coordinates, span)
-            self.mapView.setRegion(region, animated: true)
-
-        }
-
-    }
-
+}
 
 

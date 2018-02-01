@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--MenuViewController-->
         <scene sceneID="tne-QT-ifu">
@@ -63,12 +68,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="222"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="31"/>
-                                                <state key="normal" title="Crime Map">
+                                                <state key="normal" title="Crime Stats">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <connections>
-                                                    <segue destination="u6f-hL-Z8l" kind="show" id="BUI-sz-wns"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -111,10 +113,10 @@
             </objects>
             <point key="canvasLocation" x="504.80000000000001" y="79.802955665024641"/>
         </scene>
-        <!--Report a Crime-->
+        <!--Contact Police-->
         <scene sceneID="9XQ-Vb-5RO">
             <objects>
-                <viewController title="Report a Crime" id="nJ2-hL-6Qk" customClass="ReportCrime" customModule="Crime_Tracker" sceneMemberID="viewController">
+                <viewController title="Contact Police" id="nJ2-hL-6Qk" customClass="ReportCrime" customModule="Crime_Tracker" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p8q-q8-nFc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,15 +166,15 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="A44-Uc-QMV" style="IBUITableViewCellStyleDefault" id="uBr-GO-GCw">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="A44-Uc-QMV" rowHeight="64" style="IBUITableViewCellStyleDefault" id="uBr-GO-GCw">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uBr-GO-GCw" id="hjp-ko-TvZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="63.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A44-Uc-QMV">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.666666666666664"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="63.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -206,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kue-Nu-xqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2177" y="86"/>
+            <point key="canvasLocation" x="2176.8000000000002" y="85.714285714285722"/>
         </scene>
         <!--Crime Instance -->
         <scene sceneID="nA4-qE-m1H">
@@ -221,25 +223,31 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="dHT-v6-NaA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Block, City, State" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1M-Ke-0kw">
                                 <rect key="frame" x="19" y="304" width="340" height="102"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSg-ko-TE4">
                                 <rect key="frame" x="112" y="555.66666666666663" width="151" height="119.33333333333337"/>
-                                <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="See On Map">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <state key="normal" title="See On Map" backgroundImage="Map_icon">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="SeeOnMapButton:" destination="cdt-ea-OCv" eventType="touchUpInside" id="mqA-UW-RTt"/>
+                                    <segue destination="u6f-hL-Z8l" kind="show" id="qfu-LF-GgM"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egs-HO-lwc">
@@ -263,7 +271,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="sbA-eJ-cQN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -341,7 +349,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGn-Up-Qel" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1317.5999999999999" y="834.97536945812806"/>
+            <point key="canvasLocation" x="2790" y="865"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Su2-jz-iuh">
@@ -351,7 +359,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zS2-ha-S3B" colorLabel="IBBuiltInLabel-Gray">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -391,7 +400,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="ZQ1-Ze-D4w"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="GET CRIME RESULTS">
                                     <color key="titleShadowColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -406,15 +415,6 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="Igj-nn-IHu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select A City Below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NgG-Zc-jz3">
-                                <rect key="frame" x="110" y="372" width="155" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="3wM-E0-1mW"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Fe8-Mc-dRr">
                                 <rect key="frame" x="39" y="725" width="291" height="53"/>
                             </imageView>
@@ -424,13 +424,26 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video-panel-shadow" translatesAutoresizingMaskIntoConstraints="NO" id="aE2-1e-JRa">
+                                <rect key="frame" x="67" y="325" width="240" height="62"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select A City Below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NgG-Zc-jz3">
+                                <rect key="frame" x="110" y="395" width="155" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="3wM-E0-1mW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="HRT-ia-JxC" firstAttribute="top" secondItem="NgG-Zc-jz3" secondAttribute="bottom" constant="35" id="2IY-ge-qhe"/>
+                            <constraint firstItem="HRT-ia-JxC" firstAttribute="top" secondItem="NgG-Zc-jz3" secondAttribute="bottom" constant="25" id="2IY-ge-qhe"/>
+                            <constraint firstItem="aE2-1e-JRa" firstAttribute="trailing" secondItem="zcK-Df-Pua" secondAttribute="trailing" id="2WQ-G9-Ml0"/>
                             <constraint firstItem="OBD-BU-q0W" firstAttribute="top" secondItem="you-Mf-Cbv" secondAttribute="bottom" constant="28" id="7aF-Ih-4RG"/>
                             <constraint firstItem="Fe8-Mc-dRr" firstAttribute="centerX" secondItem="HRT-ia-JxC" secondAttribute="centerX" id="9TN-Fc-298"/>
-                            <constraint firstItem="NgG-Zc-jz3" firstAttribute="top" secondItem="zcK-Df-Pua" secondAttribute="bottom" constant="8" symbolic="YES" id="Axf-yc-aYw"/>
+                            <constraint firstItem="NgG-Zc-jz3" firstAttribute="top" secondItem="zcK-Df-Pua" secondAttribute="bottom" constant="31" id="Axf-yc-aYw"/>
                             <constraint firstItem="zcK-Df-Pua" firstAttribute="centerX" secondItem="NgG-Zc-jz3" secondAttribute="centerX" id="DhB-J5-LlW"/>
                             <constraint firstItem="zcK-Df-Pua" firstAttribute="top" secondItem="X4I-YM-OJV" secondAttribute="top" constant="22" id="Fp0-w2-oAJ"/>
                             <constraint firstItem="HRT-ia-JxC" firstAttribute="leading" secondItem="X4I-YM-OJV" secondAttribute="leading" constant="64" id="Fuf-Md-X6w"/>
@@ -444,26 +457,34 @@
                             <constraint firstItem="OBD-BU-q0W" firstAttribute="centerX" secondItem="you-Mf-Cbv" secondAttribute="centerX" id="h71-AL-oyE"/>
                             <constraint firstItem="OBD-BU-q0W" firstAttribute="leading" secondItem="X4I-YM-OJV" secondAttribute="leading" constant="120" id="h8f-Hn-NEf"/>
                             <constraint firstAttribute="bottom" secondItem="you-Mf-Cbv" secondAttribute="bottom" constant="152" id="hDj-UV-wVh"/>
+                            <constraint firstItem="aE2-1e-JRa" firstAttribute="leading" secondItem="zcK-Df-Pua" secondAttribute="leading" id="hsq-QL-bUN"/>
+                            <constraint firstItem="HRT-ia-JxC" firstAttribute="top" secondItem="aE2-1e-JRa" secondAttribute="bottom" constant="69" id="m5T-bl-qOC"/>
                             <constraint firstItem="Fe8-Mc-dRr" firstAttribute="leading" secondItem="X4I-YM-OJV" secondAttribute="leading" constant="39" id="mh3-nM-eX8"/>
+                            <constraint firstItem="aE2-1e-JRa" firstAttribute="top" secondItem="X4I-YM-OJV" secondAttribute="top" constant="237" id="nLY-3j-UOv"/>
                             <constraint firstItem="Fe8-Mc-dRr" firstAttribute="top" secondItem="you-Mf-Cbv" secondAttribute="bottom" constant="65" id="npN-hL-szf"/>
                             <constraint firstItem="NgG-Zc-jz3" firstAttribute="leading" secondItem="X4I-YM-OJV" secondAttribute="leading" constant="110" id="qiC-jk-zgt"/>
                             <constraint firstItem="X4I-YM-OJV" firstAttribute="trailing" secondItem="HRT-ia-JxC" secondAttribute="trailing" constant="71" id="wDl-l5-v5i"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X4I-YM-OJV"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Alameda County - Crime Tracker" id="Woa-tb-j1D"/>
+                    <navigationItem key="navigationItem" title="Alameda County - Crime Tracker" id="Woa-tb-j1D">
+                        <barButtonItem key="leftBarButtonItem" image="menu-options" id="BIZ-qF-i98"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="citySelection" destination="HRT-ia-JxC" id="kbq-bb-Ley"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nLo-gF-aL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-476" y="81"/>
+            <point key="canvasLocation" x="-476" y="80.541871921182263"/>
         </scene>
     </scenes>
     <resources>
         <image name="Icon" width="266" height="266"/>
         <image name="Image" width="435" height="87"/>
+        <image name="Map_icon" width="86" height="76"/>
         <image name="Oakland" width="468" height="310"/>
+        <image name="menu-options" width="21" height="21"/>
+        <image name="video-panel-shadow" width="347" height="42"/>
     </resources>
 </document>
