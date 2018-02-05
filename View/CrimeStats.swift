@@ -14,7 +14,10 @@ class CrimeStats: UIViewController, WKNavigationDelegate {
     
     @IBOutlet weak var ActivityView: UIActivityIndicatorView!
     
-    var url: URL!
+    @IBOutlet weak var CityLabel: UILabel!
+   
+    
+    
     
     var mylocation = ""
     
@@ -31,11 +34,13 @@ class CrimeStats: UIViewController, WKNavigationDelegate {
     let URLForNewark = "https://www.neighborhoodscout.com/ca/newark/crime"
     let URLForEmeryville = "https://www.neighborhoodscout.com/ca/emeryville/crime"
     let URLForPiedmont = "https://www.neighborhoodscout.com/ca/piedmont/crime"
+     var url: URL!
     
     override func viewDidLoad() {
-        
+        CityLabel.text = city
         WebView.navigationDelegate = self
         
+        //SWITCH STATEMENT CONTROLS WHICH WEBSITE LOADS DEPENDING ON CITY SELECTED IN PICKER IN (MAINVIEWCONTROLLER)
         switch city {
         case "OAKLAND":
             url = URL(string: URLForOakland)

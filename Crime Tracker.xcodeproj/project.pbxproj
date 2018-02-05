@@ -17,6 +17,7 @@
 		896924951FCC22D2004A91AC /* ReportCrime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896924941FCC22D2004A91AC /* ReportCrime.swift */; };
 		897FD3C71FF19DB4007B6FED /* CrimeInstanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897FD3C61FF19DB4007B6FED /* CrimeInstanceView.swift */; };
 		898821DB20287408004F0CD2 /* CrimeStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898821DA20287408004F0CD2 /* CrimeStats.swift */; };
+		898821DD2028AC42004F0CD2 /* SlideOverMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898821DC2028AC42004F0CD2 /* SlideOverMenu.swift */; };
 		89B457142022FBBC00CAB64A /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B457132022FBBC00CAB64A /* PinAnnotation.swift */; };
 		89B599801FD13874009133B9 /* APIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B5997F1FD13874009133B9 /* APIData.swift */; };
 		89B599821FD13C61009133B9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B599811FD13C61009133B9 /* MenuViewController.swift */; };
@@ -36,6 +37,7 @@
 		896924941FCC22D2004A91AC /* ReportCrime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCrime.swift; sourceTree = "<group>"; };
 		897FD3C61FF19DB4007B6FED /* CrimeInstanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeInstanceView.swift; sourceTree = "<group>"; };
 		898821DA20287408004F0CD2 /* CrimeStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeStats.swift; sourceTree = "<group>"; };
+		898821DC2028AC42004F0CD2 /* SlideOverMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOverMenu.swift; sourceTree = "<group>"; };
 		89B457132022FBBC00CAB64A /* PinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
 		89B5997F1FD13874009133B9 /* APIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIData.swift; sourceTree = "<group>"; };
 		89B599811FD13C61009133B9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				8938BDDA1FB07DBE00A6D4FB /* MainViewController.swift */,
+				898821DC2028AC42004F0CD2 /* SlideOverMenu.swift */,
 				89B599811FD13C61009133B9 /* MenuViewController.swift */,
 				896924901FCC2257004A91AC /* CrimeList.swift */,
 				897FD3C61FF19DB4007B6FED /* CrimeInstanceView.swift */,
@@ -195,6 +198,7 @@
 				89B599821FD13C61009133B9 /* MenuViewController.swift in Sources */,
 				8938BDD91FB07DBE00A6D4FB /* AppDelegate.swift in Sources */,
 				896924931FCC22B8004A91AC /* CrimeMap.swift in Sources */,
+				898821DD2028AC42004F0CD2 /* SlideOverMenu.swift in Sources */,
 				896924951FCC22D2004A91AC /* ReportCrime.swift in Sources */,
 				89E172CB1FF0C8C900605539 /* Model.swift in Sources */,
 				897FD3C71FF19DB4007B6FED /* CrimeInstanceView.swift in Sources */,

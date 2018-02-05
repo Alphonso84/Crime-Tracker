@@ -13,8 +13,11 @@ import Foundation
 var city = String()
 
 class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    @IBOutlet weak var logoImage: UIImageView!
     
+    @IBOutlet weak var shadowImage: UIImageView!
     //LIST OF CITIES TO CHOOSE FROM
+    @IBOutlet weak var backgroundImageView: UIImageView!
     var AlamedaCountyCities = ["OAKLAND","FREMONT","HAYWARD","BERKELEY","SAN LEANDRO","LIVERMORE","PLEASANTON","ALAMEDA","UNION CITY","DUBLIN","NEWARK","EMERYVILLE","PIEDMONT"]
     
 
@@ -48,22 +51,42 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     //SETS VALUE IF USER DOESNT SELECT A CITY (DEFAULT)
     override func viewWillAppear(_ animated: Bool) {
         city = AlamedaCountyCities[0]
-        
+        let randomIndex = Int(arc4random_uniform(UInt32(CityBackGrounds.count)))
+//        backgroundImageView.image = CityBackGrounds[randomIndex]
     }
     //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
+        myMotionEffect(view: logoImage, min: -20, max: 20)
+        myMotionEffect(view: shadowImage, min: -5, max: 5)
+       
         
         self.citySelection?.dataSource = self
         self.citySelection?.delegate = self
        
     }
     
+    
 // GET DATA ACTION
     @IBAction func GetCrimeDataButton(_ sender: Any) {
        APIData().parseJSON()
        
        
+    }
+    
+    func myMotionEffect(view: UIView, min: CGFloat, max: CGFloat) {
+        
+        let xMotion = UIInterpolatingMotionEffect(keyPath: "layer.transform.translation.x", type: .tiltAlongHorizontalAxis)
+        xMotion.minimumRelativeValue = min
+        xMotion.maximumRelativeValue = max
+        
+        let yMotion = UIInterpolatingMotionEffect(keyPath: "layer.transform.translation.y", type: .tiltAlongVerticalAxis)
+        yMotion.minimumRelativeValue = min
+        yMotion.maximumRelativeValue = max
+        
+        let motionEffectGroup = UIMotionEffectGroup()
+        motionEffectGroup.motionEffects = [xMotion,yMotion]
+        view.addMotionEffect(motionEffectGroup)
     }
 }
     
