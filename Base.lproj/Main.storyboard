@@ -71,6 +71,9 @@
                                                 <state key="normal" title="Crime Stats">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="thu-yV-GvU" kind="show" id="5Qq-II-tEb"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -321,6 +324,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qXN-dh-yIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3165.5" y="91"/>
+        </scene>
+        <!--Crime Stats-->
+        <scene sceneID="iZx-o9-lSf">
+            <objects>
+                <viewController title="Crime Stats" id="thu-yV-GvU" customClass="CrimeStats" customModule="Crime_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mzp-Aq-S5o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0Z-9X-fKo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="8EK-4W-P2Z">
+                                <rect key="frame" x="177" y="396" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="h0Z-9X-fKo" firstAttribute="top" secondItem="mzp-Aq-S5o" secondAttribute="top" id="3sM-tt-XiW"/>
+                            <constraint firstAttribute="bottom" secondItem="h0Z-9X-fKo" secondAttribute="bottom" id="BPF-43-ZMQ"/>
+                            <constraint firstAttribute="trailing" secondItem="h0Z-9X-fKo" secondAttribute="trailing" id="N3j-1L-5Ha"/>
+                            <constraint firstItem="h0Z-9X-fKo" firstAttribute="leading" secondItem="mzp-Aq-S5o" secondAttribute="leading" id="V2o-6B-71R"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rK0-3T-aLk"/>
+                    </view>
+                    <connections>
+                        <outlet property="ActivityView" destination="8EK-4W-P2Z" id="1EK-0U-RFF"/>
+                        <outlet property="WebView" destination="h0Z-9X-fKo" id="yKt-1l-J0b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jXz-5s-eFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1317.5999999999999" y="620.68965517241384"/>
         </scene>
         <!--Crime Map-->
         <scene sceneID="snU-x6-GA3">

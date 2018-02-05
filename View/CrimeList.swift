@@ -32,23 +32,29 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
 
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+    
         return CrimeData.count
     }
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         // Configure the cell...
         let dates = CrimeData[indexPath.row].date
-        let description = crimeTitle[indexPath.row]
+//        let description = crimeTitle[indexPath.row]
+        let description = CrimeData[indexPath.row].crimeDescription
        // CrimeData[indexPath.row].crimeDescription
+        
+        
         cell.textLabel?.text = description
         cell.detailTextLabel?.text = dates
         
-    
+       
         return cell
     }
+       
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -78,6 +84,7 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 
 }
+
 
 
 
