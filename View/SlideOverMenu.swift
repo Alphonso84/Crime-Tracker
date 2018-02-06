@@ -16,8 +16,4 @@ class SlideOverMenu: UIViewController {
         }
     
     
-    
-    
-    
-    
 }

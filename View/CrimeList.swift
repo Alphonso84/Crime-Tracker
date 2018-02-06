@@ -57,7 +57,6 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         
         
-        
         cell.textLabel?.text = description
         cell.detailTextLabel?.text = dates
         
