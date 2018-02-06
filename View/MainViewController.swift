@@ -51,14 +51,13 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     //SETS VALUE IF USER DOESNT SELECT A CITY (DEFAULT)
     override func viewWillAppear(_ animated: Bool) {
         city = AlamedaCountyCities[0]
-        let randomIndex = Int(arc4random_uniform(UInt32(CityBackGrounds.count)))
-//        backgroundImageView.image = CityBackGrounds[randomIndex]
+    
     }
     //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
-        myMotionEffect(view: logoImage, min: -20, max: 20)
-        myMotionEffect(view: shadowImage, min: -5, max: 5)
+        myMotionEffect(view: logoImage, min: -10, max: 10)
+        myMotionEffect(view: shadowImage, min: 5, max: -5)
        
         
         self.citySelection?.dataSource = self
