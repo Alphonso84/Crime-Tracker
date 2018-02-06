@@ -30,6 +30,10 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 65.00
+    }
 
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
@@ -45,6 +49,12 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //        let description = crimeTitle[indexPath.row]
         let description = CrimeData[indexPath.row].crimeDescription
        // CrimeData[indexPath.row].crimeDescription
+        
+        description.contains("EOD") ? (cell.imageView?.image = #imageLiteral(resourceName: "explosive")) : (((cell.imageView?.image = nil) != nil)) && description.contains("RECKLESS") ? (cell.imageView?.image = #imageLiteral(resourceName: "Reckless")) :
+            (((cell.imageView?.image = nil) != nil)) && description.contains("SUSPICIOUS") ? (cell.imageView?.image = #imageLiteral(resourceName: "Suspicious")) : (((cell.imageView?.image = nil) != nil)) &&
+            description.contains("ARREST") ? (cell.imageView?.image = #imageLiteral(resourceName: "arrest")) : (((cell.imageView?.image = nil) != nil)) && description.contains("STOLEN AUTO") ? (cell.imageView?.image = #imageLiteral(resourceName: "stolen vehicle")) : (((cell.imageView?.image = nil) != nil)) && description.contains("TAKE VEHICLE") ? (cell.imageView?.image = #imageLiteral(resourceName: "stolen vehicle")) : (((cell.imageView?.image = nil) != nil))
+            && description.contains("TRAFFIC COLLISION") ? (cell.imageView?.image = #imageLiteral(resourceName: "Collision")) : (((cell.imageView?.image = nil) != nil)) && description.contains("STOLEN VEHICLE") ? (cell.imageView?.image = #imageLiteral(resourceName: "stolen vehicle")) : (((cell.imageView?.image = nil) != nil)) && description.contains("DUI") ? (cell.imageView?.image = #imageLiteral(resourceName: "DUI")) : (((cell.imageView?.image = nil) != nil)) && description.contains("POSSESS CONTROLLED SUBSTANCE") ? (cell.imageView?.image = #imageLiteral(resourceName: "drugs")) : (((cell.imageView?.image = nil) != nil)) && description.contains("BURGLARY") ? (cell.imageView?.image = #imageLiteral(resourceName: "burglary")) : (((cell.imageView?.image = nil) != nil)) && description.contains("THEFT") ? (cell.imageView?.image = #imageLiteral(resourceName: "burglary")) : (((cell.imageView?.image = nil) != nil)) && description.contains("OUTSIDE AGENCY ASSIST") ? (cell.imageView?.image = #imageLiteral(resourceName: "AGENCY ASSIST")) : (((cell.imageView?.image = nil) != nil)) && description.contains("INCIDENT REPORT") ? (cell.imageView?.image = #imageLiteral(resourceName: "incident report")) : (((cell.imageView?.image = nil) != nil)) && description.contains("INFORMATIONAL REPORT") ? (cell.imageView?.image = #imageLiteral(resourceName: "incident report")) : (cell.imageView?.image = nil)
+        
         
         
         cell.textLabel?.text = description
