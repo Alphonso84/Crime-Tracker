@@ -45,12 +45,14 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         // Configure the cell...
+        cell.textLabel?.font = UIFont.init(name: "Menlo", size: 15.00)
+        
         let dates = CrimeData[indexPath.row].date
-//        let description = crimeTitle[indexPath.row]
+
         let description = CrimeData[indexPath.row].crimeDescription
-       // CrimeData[indexPath.row].crimeDescription
+     
        
-        description.contains("EOD") ? (cell.imageView?.image = #imageLiteral(resourceName: "explosive")) : (((cell.imageView?.image = nil) != nil))
+               description.contains("EOD") ? (cell.imageView?.image = #imageLiteral(resourceName: "explosive")) : (((cell.imageView?.image = nil) != nil))
             && description.contains("RECKLESS") ? (cell.imageView?.image = #imageLiteral(resourceName: "Reckless")) : (((cell.imageView?.image = nil) != nil))
             && description.contains("SUSPICIOUS") ? (cell.imageView?.image = #imageLiteral(resourceName: "Suspicious")) : (((cell.imageView?.image = nil) != nil))
             && description.contains("ARREST") ? (cell.imageView?.image = #imageLiteral(resourceName: "arrest")) : (((cell.imageView?.image = nil) != nil))
@@ -76,9 +78,8 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
             && description.contains("MURDER") ? (cell.imageView?.image = #imageLiteral(resourceName: "murder")) : (((cell.imageView?.image = nil) != nil))
             && description.contains("BATTERY") ? (cell.imageView?.image = #imageLiteral(resourceName: "Battery")) : (((cell.imageView?.image = nil) != nil))
             && description.contains("DISTURB BY LOUD") ? (cell.imageView?.image = #imageLiteral(resourceName: "disturbance")) : (((cell.imageView?.image = nil) != nil))
-            && description.contains("MENTAL HEALTH") ? (cell.imageView?.image = #imageLiteral(resourceName: "Mental Health")) : (((cell.imageView?.image = nil) != nil))
-            && description.contains("SPEED") ? (cell.imageView?.image = #imageLiteral(resourceName: "Speeding")) : (cell.imageView?.image = nil)
-        
+            && description.contains("MENTAL HEALTH") ? (cell.imageView?.image = #imageLiteral(resourceName: "Mental Health")) : (((cell.imageView?.image = nil) != nil)) && description.contains("SPEED") ? (cell.imageView?.image = #imageLiteral(resourceName: "Speeding")) : (((cell.imageView?.image = nil) != nil))
+                && description.contains("TOW") ? (cell.imageView?.image = #imageLiteral(resourceName: "Tow")) : (((cell.imageView?.image = nil) != nil)) && description.contains("INJURY") ? (cell.imageView?.image = #imageLiteral(resourceName: "injury")) : (cell.imageView?.image = nil)
         
         cell.textLabel?.text = description
         cell.detailTextLabel?.text = dates
