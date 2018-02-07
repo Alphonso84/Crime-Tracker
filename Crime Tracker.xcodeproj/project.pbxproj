@@ -18,6 +18,7 @@
 		897FD3C71FF19DB4007B6FED /* CrimeInstanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897FD3C61FF19DB4007B6FED /* CrimeInstanceView.swift */; };
 		898821DB20287408004F0CD2 /* CrimeStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898821DA20287408004F0CD2 /* CrimeStats.swift */; };
 		898821DD2028AC42004F0CD2 /* SlideOverMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898821DC2028AC42004F0CD2 /* SlideOverMenu.swift */; };
+		8997E3AC202AA14600E9C066 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8997E3AB202AA14600E9C066 /* Controller.swift */; };
 		89B457142022FBBC00CAB64A /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B457132022FBBC00CAB64A /* PinAnnotation.swift */; };
 		89B599801FD13874009133B9 /* APIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B5997F1FD13874009133B9 /* APIData.swift */; };
 		89B599821FD13C61009133B9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B599811FD13C61009133B9 /* MenuViewController.swift */; };
@@ -38,6 +39,8 @@
 		897FD3C61FF19DB4007B6FED /* CrimeInstanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeInstanceView.swift; sourceTree = "<group>"; };
 		898821DA20287408004F0CD2 /* CrimeStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeStats.swift; sourceTree = "<group>"; };
 		898821DC2028AC42004F0CD2 /* SlideOverMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOverMenu.swift; sourceTree = "<group>"; };
+		8997E3AA202A446000E9C066 /* Crime Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Crime Tracker.entitlements"; sourceTree = "<group>"; };
+		8997E3AB202AA14600E9C066 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		89B457132022FBBC00CAB64A /* PinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
 		89B5997F1FD13874009133B9 /* APIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIData.swift; sourceTree = "<group>"; };
 		89B599811FD13C61009133B9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 		8901661620080ED4002836E7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8997E3AB202AA14600E9C066 /* Controller.swift */,
 				8938BDD81FB07DBE00A6D4FB /* AppDelegate.swift */,
 			);
 			path = Controller;
@@ -90,6 +94,7 @@
 		8938BDCC1FB07DBE00A6D4FB = {
 			isa = PBXGroup;
 			children = (
+				8997E3AA202A446000E9C066 /* Crime Tracker.entitlements */,
 				8938BDD71FB07DBE00A6D4FB /* Model */,
 				8901661520080E71002836E7 /* View */,
 				8901661620080ED4002836E7 /* Controller */,
@@ -99,6 +104,7 @@
 				8938BDDF1FB07DBE00A6D4FB /* Assets.xcassets */,
 				8938BDE11FB07DBE00A6D4FB /* LaunchScreen.storyboard */,
 				8938BDE41FB07DBE00A6D4FB /* Info.plist */,
+				8997E3A7202A410D00E9C066 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +122,13 @@
 				89E172CA1FF0C8C900605539 /* Model.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8997E3A7202A410D00E9C066 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +164,14 @@
 					8938BDD41FB07DBE00A6D4FB = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -197,6 +218,7 @@
 				898821DB20287408004F0CD2 /* CrimeStats.swift in Sources */,
 				89B599821FD13C61009133B9 /* MenuViewController.swift in Sources */,
 				8938BDD91FB07DBE00A6D4FB /* AppDelegate.swift in Sources */,
+				8997E3AC202AA14600E9C066 /* Controller.swift in Sources */,
 				896924931FCC22B8004A91AC /* CrimeMap.swift in Sources */,
 				898821DD2028AC42004F0CD2 /* SlideOverMenu.swift in Sources */,
 				896924951FCC22D2004A91AC /* ReportCrime.swift in Sources */,
@@ -338,11 +360,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Crime Tracker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6257XTCRBF;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Alphonso-Sensley-II.UI-Practice";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AlphonsoSensleyII.UI-Practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -353,11 +376,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Crime Tracker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6257XTCRBF;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Alphonso-Sensley-II.UI-Practice";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AlphonsoSensleyII.UI-Practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
