@@ -44,15 +44,36 @@ class APIData {
         //URL FILTER ORDERS RESULTS BY CITY(GLOBAL VARIABLE SET IN MAINVIEWCONTROLLER)
         let userCity = "&city=\(city)"
     
-        let locationQuery = "$where=within_circle(location_1, \(latitude), -\(longitude), 10000)"
+        let locationQuery = "$where=within_circle(location_1, \(latitude[0]), \(longitude[0]), 10000)"
        // print(MainViewController.CityString().city)
         
         urlString = "\(baseURL)\(token)\(userCity)\(sortOrder)\(numberOfResults)"
-        locationURLString = "\(baseURL)\(token)\(locationQuery)"
-       
+        locationURLString = "\(baseURL)?\(locationQuery)"
+       print(locationURLString)
         let FormattedUrlString = urlString.replacingOccurrences(of: " ", with: "%20")
         let url = URL(string: FormattedUrlString)
     
+        return url!
+        
+    }
+    public func buildLocationUrl(constructedUrl: String) -> URL{
+        let baseURL = "https://data.acgov.org/resource/js8f-yfqf.json"
+        //URL FILTER LIMITS RESULTS RETURNED
+        let numberOfResults = "&$limit=50"
+        //URL FILTER ORDERS BY MOST RECENT
+        let sortOrder = "&$order=datetime DESC"
+        //URL FILTER ORDERS RESULTS BY CITY(GLOBAL VARIABLE SET IN MAINVIEWCONTROLLER)
+        let userCity = "&city=\(city)"
+        
+        let locationQuery = "$where=within_circle(location_1, \(latitude[0]), \(longitude[0]), 10000)"
+        // print(MainViewController.CityString().city)
+        
+        urlString = "\(baseURL)\(token)\(userCity)\(sortOrder)\(numberOfResults)"
+        locationURLString = "\(baseURL)?\(locationQuery)"
+        print(locationURLString)
+        let FormattedUrlString = locationURLString.replacingOccurrences(of: " ", with: "%20")
+        let url = URL(string: FormattedUrlString)
+        
         return url!
         
     }
@@ -102,7 +123,7 @@ class APIData {
         task.resume()
     }
     func parseJSONLocation() {
-        let unwrappedURL = self.buildUrl(constructedUrl: locationURLString)
+        let unwrappedURL = self.buildLocationUrl(constructedUrl: locationURLString)
         //URL SESSION
         let session = URLSession.shared
         let task = session.dataTask(with: (unwrappedURL)) { (data, response, error) in
@@ -126,12 +147,14 @@ class APIData {
                 
                 //PRINT OUT ANY DATA COMBINATION HERE
                 //Loop through Arrays created above to grab creat array of each value
-                for item in coordinatesArray {
-                    
-                    latitude.append(item[1])
-                    longitude.append(item[0])
-                    
-                }
+                print("Hello")
+                print(CrimeData)
+//                for item in coordinatesArray {
+//                    
+//                    latitude.append(item[1])
+//                    longitude.append(item[0])
+//                    
+//                }
                 
             } catch {
                 print(error)

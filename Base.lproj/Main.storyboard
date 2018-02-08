@@ -393,7 +393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jXz-5s-eFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1317.5999999999999" y="620.68965517241384"/>
+            <point key="canvasLocation" x="1660" y="620.68965517241384"/>
         </scene>
         <!--Crime Map-->
         <scene sceneID="snU-x6-GA3">
@@ -422,7 +422,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGn-Up-Qel" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2790" y="865"/>
+            <point key="canvasLocation" x="3132" y="864.53201970443354"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Su2-jz-iuh">
@@ -553,7 +553,7 @@
                     <navigationItem key="navigationItem" title="Crime Tracker" id="Woa-tb-j1D">
                         <barButtonItem key="leftBarButtonItem" image="my location" id="BIZ-qF-i98">
                             <connections>
-                                <segue destination="SUB-8K-Ltn" kind="presentation" modalPresentationStyle="overCurrentContext" id="QDH-Rd-Dlg"/>
+                                <segue destination="ECb-LF-BlX" kind="presentation" modalPresentationStyle="overCurrentContext" id="QDH-Rd-Dlg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -577,7 +577,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clearsContextBeforeDrawing="NO" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNC-kx-JMI">
-                                <rect key="frame" x="0.0" y="380" width="375" height="432"/>
+                                <rect key="frame" x="0.0" y="424" width="375" height="388"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azd-2h-3ty">
                                         <rect key="frame" x="75" y="111" width="225" height="68"/>
@@ -596,6 +596,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="getLocationCrimes:" destination="SUB-8K-Ltn" eventType="touchUpInside" id="G6l-Zz-Vbm"/>
+                                            <segue destination="BoL-Pm-ZDZ" kind="show" id="y1j-1Q-cOt"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -620,6 +621,7 @@
                             <outletCollection property="gestureRecognizers" destination="fAC-wV-aVx" appends="YES" id="uM3-js-bDH"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="N0v-16-fmg"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="0.0" height="0.0"/>
                 </viewController>
@@ -630,7 +632,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1911" y="907"/>
+            <point key="canvasLocation" x="-758" y="1008"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="WT2-6S-ltj">
@@ -656,7 +658,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sr7-UQ-GQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="185" y="1037"/>
+            <point key="canvasLocation" x="527.20000000000005" y="1036.6995073891626"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LGe-Ve-yWK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ECb-LF-BlX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pve-sZ-HDk">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SUB-8K-Ltn" kind="relationship" relationship="rootViewController" id="G1H-up-a4E"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ll5-OP-hQg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1819.2" y="1008.6206896551724"/>
         </scene>
     </scenes>
     <resources>
@@ -667,4 +687,7 @@
         <image name="my location" width="66" height="66"/>
         <image name="video-panel-shadow" width="347" height="42"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="y1j-1Q-cOt"/>
+    </inferredMetricsTieBreakers>
 </document>

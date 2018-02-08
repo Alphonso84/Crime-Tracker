@@ -5,13 +5,14 @@
 //  Created by user on 11/6/17.
 //  Copyright © 2017 Alphonso. All rights reserved.
 //
-
+import MapKit
+import CoreLocation
 import UIKit
 import Foundation
 
 //USING GLOBAL VARIABLE SEEMS TO BE SIMPLEST SOLUTION
 var city = String()
-
+let manager = CLLocationManager()
 class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var logoImage: UIImageView!
     
@@ -23,6 +24,23 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
 
    //PICKERVIEW TO CHOOSE CITIES
     @IBOutlet weak var citySelection: UIPickerView?
+    
+    
+    
+    
+    let myLocation = CLLocationCoordinate2D()
+    public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) ->CLLocationCoordinate2D {
+        let location = locations[0]
+        let myLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+        
+        
+        return myLocation
+    }
+    
+    func returnUserLocation() -> CLLocationCoordinate2D {
+        let userLocation = manager.location!.coordinate
+        return userLocation
+    }
     
     
     
@@ -58,6 +76,13 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         super.viewDidLoad()
         myMotionEffect(view: logoImage, min: -10, max: 10)
         myMotionEffect(view: shadowImage, min: 5, max: -5)
+        
+           manager.delegate = self as? CLLocationManagerDelegate
+           manager.desiredAccuracy = kCLLocationAccuracyBest
+            manager.requestWhenInUseAuthorization()
+             manager.startUpdatingLocation()
+             
+           
        
         
         self.citySelection?.dataSource = self
