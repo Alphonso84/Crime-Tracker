@@ -44,12 +44,9 @@ class APIData {
         //URL FILTER ORDERS RESULTS BY CITY(GLOBAL VARIABLE SET IN MAINVIEWCONTROLLER)
         let userCity = "&city=\(city)"
     
-        let locationQuery = "$where=within_circle(location_1, \(latitude[0]), \(longitude[0]), 10000)"
-       // print(MainViewController.CityString().city)
-        
+
         urlString = "\(baseURL)\(token)\(userCity)\(sortOrder)\(numberOfResults)"
-        locationURLString = "\(baseURL)?\(locationQuery)"
-       print(locationURLString)
+    
         let FormattedUrlString = urlString.replacingOccurrences(of: " ", with: "%20")
         let url = URL(string: FormattedUrlString)
     
