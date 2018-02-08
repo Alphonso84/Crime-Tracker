@@ -553,7 +553,7 @@
                     <navigationItem key="navigationItem" title="Crime Tracker" id="Woa-tb-j1D">
                         <barButtonItem key="leftBarButtonItem" image="my location" id="BIZ-qF-i98">
                             <connections>
-                                <segue destination="ECb-LF-BlX" kind="presentation" modalPresentationStyle="overCurrentContext" id="QDH-Rd-Dlg"/>
+                                <segue destination="ECb-LF-BlX" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="QDH-Rd-Dlg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
