@@ -89,7 +89,7 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
             && description.contains("CRUELTY TO ANIMALS") ? (cell.imageView?.image = #imageLiteral(resourceName: "animal cruelty")) : (((cell.imageView?.image = nil) != nil))
             && description.contains("DOG ATTACK") ? (cell.imageView?.image = #imageLiteral(resourceName: "dog attack")) : (((cell.imageView?.image = nil) != nil))
             && description.contains("LOST PROPERTY") ? (cell.imageView?.image = #imageLiteral(resourceName: "lost property")) : (((cell.imageView?.image = nil) != nil))
-            && description.contains("LICENSE SUSPENDED") ? (cell.imageView?.image = #imageLiteral(resourceName: "License Suspended")) : (cell.imageView?.image = nil)
+                && description.contains("LICENSE SUSPENDED") ? (cell.imageView?.image = #imageLiteral(resourceName: "License Suspended")) : (((cell.imageView?.image = nil) != nil)) && description.contains("MISSING PERSON") ? (cell.imageView?.image = #imageLiteral(resourceName: "missing person")) : (cell.imageView?.image = nil)
         
         
         
