@@ -10,7 +10,8 @@ import UIKit
 
 //EMPTY STRING FOR URL
 var urlString = ""
-
+//EMPTY STRING BUILT FROM USERS LOCATION
+var locationURLString = ""
 //ARRAY OF MODEL TYPE CRIMEREPORT
 var CrimeData = [CrimeReport]()
 
@@ -42,9 +43,12 @@ class APIData {
         let sortOrder = "&$order=datetime DESC"
         //URL FILTER ORDERS RESULTS BY CITY(GLOBAL VARIABLE SET IN MAINVIEWCONTROLLER)
         let userCity = "&city=\(city)"
+    
+        let locationQuery = "$where=within_circle(location_1, \(latitude), -\(longitude), 10000)"
        // print(MainViewController.CityString().city)
         
         urlString = "\(baseURL)\(token)\(userCity)\(sortOrder)\(numberOfResults)"
+        locationURLString = "\(baseURL)\(token)\(locationQuery)"
        
         let FormattedUrlString = urlString.replacingOccurrences(of: " ", with: "%20")
         let url = URL(string: FormattedUrlString)
@@ -70,7 +74,7 @@ class APIData {
               
                 let jsonDecoder = JSONDecoder()
                 let jsonData = try jsonDecoder.decode(Array<CrimeReport>.self, from: unwrappedData)
-                //USE BELOW IF DECODER DOESNT WORK
+                //USE SERILIZATION BELOW IF DECODER DOESNT WORK
                 //JSONSerialization.jsonObject(with: unwrappedData, options: []) as? [[String:Any]]
                 
                 //CRIMEDATA IS AN ARRAY OF STRUCT TYPE CRIMEREPORT
@@ -91,16 +95,48 @@ class APIData {
                     
                 }
                 
-
-                
-//                print(latitude)
-//                print(longitude)
-//
-//                print(crimeDate)
                 } catch {
                 print(error)
                 }
             }
+        task.resume()
+    }
+    func parseJSONLocation() {
+        let unwrappedURL = self.buildUrl(constructedUrl: locationURLString)
+        //URL SESSION
+        let session = URLSession.shared
+        let task = session.dataTask(with: (unwrappedURL)) { (data, response, error) in
+            print("Start")
+            guard let unwrappedData = data else {return}
+            do {
+                
+                let jsonDecoder = JSONDecoder()
+                let jsonData = try jsonDecoder.decode(Array<CrimeReport>.self, from: unwrappedData)
+                //USE SERILIZATION BELOW IF DECODER DOESNT WORK
+                //JSONSerialization.jsonObject(with: unwrappedData, options: []) as? [[String:Any]]
+                
+                //CRIMEDATA IS AN ARRAY OF STRUCT TYPE CRIMEREPORT
+                CrimeData = jsonData
+                
+                //USING MAP METHOD TO TRANSFORM CRIMEDATA ARRAY INTO ARRAY OF GLOBAL VARIABLES
+                coordinatesArray = CrimeData.map {$0.location1.coordinates}
+                crimeTitle = CrimeData.map {$0.crimeDescription}
+                crimeDate = CrimeData.map {$0.date}
+                crimeBlock = CrimeData.map {$0.date}
+                
+                //PRINT OUT ANY DATA COMBINATION HERE
+                //Loop through Arrays created above to grab creat array of each value
+                for item in coordinatesArray {
+                    
+                    latitude.append(item[1])
+                    longitude.append(item[0])
+                    
+                }
+                
+            } catch {
+                print(error)
+            }
+        }
         task.resume()
         
     }

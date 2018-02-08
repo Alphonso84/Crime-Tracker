@@ -14,6 +14,10 @@ class SlideOverMenu: UIViewController {
         self.dismiss(animated: true)
         
         }
+   
+    @IBAction func getLocationCrimes(_ sender: Any) {
+        APIData().parseJSONLocation()
+    }
     
     
 }

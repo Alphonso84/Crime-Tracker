@@ -9,35 +9,71 @@
 import Foundation
 import UIKit
 import MapKit
+import CoreLocation
 import CoreGraphics
 
-
+var userLocation = CLLocationCoordinate2D()
 var stringCrime = String()
 var dateCrime = String()
 var lat = Double()
 var long = Double()
 var annotations = [MKPointAnnotation]()
+extension CLLocationCoordinate2D {
+    //distance in meters, as explained in CLLoactionDistance definition
+    func distance(from: CLLocationCoordinate2D) -> CLLocationDistance {
+        let destination = CLLocation(latitude:from.latitude,longitude:from.longitude)
+        return CLLocation(latitude: latitude, longitude: longitude).distance(from: destination)
+    }
+}
 
 
-class CrimeMap: UIViewController {
+
+class CrimeMap: UIViewController, CLLocationManagerDelegate {
     
+    let manager = CLLocationManager()
     
     @IBOutlet weak var mapView: MKMapView!
+    let myLocation = CLLocationCoordinate2D()
+   public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) ->CLLocationCoordinate2D {
+        let location = locations[0]
+        let myLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+        self.mapView.showsUserLocation = true
     
+        return myLocation
+    }
     
-    
+    func returnUserLocation() -> CLLocationCoordinate2D {
+        let userLocation = manager.location!.coordinate
+        return userLocation
+    }
     let locations = CLLocationCoordinate2DMake(lat , long)
     // let crimeLocations = CLLocationCoordinate2DMake(
     
     override func viewWillAppear(_ animated: Bool) {
       
+        
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
+        print(returnUserLocation())
+        print(manager.location!.coordinate)
+        print(locations)
+        print(manager.location!.coordinate.distance(from: locations))
+        
+        //Creating Alert
+        let locationAlert = UIAlertController(title: "\(stringCrime)", message: "This crime happend \(manager.location!.coordinate.distance(from: locations)) meters from your location", preferredStyle: UIAlertControllerStyle.actionSheet)
+        locationAlert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel, handler: nil))
+       present(locationAlert, animated: true, completion: nil)
+        
       mapView.setRegion(MKCoordinateRegionMakeWithDistance(locations, 2000, 2000), animated: true)
-let crimes = PinAnnotation(title: "\(stringCrime)", subtitle: "\(dateCrime)", coordinate: locations)
+      let crimes = PinAnnotation(title: "\(stringCrime)", subtitle: "\(dateCrime)", coordinate: locations)
         
         mapView.addAnnotation(crimes)
     }
