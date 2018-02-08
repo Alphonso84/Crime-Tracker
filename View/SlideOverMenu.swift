@@ -18,6 +18,7 @@ class SlideOverMenu: UIViewController {
         
         }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         latitude = [manager.location!.coordinate.latitude]
         longitude = [manager.location!.coordinate.longitude]
@@ -25,7 +26,10 @@ class SlideOverMenu: UIViewController {
     override func viewDidLoad() {
         latitude = [manager.location!.coordinate.latitude]
         longitude = [manager.location!.coordinate.longitude]
+        let DataAlert = UIAlertController(title: "ATTENTION", message: "Crime data retrieved outside of Alameda County, CA may be out of date or unavailable", preferredStyle: UIAlertControllerStyle.actionSheet)
+        DataAlert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel, handler: nil))
         APIData().parseJSONLocation()
+        present(DataAlert, animated: true, completion: nil)
     }
    
     @IBAction func getLocationCrimes(_ sender: Any) {
