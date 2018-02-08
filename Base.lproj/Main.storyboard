@@ -170,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CJe-Do-GH0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1317.5999999999999" y="-597.04433497536945"/>
+            <point key="canvasLocation" x="2001" y="-624"/>
         </scene>
         <!--Crime List-->
         <scene sceneID="oJb-5l-Dhz">
@@ -226,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kue-Nu-xqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2176.8000000000002" y="85.714285714285722"/>
+            <point key="canvasLocation" x="2002" y="112"/>
         </scene>
         <!--Crime Instance -->
         <scene sceneID="nA4-qE-m1H">
@@ -338,7 +338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qXN-dh-yIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3116" y="81"/>
+            <point key="canvasLocation" x="3207" y="112"/>
         </scene>
         <!--Crime Stats-->
         <scene sceneID="iZx-o9-lSf">
@@ -393,7 +393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jXz-5s-eFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1660" y="620.68965517241384"/>
+            <point key="canvasLocation" x="2002" y="939"/>
         </scene>
         <!--Crime Map-->
         <scene sceneID="snU-x6-GA3">
@@ -422,7 +422,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGn-Up-Qel" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3132" y="864.53201970443354"/>
+            <point key="canvasLocation" x="3206" y="938"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Su2-jz-iuh">
@@ -577,7 +577,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clearsContextBeforeDrawing="NO" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNC-kx-JMI">
-                                <rect key="frame" x="0.0" y="424" width="375" height="388"/>
+                                <rect key="frame" x="0.0" y="372" width="375" height="440"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azd-2h-3ty">
                                         <rect key="frame" x="75" y="111" width="225" height="68"/>
@@ -611,7 +611,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="UNC-kx-JMI" firstAttribute="top" secondItem="EQQ-Dq-h2T" secondAttribute="top" constant="336" id="CfO-po-Z07"/>
+                            <constraint firstItem="UNC-kx-JMI" firstAttribute="top" secondItem="EQQ-Dq-h2T" secondAttribute="top" constant="284" id="CfO-po-Z07"/>
                             <constraint firstItem="EQQ-Dq-h2T" firstAttribute="bottom" secondItem="UNC-kx-JMI" secondAttribute="bottom" constant="-34" id="IXa-nV-E9P"/>
                             <constraint firstItem="UNC-kx-JMI" firstAttribute="leading" secondItem="Gib-eV-M1f" secondAttribute="leading" id="Kfd-tq-Qrp"/>
                             <constraint firstItem="EQQ-Dq-h2T" firstAttribute="trailing" secondItem="UNC-kx-JMI" secondAttribute="trailing" id="ck7-i4-2al"/>
@@ -632,48 +632,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-758" y="1008"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Zaq-vj-rXB">
-            <objects>
-                <viewController id="SrM-wo-vU3" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="I0e-mP-Sdi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="5rq-QR-V3R"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4J9-ZU-Que" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="239" y="1002"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="WT2-6S-ltj">
-            <objects>
-                <viewController id="OeW-fO-6iu" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ktq-4K-Jkn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MXz-TU-bVD">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="MXz-TU-bVD" secondAttribute="bottom" id="Be3-N3-6ow"/>
-                            <constraint firstItem="MXz-TU-bVD" firstAttribute="top" secondItem="ktq-4K-Jkn" secondAttribute="top" id="OqI-0Z-gXI"/>
-                            <constraint firstAttribute="trailing" secondItem="MXz-TU-bVD" secondAttribute="trailing" id="ogc-y9-eGe"/>
-                            <constraint firstItem="MXz-TU-bVD" firstAttribute="leading" secondItem="ktq-4K-Jkn" secondAttribute="leading" id="wsC-un-m2S"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Izr-FP-JDR"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sr7-UQ-GQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2359" y="895"/>
+            <point key="canvasLocation" x="-759.20000000000005" y="1007.8817733990148"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LGe-Ve-yWK">

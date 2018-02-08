@@ -68,7 +68,7 @@ class CrimeMap: UIViewController, CLLocationManagerDelegate {
         print(manager.location!.coordinate.distance(from: locations))
         
         //Creating Alert to inform user of how far away crime is from thier location
-        let locationAlert = UIAlertController(title: "\(stringCrime)", message: "This crime happend \(manager.location!.coordinate.distance(from: locations)) meters from your location", preferredStyle: UIAlertControllerStyle.actionSheet)
+        let locationAlert = UIAlertController(title: "\(stringCrime)", message: "This crime happend \(manager.location!.coordinate.distance(from: locations) * 3.3/5280) miles from your location", preferredStyle: UIAlertControllerStyle.actionSheet)
         locationAlert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel, handler: nil))
         //Alert will only display if crime is less than 8000 meters from users location.
         if manager.location!.coordinate.distance(from: locations) < 8000 {

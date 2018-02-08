@@ -17,13 +17,19 @@ class SlideOverMenu: UIViewController {
         self.dismiss(animated: true)
         
         }
-    override func viewDidLoad() {
+    
+    override func viewWillAppear(_ animated: Bool) {
         latitude = [manager.location!.coordinate.latitude]
         longitude = [manager.location!.coordinate.longitude]
     }
+    override func viewDidLoad() {
+        latitude = [manager.location!.coordinate.latitude]
+        longitude = [manager.location!.coordinate.longitude]
+        APIData().parseJSONLocation()
+    }
    
     @IBAction func getLocationCrimes(_ sender: Any) {
-  APIData().parseJSONLocation()
+  //APIData().parseJSONLocation()
        
     }
     
