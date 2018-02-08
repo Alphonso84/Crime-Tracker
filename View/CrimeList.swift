@@ -51,7 +51,7 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
         let description = CrimeData[indexPath.row].crimeDescription
      
-       //THERE HAS TO BE A BETTER WAY TO IMPLEMENT THIS LOGIC
+       //THERE HAS TO BE A BETTER WAY TO IMPLEMENT THIS LOGIC //ALREADY TRIED SWITCH//IF/ELSE
                description.contains("EOD") ? (cell.imageView?.image = #imageLiteral(resourceName: "explosive")) : (((cell.imageView?.image = nil) != nil))
             && description.contains("RECKLESS") ? (cell.imageView?.image = #imageLiteral(resourceName: "Reckless")) : (((cell.imageView?.image = nil) != nil))
             && description.contains("SUSPICIOUS") ? (cell.imageView?.image = #imageLiteral(resourceName: "Suspicious")) : (((cell.imageView?.image = nil) != nil))
@@ -90,7 +90,9 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
             && description.contains("DOG ATTACK") ? (cell.imageView?.image = #imageLiteral(resourceName: "dog attack")) : (((cell.imageView?.image = nil) != nil))
             && description.contains("LOST PROPERTY") ? (cell.imageView?.image = #imageLiteral(resourceName: "lost property")) : (((cell.imageView?.image = nil) != nil))
             && description.contains("LICENSE SUSPENDED") ? (cell.imageView?.image = #imageLiteral(resourceName: "License Suspended")) : (((cell.imageView?.image = nil) != nil))
-            && description.contains("MISSING PERSON") ? (cell.imageView?.image = #imageLiteral(resourceName: "missing person")) : (cell.imageView?.image = nil)
+            && description.contains("MISSING PERSON") ? (cell.imageView?.image = #imageLiteral(resourceName: "missing person")) : (((cell.imageView?.image = nil) != nil))
+            && description.contains("ELUDE") ? (cell.imageView?.image = #imageLiteral(resourceName: "arrest")) : (((cell.imageView?.image = nil) != nil))
+            && description.contains("RUNAWAY") ? (cell.imageView?.image = #imageLiteral(resourceName: "missing person")) : (cell.imageView?.image = nil)
         
         
         

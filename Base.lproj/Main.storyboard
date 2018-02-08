@@ -550,8 +550,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X4I-YM-OJV"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Alameda County - Crime Tracker" id="Woa-tb-j1D">
-                        <barButtonItem key="leftBarButtonItem" image="menu-options" id="BIZ-qF-i98">
+                    <navigationItem key="navigationItem" title="Crime Tracker" id="Woa-tb-j1D">
+                        <barButtonItem key="leftBarButtonItem" image="my location" id="BIZ-qF-i98">
                             <connections>
                                 <segue destination="SUB-8K-Ltn" kind="presentation" modalPresentationStyle="overCurrentContext" id="QDH-Rd-Dlg"/>
                             </connections>
@@ -576,18 +576,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view clearsContextBeforeDrawing="NO" alpha="0.89999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNC-kx-JMI">
-                                <rect key="frame" x="0.0" y="93" width="296" height="719"/>
+                            <view clearsContextBeforeDrawing="NO" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNC-kx-JMI">
+                                <rect key="frame" x="0.0" y="380" width="375" height="432"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azd-2h-3ty">
+                                        <rect key="frame" x="75" y="111" width="225" height="68"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="68" id="7Ly-do-eB5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="20"/>
+                                        <state key="normal" title="Get Crimes Near Me">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="azd-2h-3ty" firstAttribute="top" secondItem="UNC-kx-JMI" secondAttribute="top" constant="111" id="HRL-7V-idy"/>
+                                    <constraint firstItem="azd-2h-3ty" firstAttribute="leading" secondItem="UNC-kx-JMI" secondAttribute="leading" constant="75" id="c0Q-Yu-1OD"/>
+                                    <constraint firstItem="azd-2h-3ty" firstAttribute="centerX" secondItem="UNC-kx-JMI" secondAttribute="centerX" id="cDq-G5-eG9"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="UNC-kx-JMI" firstAttribute="top" secondItem="EQQ-Dq-h2T" secondAttribute="top" constant="49" id="CfO-po-Z07"/>
+                            <constraint firstItem="UNC-kx-JMI" firstAttribute="top" secondItem="EQQ-Dq-h2T" secondAttribute="top" constant="336" id="CfO-po-Z07"/>
                             <constraint firstItem="EQQ-Dq-h2T" firstAttribute="bottom" secondItem="UNC-kx-JMI" secondAttribute="bottom" constant="-34" id="IXa-nV-E9P"/>
                             <constraint firstItem="UNC-kx-JMI" firstAttribute="leading" secondItem="Gib-eV-M1f" secondAttribute="leading" id="Kfd-tq-Qrp"/>
-                            <constraint firstItem="EQQ-Dq-h2T" firstAttribute="trailing" secondItem="UNC-kx-JMI" secondAttribute="trailing" constant="79" id="ck7-i4-2al"/>
+                            <constraint firstItem="EQQ-Dq-h2T" firstAttribute="trailing" secondItem="UNC-kx-JMI" secondAttribute="trailing" id="ck7-i4-2al"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EQQ-Dq-h2T"/>
                         <connections>
@@ -612,7 +635,7 @@
         <image name="Image" width="435" height="87"/>
         <image name="Map_icon" width="86" height="76"/>
         <image name="Oakland" width="468" height="310"/>
-        <image name="menu-options" width="21" height="21"/>
+        <image name="my location" width="66" height="66"/>
         <image name="video-panel-shadow" width="347" height="42"/>
     </resources>
 </document>
