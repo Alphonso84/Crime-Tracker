@@ -236,6 +236,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Untitled design-3" translatesAutoresizingMaskIntoConstraints="NO" id="PTr-uw-G2T">
+                                <rect key="frame" x="0.0" y="352" width="375" height="469"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crime Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdr-8C-MZ2">
                                 <rect key="frame" x="16" y="171" width="343" height="60"/>
                                 <constraints>
@@ -252,10 +255,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSg-ko-TE4">
-                                <rect key="frame" x="112" y="555.66666666666663" width="151" height="119.33333333333337"/>
+                                <rect key="frame" x="112" y="556" width="151" height="119"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="25"/>
-                                <state key="normal" title="See On Map" backgroundImage="Map_icon">
+                                <state key="normal" title="See On Map">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -304,18 +307,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="PTr-uw-G2T" firstAttribute="leading" secondItem="rFJ-26-pV3" secondAttribute="leading" id="0rE-fg-ZNu"/>
                             <constraint firstItem="hdr-8C-MZ2" firstAttribute="top" secondItem="Egs-HO-lwc" secondAttribute="bottom" constant="8" symbolic="YES" id="29n-yY-DpS"/>
                             <constraint firstItem="Egs-HO-lwc" firstAttribute="top" secondItem="P5N-W5-Iwb" secondAttribute="top" constant="40" id="2NZ-uU-gCv"/>
                             <constraint firstItem="nVv-Gi-CPL" firstAttribute="trailing" secondItem="QfP-J9-fo9" secondAttribute="trailing" id="4NW-4f-w5R"/>
                             <constraint firstItem="P5N-W5-Iwb" firstAttribute="trailing" secondItem="Egs-HO-lwc" secondAttribute="trailing" constant="141" id="7hC-bv-qua"/>
                             <constraint firstItem="G1M-Ke-0kw" firstAttribute="trailing" secondItem="VW8-uZ-SDj" secondAttribute="trailing" constant="2" id="8BF-Ch-BEU"/>
                             <constraint firstItem="hdr-8C-MZ2" firstAttribute="leading" secondItem="rFJ-26-pV3" secondAttribute="leadingMargin" id="Aci-yr-coC"/>
+                            <constraint firstItem="PTr-uw-G2T" firstAttribute="centerX" secondItem="QfP-J9-fo9" secondAttribute="centerX" id="BrM-EF-Bce"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="PTr-uw-G2T" secondAttribute="bottom" constant="-43" id="D0D-ev-4Cd"/>
                             <constraint firstItem="VW8-uZ-SDj" firstAttribute="top" secondItem="QfP-J9-fo9" secondAttribute="bottom" constant="8" symbolic="YES" id="L7h-wX-vUH"/>
                             <constraint firstItem="QSg-ko-TE4" firstAttribute="leading" secondItem="P5N-W5-Iwb" secondAttribute="leading" constant="112" id="L8L-74-bbo"/>
                             <constraint firstItem="nVv-Gi-CPL" firstAttribute="centerX" secondItem="G1M-Ke-0kw" secondAttribute="centerX" constant="-2" id="Lke-Rz-ORO"/>
                             <constraint firstItem="nVv-Gi-CPL" firstAttribute="leading" secondItem="P5N-W5-Iwb" secondAttribute="leading" constant="136" id="PVz-LN-nE8"/>
                             <constraint firstItem="G1M-Ke-0kw" firstAttribute="leading" secondItem="P5N-W5-Iwb" secondAttribute="leading" constant="19" id="THq-jA-rzX"/>
                             <constraint firstItem="QSg-ko-TE4" firstAttribute="top" secondItem="VW8-uZ-SDj" secondAttribute="bottom" constant="38.666666666666629" id="Tfg-A8-08W"/>
+                            <constraint firstItem="PTr-uw-G2T" firstAttribute="top" secondItem="nVv-Gi-CPL" secondAttribute="bottom" constant="56" id="Tst-y5-4za"/>
                             <constraint firstItem="hdr-8C-MZ2" firstAttribute="centerX" secondItem="nVv-Gi-CPL" secondAttribute="centerX" id="ab3-U4-38j"/>
                             <constraint firstItem="hdr-8C-MZ2" firstAttribute="trailing" secondItem="rFJ-26-pV3" secondAttribute="trailingMargin" id="cAA-M8-1hH"/>
                             <constraint firstItem="G1M-Ke-0kw" firstAttribute="top" secondItem="nVv-Gi-CPL" secondAttribute="bottom" constant="8" symbolic="YES" id="ccB-ee-vjr"/>
@@ -338,7 +345,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qXN-dh-yIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3207" y="112"/>
+            <point key="canvasLocation" x="3205.5999999999999" y="111.57635467980296"/>
         </scene>
         <!--Crime Stats-->
         <scene sceneID="iZx-o9-lSf">
@@ -665,9 +672,9 @@
     <resources>
         <image name="Icon" width="266" height="266"/>
         <image name="Image" width="435" height="87"/>
-        <image name="Map_icon" width="86" height="76"/>
         <image name="Oakland" width="468" height="310"/>
         <image name="Untitled design-2" width="400" height="400"/>
+        <image name="Untitled design-3" width="266" height="266"/>
         <image name="my location" width="66" height="66"/>
         <image name="video-panel-shadow" width="347" height="42"/>
     </resources>
