@@ -32,7 +32,7 @@
 	<key>NSLocationUsageDescription</key>
 	<string>To get your location on the map</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>In order to find crime data near your location</string>
+	<string>In order to find crime data near your current location.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
