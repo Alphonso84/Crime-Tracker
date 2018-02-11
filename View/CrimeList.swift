@@ -92,7 +92,14 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
             && description.contains("LICENSE SUSPENDED") ? (cell.imageView?.image = #imageLiteral(resourceName: "License Suspended")) : (((cell.imageView?.image = nil) != nil))
             && description.contains("MISSING PERSON") ? (cell.imageView?.image = #imageLiteral(resourceName: "missing person")) : (((cell.imageView?.image = nil) != nil))
             && description.contains("ELUDE") ? (cell.imageView?.image = #imageLiteral(resourceName: "arrest")) : (((cell.imageView?.image = nil) != nil))
-            && description.contains("RUNAWAY") ? (cell.imageView?.image = #imageLiteral(resourceName: "missing person")) : (cell.imageView?.image = nil)
+            && description.contains("RUNAWAY") ? (cell.imageView?.image = #imageLiteral(resourceName: "missing person")) : (((cell.imageView?.image = nil) != nil))
+            && description.contains("THREATEN CRIME") ? (cell.imageView?.image = #imageLiteral(resourceName: "arrest")) : (((cell.imageView?.image = nil) != nil))
+            && description.contains("TRESPASS") ? (cell.imageView?.image = #imageLiteral(resourceName: "trespass")) : (((cell.imageView?.image = nil) != nil))
+            && description.contains("VIOLATION") ? (cell.imageView?.image = #imageLiteral(resourceName: "Court")) : (((cell.imageView?.image = nil) != nil))
+            && description.contains("OPERATING VEH") ? (cell.imageView?.image = #imageLiteral(resourceName: "vehicle")) : (((cell.imageView?.image = nil) != nil))
+            && description.contains("DEATH") ? (cell.imageView?.image = #imageLiteral(resourceName: "death")) : (((cell.imageView?.image = nil) != nil))
+            && description.contains("STALKING") ? (cell.imageView?.image = #imageLiteral(resourceName: "Suspicious")) : (((cell.imageView?.image = nil) != nil))
+            && description.contains("MEDICAL") ? (cell.imageView?.image = #imageLiteral(resourceName: "medical")) : (cell.imageView?.image = nil)
         
         
         
