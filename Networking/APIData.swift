@@ -33,6 +33,7 @@ class APIData {
   
     //API TOKEN
     private let token = "?$$app_token=BEyC2oP4D1T8CaKegklvf4ExN"
+    private let secretToken = "CcZhJkCwYWL4i6tAzfDw81u-MD4lGOYSJGen"
     
     //METHOD FOR BUILDING API URL
    public func buildUrl(constructedUrl: String) -> URL{
@@ -66,7 +67,7 @@ class APIData {
         // print(MainViewController.CityString().city)
         
         urlString = "\(baseURL)\(token)\(userCity)\(sortOrder)\(numberOfResults)"
-        locationURLString = "\(baseURL)?\(locationQuery)"
+        locationURLString = "\(baseURL)?\(locationQuery)\(sortOrder)\(numberOfResults)"
         print(locationURLString)
         let FormattedUrlString = locationURLString.replacingOccurrences(of: " ", with: "%20")
         let url = URL(string: FormattedUrlString)
@@ -135,7 +136,7 @@ class APIData {
                 
                 //CRIMEDATA IS AN ARRAY OF STRUCT TYPE CRIMEREPORT
                 CrimeData = jsonData
-                
+                print(CrimeData)
                 //USING MAP METHOD TO TRANSFORM CRIMEDATA ARRAY INTO ARRAY OF GLOBAL VARIABLES
                 coordinatesArray = CrimeData.map {$0.location1.coordinates}
                 crimeTitle = CrimeData.map {$0.crimeDescription}
@@ -146,6 +147,7 @@ class APIData {
                 //Loop through Arrays created above to grab creat array of each value
                 print("Hello")
                 print(CrimeData)
+                print(crimeTitle)
 //                for item in coordinatesArray {
 //                    
 //                    latitude.append(item[1])
