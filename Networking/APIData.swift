@@ -63,7 +63,7 @@ class APIData {
         //URL FILTER ORDERS RESULTS BY CITY(GLOBAL VARIABLE SET IN MAINVIEWCONTROLLER)
         let userCity = "&city=\(city)"
         
-        let locationQuery = "$where=within_circle(location_1, \(latitude[0]), \(longitude[0]), 10000)"
+        let locationQuery = "$where=within_circle(location_1, \(latitude[0]), \(longitude[0]), 8000)"
         // print(MainViewController.CityString().city)
         
         urlString = "\(baseURL)\(token)\(userCity)\(sortOrder)\(numberOfResults)"
@@ -136,7 +136,7 @@ class APIData {
                 
                 //CRIMEDATA IS AN ARRAY OF STRUCT TYPE CRIMEREPORT
                 CrimeData = jsonData
-                print(CrimeData)
+                
                 //USING MAP METHOD TO TRANSFORM CRIMEDATA ARRAY INTO ARRAY OF GLOBAL VARIABLES
                 coordinatesArray = CrimeData.map {$0.location1.coordinates}
                 crimeTitle = CrimeData.map {$0.crimeDescription}
@@ -146,7 +146,7 @@ class APIData {
                 //PRINT OUT ANY DATA COMBINATION HERE
                 //Loop through Arrays created above to grab creat array of each value
                 print("Hello")
-                print(CrimeData)
+               
                 print(crimeTitle)
 //                for item in coordinatesArray {
 //                    
