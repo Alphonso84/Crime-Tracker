@@ -23,9 +23,9 @@ var crimeString = [String]()
 
 
 var coordinatesArray = [[Double]]()
-var crimeTitle = [String]()
-var crimeDate = [String]()
-var crimeBlock = [String]()
+var crimeTitle = [String?]()
+var crimeDate = [String?]()
+var crimeBlock = [String?]()
 
 
 class APIData {

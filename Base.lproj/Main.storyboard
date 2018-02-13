@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wWR-Hw-jxg">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -21,20 +21,20 @@
             <objects>
                 <viewController title="MenuViewController" id="BYZ-38-t0r" customClass="MenuViewController" customModule="Crime_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oakland" translatesAutoresizingMaskIntoConstraints="NO" id="dQy-OF-Ebt">
-                                <rect key="frame" x="0.0" y="120" width="375" height="581"/>
+                                <rect key="frame" x="0.0" y="120" width="768" height="938"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="r28-Au-pph">
-                                <rect key="frame" x="0.0" y="120" width="375" height="579"/>
+                                <rect key="frame" x="0.0" y="120" width="768" height="936"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gEW-tv-p7y">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="193"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="312"/>
                                         <subviews>
                                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGT-WM-3VO">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="193"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="768" height="312"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="31"/>
                                                 <state key="normal" title="Contact Police">
@@ -47,10 +47,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WJf-9s-lHp">
-                                        <rect key="frame" x="0.0" y="193" width="375" height="193"/>
+                                        <rect key="frame" x="0.0" y="312" width="768" height="312"/>
                                         <subviews>
                                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTm-ga-kM5">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="193"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="768" height="312"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="31"/>
                                                 <state key="normal" title="Crime List">
@@ -63,10 +63,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="center" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="k7z-bk-dph">
-                                        <rect key="frame" x="0.0" y="386" width="375" height="193"/>
+                                        <rect key="frame" x="0.0" y="624" width="768" height="312"/>
                                         <subviews>
                                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPf-jT-qpr">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="193"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="768" height="312"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="31"/>
                                                 <state key="normal" title="Crime Stats">
@@ -81,7 +81,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GK3-RU-2Xf">
-                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="64" width="768" height="56"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="bcC-0l-tHx"/>
@@ -122,11 +122,11 @@
             <objects>
                 <viewController title="Contact Police" id="nJ2-hL-6Qk" customClass="ReportCrime" customModule="Crime_Tracker" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p8q-q8-nFc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8B-H1-nVg">
-                                <rect key="frame" x="0.0" y="104" width="375" height="563"/>
+                                <rect key="frame" x="0.0" y="104" width="768" height="920"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -134,11 +134,11 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="JAr-xC-WyB">
-                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                                <rect key="frame" x="374" y="502" width="20" height="20"/>
                                 <color key="color" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BN5-4K-Xxg">
-                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="64" width="768" height="56"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="GwF-sR-5Ri"/>
@@ -177,22 +177,22 @@
             <objects>
                 <viewController title="Crime List" id="BoL-Pm-ZDZ" customClass="CrimeList" customModule="Crime_Tracker" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Jj-zx-Eo8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XAf-AH-KsT">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="A44-Uc-QMV" rowHeight="64" style="IBUITableViewCellStyleDefault" id="uBr-GO-GCw">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="64"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="A44-Uc-QMV" rowHeight="64" style="IBUITableViewCellStyleDefault" id="uBr-GO-GCw">
+                                        <rect key="frame" x="0.0" y="28" width="768" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uBr-GO-GCw" id="hjp-ko-TvZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="63.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="A44-Uc-QMV">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="63.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="738" height="63.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -233,35 +233,14 @@
             <objects>
                 <viewController restorationIdentifier="CrimeInstanceView" storyboardIdentifier="CrimeInstanceView" title="Crime Instance " id="cdt-ea-OCv" customClass="CrimeInstanceView" customModule="Crime_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rFJ-26-pV3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Untitled design-3" translatesAutoresizingMaskIntoConstraints="NO" id="PTr-uw-G2T">
-                                <rect key="frame" x="0.0" y="451.5" width="375" height="258.5"/>
+                                <rect key="frame" x="0.0" y="735" width="768" height="289"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crime Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdr-8C-MZ2">
-                                <rect key="frame" x="26" y="147" width="322" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="aQP-TK-PWp"/>
-                                    <constraint firstAttribute="height" constant="60" id="d7K-Br-ngI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="aQP-TK-PWp"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="aQP-TK-PWp"/>
-                                        <exclude reference="d7K-Br-ngI"/>
-                                    </mask>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Block, City, State" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1M-Ke-0kw">
-                                <rect key="frame" x="27" y="280" width="321" height="22.5"/>
+                                <rect key="frame" x="28" y="256" width="712" height="333"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="77" id="Zes-Vc-h6E"/>
                                 </constraints>
@@ -278,17 +257,24 @@
                                         <include reference="Zes-Vc-h6E"/>
                                     </mask>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="Zes-Vc-h6E"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfP-J9-fo9">
-                                <rect key="frame" x="146.5" y="310.5" width="82" height="35"/>
+                                <rect key="frame" x="343" y="597" width="82" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="3Wh-DV-5LU"/>
+                                    <constraint firstAttribute="height" constant="35" id="pKf-nS-mu2"/>
                                     <constraint firstAttribute="height" constant="35" id="t1H-zn-c7m"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="27"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="pKf-nS-mu2"/>
                                         <exclude reference="t1H-zn-c7m"/>
                                     </mask>
                                 </variation>
@@ -298,12 +284,19 @@
                                         <include reference="t1H-zn-c7m"/>
                                     </mask>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="pKf-nS-mu2"/>
+                                        <exclude reference="t1H-zn-c7m"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VW8-uZ-SDj">
-                                <rect key="frame" x="27" y="353.5" width="321" height="60"/>
+                                <rect key="frame" x="27" y="667" width="714" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="19K-gw-zNf"/>
                                     <constraint firstAttribute="height" constant="60" id="TPw-fC-kJe"/>
+                                    <constraint firstAttribute="height" constant="60" id="ePe-1m-r6S"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="19"/>
                                 <nil key="textColor"/>
@@ -311,6 +304,7 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="TPw-fC-kJe"/>
+                                        <exclude reference="ePe-1m-r6S"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
@@ -319,18 +313,26 @@
                                         <include reference="TPw-fC-kJe"/>
                                     </mask>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="TPw-fC-kJe"/>
+                                        <include reference="ePe-1m-r6S"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVv-Gi-CPL">
-                                <rect key="frame" x="146.5" y="237" width="82" height="35"/>
+                                <rect key="frame" x="326" y="213" width="116" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="ESm-dX-DKV"/>
                                     <constraint firstAttribute="height" constant="35" id="dL9-bi-C2r"/>
+                                    <constraint firstAttribute="height" constant="35" id="fwd-vR-wiw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="27"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="dL9-bi-C2r"/>
+                                        <exclude reference="fwd-vR-wiw"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
@@ -339,18 +341,26 @@
                                         <include reference="dL9-bi-C2r"/>
                                     </mask>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="dL9-bi-C2r"/>
+                                        <include reference="fwd-vR-wiw"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egs-HO-lwc">
-                                <rect key="frame" x="136" y="104" width="103" height="35"/>
+                                <rect key="frame" x="265" y="64" width="238" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="oub-L8-HVS"/>
                                     <constraint firstAttribute="height" constant="35" id="pzd-f4-BHS"/>
+                                    <constraint firstAttribute="height" constant="35" id="yxJ-OP-IKE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="27"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="pzd-f4-BHS"/>
+                                        <exclude reference="yxJ-OP-IKE"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
@@ -359,12 +369,19 @@
                                         <include reference="pzd-f4-BHS"/>
                                     </mask>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="pzd-f4-BHS"/>
+                                        <include reference="yxJ-OP-IKE"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSg-ko-TE4">
-                                <rect key="frame" x="112.5" y="483.5" width="151" height="53.5"/>
+                                <rect key="frame" x="309" y="762" width="151" height="61"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="c3O-7E-R6h"/>
+                                    <constraint firstAttribute="height" constant="61" id="qv0-UE-43A"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="25"/>
                                 <state key="normal" title="See On Map">
@@ -378,6 +395,7 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="c3O-7E-R6h"/>
+                                        <exclude reference="qv0-UE-43A"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
@@ -385,29 +403,72 @@
                                         <include reference="c3O-7E-R6h"/>
                                     </mask>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="c3O-7E-R6h"/>
+                                        <include reference="qv0-UE-43A"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="SeeOnMapButton:" destination="cdt-ea-OCv" eventType="touchUpInside" id="mqA-UW-RTt"/>
                                     <segue destination="u6f-hL-Z8l" kind="show" id="qfu-LF-GgM"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crime Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdr-8C-MZ2">
+                                <rect key="frame" x="156" y="107" width="457" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="aQP-TK-PWp"/>
+                                    <constraint firstAttribute="height" constant="60" id="bga-Zy-FQS"/>
+                                    <constraint firstAttribute="height" constant="60" id="d7K-Br-ngI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="aQP-TK-PWp"/>
+                                        <exclude reference="bga-Zy-FQS"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="aQP-TK-PWp"/>
+                                        <exclude reference="d7K-Br-ngI"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="aQP-TK-PWp"/>
+                                        <include reference="bga-Zy-FQS"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="QfP-J9-fo9" firstAttribute="leading" secondItem="P5N-W5-Iwb" secondAttribute="leading" constant="343" id="0BZ-aX-Sen"/>
                             <constraint firstItem="Egs-HO-lwc" firstAttribute="leading" secondItem="P5N-W5-Iwb" secondAttribute="leading" constant="136" id="1J3-tq-kQh"/>
                             <constraint firstAttribute="trailing" secondItem="PTr-uw-G2T" secondAttribute="trailing" id="1Pl-ag-8de"/>
+                            <constraint firstItem="VW8-uZ-SDj" firstAttribute="top" secondItem="QfP-J9-fo9" secondAttribute="bottom" constant="35" id="1fc-8f-no5"/>
+                            <constraint firstItem="hdr-8C-MZ2" firstAttribute="top" secondItem="Egs-HO-lwc" secondAttribute="bottom" constant="8" symbolic="YES" id="1xi-ZC-kl1"/>
                             <constraint firstItem="QSg-ko-TE4" firstAttribute="top" secondItem="VW8-uZ-SDj" secondAttribute="bottom" constant="70" id="2Cc-Cb-yhq"/>
                             <constraint firstItem="Egs-HO-lwc" firstAttribute="top" secondItem="P5N-W5-Iwb" secondAttribute="top" constant="40" id="2jP-dn-CZ5"/>
                             <constraint firstItem="QSg-ko-TE4" firstAttribute="top" secondItem="VW8-uZ-SDj" secondAttribute="bottom" constant="99" id="3I6-Aq-cA2"/>
                             <constraint firstItem="P5N-W5-Iwb" firstAttribute="bottom" secondItem="QSg-ko-TE4" secondAttribute="bottom" constant="209" id="3hG-wy-4f1"/>
+                            <constraint firstItem="PTr-uw-G2T" firstAttribute="top" secondItem="VW8-uZ-SDj" secondAttribute="bottom" constant="8" symbolic="YES" id="3k9-5L-qm9"/>
                             <constraint firstItem="G1M-Ke-0kw" firstAttribute="top" secondItem="nVv-Gi-CPL" secondAttribute="bottom" constant="8" symbolic="YES" id="5SX-lm-Zvb"/>
                             <constraint firstItem="G1M-Ke-0kw" firstAttribute="trailing" secondItem="VW8-uZ-SDj" secondAttribute="trailing" id="5pd-5L-wwn"/>
                             <constraint firstItem="nVv-Gi-CPL" firstAttribute="centerX" secondItem="G1M-Ke-0kw" secondAttribute="centerX" id="7uu-j1-Njc"/>
+                            <constraint firstItem="VW8-uZ-SDj" firstAttribute="leading" secondItem="P5N-W5-Iwb" secondAttribute="leading" constant="27" id="9yX-0X-7GE"/>
                             <constraint firstItem="PTr-uw-G2T" firstAttribute="leading" secondItem="rFJ-26-pV3" secondAttribute="leading" id="AR4-Zd-4BO"/>
                             <constraint firstItem="PTr-uw-G2T" firstAttribute="bottom" secondItem="P5N-W5-Iwb" secondAttribute="bottom" id="AUW-1U-yjM"/>
+                            <constraint firstItem="QSg-ko-TE4" firstAttribute="top" secondItem="VW8-uZ-SDj" secondAttribute="bottom" constant="35" id="AUq-Gb-dd2"/>
+                            <constraint firstItem="G1M-Ke-0kw" firstAttribute="centerX" secondItem="QfP-J9-fo9" secondAttribute="centerX" id="Ag1-Xy-Orh"/>
                             <constraint firstItem="Egs-HO-lwc" firstAttribute="centerX" secondItem="hdr-8C-MZ2" secondAttribute="centerX" id="AuI-DL-35j"/>
                             <constraint firstAttribute="bottomMargin" secondItem="PTr-uw-G2T" secondAttribute="bottom" constant="-43" id="Bq1-si-bMT"/>
+                            <constraint firstItem="QfP-J9-fo9" firstAttribute="leading" secondItem="P5N-W5-Iwb" secondAttribute="leading" constant="343" id="DOZ-8l-0Ta"/>
                             <constraint firstItem="Egs-HO-lwc" firstAttribute="top" secondItem="P5N-W5-Iwb" secondAttribute="top" constant="40" id="DRD-33-4Ga"/>
+                            <constraint firstItem="hdr-8C-MZ2" firstAttribute="leading" secondItem="P5N-W5-Iwb" secondAttribute="leading" constant="156" id="E0h-Ha-v0B"/>
                             <constraint firstItem="hdr-8C-MZ2" firstAttribute="top" secondItem="Egs-HO-lwc" secondAttribute="bottom" constant="8" symbolic="YES" id="EKO-Qj-kCN"/>
                             <constraint firstAttribute="trailing" secondItem="PTr-uw-G2T" secondAttribute="trailing" id="EQe-Fd-fg4"/>
                             <constraint firstItem="P5N-W5-Iwb" firstAttribute="bottom" secondItem="QSg-ko-TE4" secondAttribute="bottom" constant="130" id="Ezi-fe-jrP"/>
@@ -416,8 +477,14 @@
                             <constraint firstItem="Egs-HO-lwc" firstAttribute="leading" secondItem="P5N-W5-Iwb" secondAttribute="leading" constant="136" id="HnR-uB-lVQ"/>
                             <constraint firstItem="Egs-HO-lwc" firstAttribute="centerX" secondItem="hdr-8C-MZ2" secondAttribute="centerX" id="I40-1T-xJJ"/>
                             <constraint firstItem="VW8-uZ-SDj" firstAttribute="top" secondItem="QfP-J9-fo9" secondAttribute="bottom" constant="8" symbolic="YES" id="JBS-na-97e"/>
+                            <constraint firstItem="hdr-8C-MZ2" firstAttribute="centerX" secondItem="nVv-Gi-CPL" secondAttribute="centerX" id="JuW-CH-8SY"/>
+                            <constraint firstItem="QfP-J9-fo9" firstAttribute="centerX" secondItem="VW8-uZ-SDj" secondAttribute="centerX" id="KA7-Dv-6Df"/>
+                            <constraint firstItem="G1M-Ke-0kw" firstAttribute="top" secondItem="nVv-Gi-CPL" secondAttribute="bottom" constant="8" symbolic="YES" id="LQt-vZ-FnM"/>
+                            <constraint firstItem="G1M-Ke-0kw" firstAttribute="leading" secondItem="P5N-W5-Iwb" secondAttribute="leading" constant="28" id="Mhg-0g-bb6"/>
                             <constraint firstItem="Egs-HO-lwc" firstAttribute="centerX" secondItem="nVv-Gi-CPL" secondAttribute="centerX" id="Mi8-qc-BrR"/>
+                            <constraint firstItem="nVv-Gi-CPL" firstAttribute="top" secondItem="hdr-8C-MZ2" secondAttribute="bottom" constant="46" id="Qt2-zp-r7C"/>
                             <constraint firstItem="hdr-8C-MZ2" firstAttribute="centerX" secondItem="QSg-ko-TE4" secondAttribute="centerX" id="QvC-cA-fLk"/>
+                            <constraint firstItem="Egs-HO-lwc" firstAttribute="top" secondItem="P5N-W5-Iwb" secondAttribute="top" id="SW9-eA-IgT"/>
                             <constraint firstItem="PTr-uw-G2T" firstAttribute="leading" secondItem="rFJ-26-pV3" secondAttribute="leading" id="TrR-bs-KjG"/>
                             <constraint firstItem="QfP-J9-fo9" firstAttribute="centerX" secondItem="VW8-uZ-SDj" secondAttribute="centerX" id="V5X-Bg-15J"/>
                             <constraint firstItem="nVv-Gi-CPL" firstAttribute="top" secondItem="hdr-8C-MZ2" secondAttribute="bottom" constant="30" id="WnY-Lo-mAC"/>
@@ -426,48 +493,78 @@
                             <constraint firstItem="G1M-Ke-0kw" firstAttribute="leading" secondItem="VW8-uZ-SDj" secondAttribute="leading" id="ZIX-KY-O1r"/>
                             <constraint firstItem="hdr-8C-MZ2" firstAttribute="leading" secondItem="P5N-W5-Iwb" secondAttribute="leading" constant="26" id="ZMJ-Fn-2wz"/>
                             <constraint firstItem="VW8-uZ-SDj" firstAttribute="top" secondItem="QfP-J9-fo9" secondAttribute="bottom" constant="8" symbolic="YES" id="a0Y-1j-Avg"/>
+                            <constraint firstItem="P5N-W5-Iwb" firstAttribute="bottom" secondItem="QSg-ko-TE4" secondAttribute="bottom" constant="201" id="a2g-eR-2bH"/>
                             <constraint firstItem="VW8-uZ-SDj" firstAttribute="centerX" secondItem="PTr-uw-G2T" secondAttribute="centerX" id="b9W-7Z-YjE"/>
                             <constraint firstItem="VW8-uZ-SDj" firstAttribute="centerX" secondItem="QSg-ko-TE4" secondAttribute="centerX" id="c1W-gx-oRE"/>
+                            <constraint firstItem="QSg-ko-TE4" firstAttribute="centerX" secondItem="PTr-uw-G2T" secondAttribute="centerX" id="cA6-o5-CwM"/>
                             <constraint firstItem="G1M-Ke-0kw" firstAttribute="centerX" secondItem="QfP-J9-fo9" secondAttribute="centerX" id="cZK-wB-d4A"/>
+                            <constraint firstItem="VW8-uZ-SDj" firstAttribute="centerX" secondItem="QSg-ko-TE4" secondAttribute="centerX" id="cw1-AU-nYg"/>
                             <constraint firstItem="G1M-Ke-0kw" firstAttribute="leading" secondItem="P5N-W5-Iwb" secondAttribute="leading" constant="28" id="e6a-jZ-2yZ"/>
                             <constraint firstItem="QfP-J9-fo9" firstAttribute="top" secondItem="G1M-Ke-0kw" secondAttribute="bottom" constant="90" id="e9F-90-f4O"/>
+                            <constraint firstItem="nVv-Gi-CPL" firstAttribute="centerX" secondItem="G1M-Ke-0kw" secondAttribute="centerX" id="fQW-AU-9Qd"/>
                             <constraint firstItem="G1M-Ke-0kw" firstAttribute="top" secondItem="nVv-Gi-CPL" secondAttribute="bottom" constant="8" symbolic="YES" id="fd6-8S-G4E"/>
                             <constraint firstItem="nVv-Gi-CPL" firstAttribute="leading" secondItem="P5N-W5-Iwb" secondAttribute="leading" constant="326" id="gCk-V5-22w"/>
+                            <constraint firstItem="nVv-Gi-CPL" firstAttribute="leading" secondItem="P5N-W5-Iwb" secondAttribute="leading" constant="326" id="nuA-Ma-Lov"/>
                             <constraint firstItem="PTr-uw-G2T" firstAttribute="top" secondItem="VW8-uZ-SDj" secondAttribute="bottom" constant="38" id="pQf-Kv-FuD"/>
                             <constraint firstItem="VW8-uZ-SDj" firstAttribute="leading" secondItem="P5N-W5-Iwb" secondAttribute="leading" constant="27" id="q2f-nr-XHG"/>
                             <constraint firstItem="QSg-ko-TE4" firstAttribute="leading" secondItem="P5N-W5-Iwb" secondAttribute="leading" constant="307" id="q9I-0c-i3A"/>
                             <constraint firstItem="PTr-uw-G2T" firstAttribute="top" secondItem="VW8-uZ-SDj" secondAttribute="bottom" constant="80" id="qM5-Ey-ked"/>
                             <constraint firstItem="hdr-8C-MZ2" firstAttribute="trailing" secondItem="G1M-Ke-0kw" secondAttribute="trailing" id="qxJ-8v-b5z"/>
                             <constraint firstItem="hdr-8C-MZ2" firstAttribute="top" secondItem="Egs-HO-lwc" secondAttribute="bottom" constant="8" symbolic="YES" id="rkT-ma-RmI"/>
+                            <constraint firstItem="QfP-J9-fo9" firstAttribute="top" secondItem="G1M-Ke-0kw" secondAttribute="bottom" constant="8" symbolic="YES" id="sfu-pa-dIg"/>
+                            <constraint firstItem="Egs-HO-lwc" firstAttribute="leading" secondItem="P5N-W5-Iwb" secondAttribute="leading" constant="265" id="tFn-H4-5iP"/>
                             <constraint firstItem="QfP-J9-fo9" firstAttribute="top" secondItem="G1M-Ke-0kw" secondAttribute="bottom" constant="8" symbolic="YES" id="tzH-T1-Nno"/>
                             <constraint firstItem="QfP-J9-fo9" firstAttribute="centerX" secondItem="VW8-uZ-SDj" secondAttribute="centerX" id="wfK-cd-m7Y"/>
+                            <constraint firstItem="Egs-HO-lwc" firstAttribute="centerX" secondItem="hdr-8C-MZ2" secondAttribute="centerX" id="xRg-6a-9pG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P5N-W5-Iwb"/>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="3hG-wy-4f1"/>
+                                <exclude reference="a2g-eR-2bH"/>
+                                <exclude reference="1xi-ZC-kl1"/>
+                                <exclude reference="E0h-Ha-v0B"/>
                                 <exclude reference="EKO-Qj-kCN"/>
+                                <exclude reference="JuW-CH-8SY"/>
                                 <exclude reference="QvC-cA-fLk"/>
                                 <exclude reference="ZMJ-Fn-2wz"/>
-                                <exclude reference="2jP-dn-CZ5"/>
-                                <exclude reference="HnR-uB-lVQ"/>
-                                <exclude reference="I40-1T-xJJ"/>
-                                <exclude reference="7uu-j1-Njc"/>
-                                <exclude reference="gCk-V5-22w"/>
+                                <exclude reference="Ag1-Xy-Orh"/>
+                                <exclude reference="LQt-vZ-FnM"/>
+                                <exclude reference="Mhg-0g-bb6"/>
                                 <exclude reference="cZK-wB-d4A"/>
                                 <exclude reference="e6a-jZ-2yZ"/>
                                 <exclude reference="fd6-8S-G4E"/>
-                                <exclude reference="0BZ-aX-Sen"/>
-                                <exclude reference="V5X-Bg-15J"/>
-                                <exclude reference="e9F-90-f4O"/>
+                                <exclude reference="2jP-dn-CZ5"/>
+                                <exclude reference="HnR-uB-lVQ"/>
+                                <exclude reference="I40-1T-xJJ"/>
+                                <exclude reference="SW9-eA-IgT"/>
+                                <exclude reference="tFn-H4-5iP"/>
+                                <exclude reference="xRg-6a-9pG"/>
+                                <exclude reference="7uu-j1-Njc"/>
+                                <exclude reference="Qt2-zp-r7C"/>
+                                <exclude reference="fQW-AU-9Qd"/>
+                                <exclude reference="gCk-V5-22w"/>
+                                <exclude reference="nuA-Ma-Lov"/>
+                                <exclude reference="1fc-8f-no5"/>
+                                <exclude reference="9yX-0X-7GE"/>
                                 <exclude reference="JBS-na-97e"/>
                                 <exclude reference="b9W-7Z-YjE"/>
+                                <exclude reference="cw1-AU-nYg"/>
                                 <exclude reference="q2f-nr-XHG"/>
+                                <exclude reference="3k9-5L-qm9"/>
                                 <exclude reference="AUW-1U-yjM"/>
                                 <exclude reference="EQe-Fd-fg4"/>
                                 <exclude reference="TrR-bs-KjG"/>
                                 <exclude reference="qM5-Ey-ked"/>
+                                <exclude reference="0BZ-aX-Sen"/>
+                                <exclude reference="DOZ-8l-0Ta"/>
+                                <exclude reference="KA7-Dv-6Df"/>
+                                <exclude reference="V5X-Bg-15J"/>
+                                <exclude reference="e9F-90-f4O"/>
+                                <exclude reference="sfu-pa-dIg"/>
                                 <exclude reference="3I6-Aq-cA2"/>
+                                <exclude reference="AUq-Gb-dd2"/>
+                                <exclude reference="cA6-o5-CwM"/>
                                 <exclude reference="q9I-0c-i3A"/>
                             </mask>
                         </variation>
@@ -481,6 +578,12 @@
                                 <include reference="ZMJ-Fn-2wz"/>
                                 <exclude reference="qxJ-8v-b5z"/>
                                 <exclude reference="rkT-ma-RmI"/>
+                                <exclude reference="5SX-lm-Zvb"/>
+                                <exclude reference="5pd-5L-wwn"/>
+                                <exclude reference="ZIX-KY-O1r"/>
+                                <include reference="cZK-wB-d4A"/>
+                                <include reference="e6a-jZ-2yZ"/>
+                                <include reference="fd6-8S-G4E"/>
                                 <exclude reference="1J3-tq-kQh"/>
                                 <include reference="2jP-dn-CZ5"/>
                                 <exclude reference="AuI-DL-35j"/>
@@ -493,17 +596,6 @@
                                 <exclude reference="X4r-ST-GfS"/>
                                 <exclude reference="XCM-PV-XeA"/>
                                 <include reference="gCk-V5-22w"/>
-                                <exclude reference="5SX-lm-Zvb"/>
-                                <exclude reference="5pd-5L-wwn"/>
-                                <exclude reference="ZIX-KY-O1r"/>
-                                <include reference="cZK-wB-d4A"/>
-                                <include reference="e6a-jZ-2yZ"/>
-                                <include reference="fd6-8S-G4E"/>
-                                <include reference="0BZ-aX-Sen"/>
-                                <include reference="V5X-Bg-15J"/>
-                                <include reference="e9F-90-f4O"/>
-                                <exclude reference="tzH-T1-Nno"/>
-                                <exclude reference="wfK-cd-m7Y"/>
                                 <include reference="JBS-na-97e"/>
                                 <exclude reference="a0Y-1j-Avg"/>
                                 <include reference="b9W-7Z-YjE"/>
@@ -518,9 +610,61 @@
                                 <include reference="TrR-bs-KjG"/>
                                 <exclude reference="pQf-Kv-FuD"/>
                                 <include reference="qM5-Ey-ked"/>
+                                <include reference="0BZ-aX-Sen"/>
+                                <include reference="V5X-Bg-15J"/>
+                                <include reference="e9F-90-f4O"/>
+                                <exclude reference="tzH-T1-Nno"/>
+                                <exclude reference="wfK-cd-m7Y"/>
                                 <exclude reference="2Cc-Cb-yhq"/>
                                 <include reference="3I6-Aq-cA2"/>
                                 <include reference="q9I-0c-i3A"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="3hG-wy-4f1"/>
+                                <include reference="a2g-eR-2bH"/>
+                                <include reference="1xi-ZC-kl1"/>
+                                <include reference="E0h-Ha-v0B"/>
+                                <exclude reference="EKO-Qj-kCN"/>
+                                <include reference="JuW-CH-8SY"/>
+                                <exclude reference="QvC-cA-fLk"/>
+                                <exclude reference="ZMJ-Fn-2wz"/>
+                                <include reference="Ag1-Xy-Orh"/>
+                                <include reference="LQt-vZ-FnM"/>
+                                <include reference="Mhg-0g-bb6"/>
+                                <exclude reference="cZK-wB-d4A"/>
+                                <exclude reference="e6a-jZ-2yZ"/>
+                                <exclude reference="fd6-8S-G4E"/>
+                                <exclude reference="2jP-dn-CZ5"/>
+                                <exclude reference="HnR-uB-lVQ"/>
+                                <exclude reference="I40-1T-xJJ"/>
+                                <include reference="SW9-eA-IgT"/>
+                                <include reference="tFn-H4-5iP"/>
+                                <include reference="xRg-6a-9pG"/>
+                                <exclude reference="7uu-j1-Njc"/>
+                                <include reference="Qt2-zp-r7C"/>
+                                <include reference="fQW-AU-9Qd"/>
+                                <exclude reference="gCk-V5-22w"/>
+                                <include reference="nuA-Ma-Lov"/>
+                                <include reference="1fc-8f-no5"/>
+                                <include reference="9yX-0X-7GE"/>
+                                <exclude reference="JBS-na-97e"/>
+                                <exclude reference="b9W-7Z-YjE"/>
+                                <include reference="cw1-AU-nYg"/>
+                                <exclude reference="q2f-nr-XHG"/>
+                                <include reference="3k9-5L-qm9"/>
+                                <exclude reference="qM5-Ey-ked"/>
+                                <exclude reference="0BZ-aX-Sen"/>
+                                <include reference="DOZ-8l-0Ta"/>
+                                <include reference="KA7-Dv-6Df"/>
+                                <exclude reference="V5X-Bg-15J"/>
+                                <exclude reference="e9F-90-f4O"/>
+                                <include reference="sfu-pa-dIg"/>
+                                <exclude reference="3I6-Aq-cA2"/>
+                                <include reference="AUq-Gb-dd2"/>
+                                <include reference="cA6-o5-CwM"/>
+                                <exclude reference="q9I-0c-i3A"/>
                             </mask>
                         </variation>
                     </view>
@@ -539,11 +683,11 @@
             <objects>
                 <viewController title="Crime Stats" id="thu-yV-GvU" customClass="CrimeStats" customModule="Crime_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mzp-Aq-S5o">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0Z-9X-fKo">
-                                <rect key="frame" x="0.0" y="132" width="375" height="535"/>
+                                <rect key="frame" x="0.0" y="132" width="768" height="892"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -551,11 +695,11 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="8EK-4W-P2Z">
-                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                                <rect key="frame" x="374" y="502" width="20" height="20"/>
                                 <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W32-cX-RWh">
-                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="64" width="768" height="56"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="sAa-tT-mxH"/>
@@ -594,11 +738,11 @@
             <objects>
                 <viewController title="Crime Map" id="u6f-hL-Z8l" customClass="CrimeMap" customModule="Crime_Tracker" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dxs-Od-ma7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hNO-hA-vGI">
-                                <rect key="frame" x="0.0" y="-24" width="375" height="725"/>
+                                <rect key="frame" x="0.0" y="-24" width="768" height="1082"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -624,7 +768,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wWR-Hw-jxg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zS2-ha-S3B" colorLabel="IBBuiltInLabel-Gray">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -644,19 +788,19 @@
             <objects>
                 <viewController title="MainViewController" id="Xmc-DG-nUi" customClass="MainViewController" customModule="Crime_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IKd-yy-tsR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wju-fO-5JT">
-                                <rect key="frame" x="0.0" y="64" width="376" height="736"/>
+                                <rect key="frame" x="0.0" y="64" width="769" height="960"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="zcK-Df-Pua">
-                                <rect key="frame" x="67" y="86" width="241" height="266"/>
+                                <rect key="frame" x="67" y="86" width="634" height="490"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HRT-ia-JxC">
-                                <rect key="frame" x="64" y="444" width="240" height="115"/>
+                                <rect key="frame" x="64" y="668" width="633" height="115"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="115" id="VJ6-Gh-nbD"/>
@@ -667,7 +811,7 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="you-Mf-Cbv">
-                                <rect key="frame" x="60" y="587" width="256" height="61"/>
+                                <rect key="frame" x="60" y="811" width="649" height="61"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="ZQ1-Ze-D4w"/>
@@ -688,20 +832,20 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Fe8-Mc-dRr">
-                                <rect key="frame" x="39" y="713" width="291" height="87"/>
+                                <rect key="frame" x="39" y="937" width="684" height="87"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered By" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBD-BU-q0W">
-                                <rect key="frame" x="120" y="676" width="135" height="29"/>
+                                <rect key="frame" x="120" y="900" width="528" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video-panel-shadow" translatesAutoresizingMaskIntoConstraints="NO" id="aE2-1e-JRa">
-                                <rect key="frame" x="67" y="301" width="241" height="74"/>
+                                <rect key="frame" x="67" y="281" width="241" height="74"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select A City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NgG-Zc-jz3">
-                                <rect key="frame" x="110" y="383" width="156" height="36"/>
+                                <rect key="frame" x="110" y="607" width="549" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="3wM-E0-1mW"/>
                                 </constraints>
@@ -772,20 +916,20 @@
             <objects>
                 <viewController id="SUB-8K-Ltn" customClass="SlideOverMenu" customModule="Crime_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Gib-eV-M1f">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNC-kx-JMI">
-                                <rect key="frame" x="0.0" y="328" width="375" height="373"/>
+                                <rect key="frame" x="0.0" y="328" width="768" height="730"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Untitled design-2" translatesAutoresizingMaskIntoConstraints="NO" id="jxi-ig-W6C">
-                                        <rect key="frame" x="-77" y="76" width="530" height="465"/>
+                                        <rect key="frame" x="-77" y="76" width="923" height="465"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="465" id="iUW-fN-vew"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azd-2h-3ty">
-                                        <rect key="frame" x="76" y="62" width="225" height="68"/>
+                                        <rect key="frame" x="76" y="62" width="618" height="68"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="68" id="7Ly-do-eB5"/>
@@ -848,7 +992,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ECb-LF-BlX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pve-sZ-HDk">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
