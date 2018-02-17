@@ -86,6 +86,7 @@ class APIData {
         let unwrappedURL = self.buildUrl(constructedUrl: urlString)
         //URL SESSION
         let session = URLSession.shared
+    
         let task = session.dataTask(with: (unwrappedURL)) { (data, response, error) in
             print("Start")
             guard let unwrappedData = data else {return}

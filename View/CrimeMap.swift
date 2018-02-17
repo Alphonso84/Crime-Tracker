@@ -37,7 +37,7 @@ class CrimeMap: UIViewController, CLLocationManagerDelegate {
    public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) ->CLLocationCoordinate2D? {
         let location = locations[0]
         let myLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
- 
+
         self.mapView.showsUserLocation = true
     
         return myLocation
@@ -64,10 +64,10 @@ class CrimeMap: UIViewController, CLLocationManagerDelegate {
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
-        print(returnUserLocation())
-        print(manager.location!.coordinate)
-        print(locations)
-        print(manager.location!.coordinate.distance(from: locations))
+//        print(returnUserLocation())
+//        print(manager.location!.coordinate)
+//        print(locations)
+//        print(manager.location!.coordinate.distance(from: locations))
         
         //Creating Alert to inform user of how far away crime is from thier location
         let locationAlert = UIAlertController(title: "\(stringCrime)", message: "This crime happend \(manager.location!.coordinate.distance(from: locations) * 3.3/5280) miles from your location", preferredStyle: UIAlertControllerStyle.alert)
