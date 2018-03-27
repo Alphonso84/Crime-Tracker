@@ -87,8 +87,10 @@ class APIData {
         //URL SESSION
         let session = URLSession.shared
     
+        
         let task = session.dataTask(with: (unwrappedURL)) { (data, response, error) in
             print("Start")
+            print(urlString)
             guard let unwrappedData = data else {return}
             do {
               
@@ -100,20 +102,11 @@ class APIData {
                 //CRIMEDATA IS AN ARRAY OF STRUCT TYPE CRIMEREPORT
                 CrimeData = jsonData
                 
-                //USING MAP METHOD TO TRANSFORM CRIMEDATA ARRAY INTO ARRAY OF GLOBAL VARIABLES
-                coordinatesArray = CrimeData.map {$0.location1.coordinates}
-                crimeTitle = CrimeData.map {$0.crimeDescription}
-                crimeDate = CrimeData.map {$0.date}
-                crimeBlock = CrimeData.map {$0.date}
-                
+               
                 //PRINT OUT ANY DATA COMBINATION HERE
-                //Loop through Arrays created above to grab creat array of each value
-                for item in coordinatesArray {
-                    
-                    latitude.append(item[1])
-                    longitude.append(item[0])
-                    
-                }
+                
+                
+                
                 
                 } catch {
                 print(error)
@@ -145,16 +138,11 @@ class APIData {
                 crimeBlock = CrimeData.map {$0.date}
                 
                 //PRINT OUT ANY DATA COMBINATION HERE
-                //Loop through Arrays created above to grab creat array of each value
+                
                 print("Hello")
                
-                print(crimeTitle)
-//                for item in coordinatesArray {
-//                    
-//                    latitude.append(item[1])
-//                    longitude.append(item[0])
-//                    
-//                }
+                print(CrimeData)
+
                 
             } catch {
                 print(error)

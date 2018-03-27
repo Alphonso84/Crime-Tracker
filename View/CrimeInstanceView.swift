@@ -29,7 +29,7 @@ class CrimeInstanceView: UIViewController, UITableViewDelegate {
     }
     
     override func viewDidLoad() {
-        
+        super.viewDidLoad()
         //Value is Actually Assigned in CrimeList Controller in didSelectRow
         blockCityStateLabel.text = stringForblockCityStateLabel
         crimeDescriptionLabel.text = stringForCrimeDescriptionLabel

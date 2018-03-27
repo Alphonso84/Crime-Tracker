@@ -37,6 +37,7 @@ class CrimeStats: UIViewController, WKNavigationDelegate {
      var url: URL!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         CityLabel.text = city
         WebView.navigationDelegate = self
         

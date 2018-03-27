@@ -21,8 +21,8 @@ struct CrimeReport: Codable {
     
     enum CodingKeys: String, CodingKey {
         case block = "block"
-        case crimeDescription = "crimedescription"
         case city = "city"
+        case crimeDescription = "crimedescription"
         case date = "datetime"
         case state = "state"
         case location1 = "location_1"

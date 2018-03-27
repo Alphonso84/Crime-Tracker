@@ -31,13 +31,14 @@ class ReportCrime: UIViewController, WKNavigationDelegate {
     
     var url: URL!
     
-   
+    
     
     override func viewDidLoad() {
-      CityLabel.text = city
+        super.viewDidLoad()
+        CityLabel.text = city
         WebView.navigationDelegate = self
         
-       //SWITCH STATEMENT CONTROLS WHICH WEBSITE LOADS DEPENDING ON CITY SELECTED IN PICKER IN (MAINVIEWCONTROLLER)
+        //SWITCH STATEMENT CONTROLS WHICH WEBSITE LOADS DEPENDING ON CITY SELECTED IN PICKER IN (MAINVIEWCONTROLLER)
         switch city {
         case "OAKLAND":
             url = URL(string: URLForOakland)
@@ -68,10 +69,10 @@ class ReportCrime: UIViewController, WKNavigationDelegate {
         default:
             url = URL(string: URLForOakland)
         }
-
-       WebView.load(URLRequest(url: url))
-       
-        }
+        
+        WebView.load(URLRequest(url: url))
+        
+    }
     
     func WebView(_ webView: WKWebView,didStart navigation: WKNavigation!) {
         print("Start Page Loading")

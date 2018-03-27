@@ -34,12 +34,12 @@ class CrimeMap: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     let myLocation = CLLocationCoordinate2D()
-   public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) ->CLLocationCoordinate2D? {
+    public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) ->CLLocationCoordinate2D? {
         let location = locations[0]
         let myLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
-
+        
         self.mapView.showsUserLocation = true
-    
+        
         return myLocation
     }
     
@@ -52,7 +52,7 @@ class CrimeMap: UIViewController, CLLocationManagerDelegate {
     // let crimeLocations = CLLocationCoordinate2DMake(
     
     override func viewWillAppear(_ animated: Bool) {
-      
+        
         
     }
     
@@ -64,10 +64,10 @@ class CrimeMap: UIViewController, CLLocationManagerDelegate {
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
-//        print(returnUserLocation())
-//        print(manager.location!.coordinate)
-//        print(locations)
-//        print(manager.location!.coordinate.distance(from: locations))
+        //        print(returnUserLocation())
+        //        print(manager.location!.coordinate)
+        //        print(locations)
+        //        print(manager.location!.coordinate.distance(from: locations))
         
         //Creating Alert to inform user of how far away crime is from thier location
         let locationAlert = UIAlertController(title: "\(stringCrime)", message: "This crime happend \(manager.location!.coordinate.distance(from: locations) * 3.3/5280) miles from your location", preferredStyle: UIAlertControllerStyle.alert)
@@ -76,13 +76,13 @@ class CrimeMap: UIViewController, CLLocationManagerDelegate {
         if manager.location!.coordinate.distance(from: locations) < 8000 {
             present(locationAlert, animated: true, completion: nil)
         }
-      mapView.setRegion(MKCoordinateRegionMakeWithDistance(locations, 2000, 2000), animated: true)
-      let crimes = PinAnnotation(title: "\(stringCrime)", subtitle: "\(dateCrime)", coordinate: locations)
+        mapView.setRegion(MKCoordinateRegionMakeWithDistance(locations, 2000, 2000), animated: true)
+        let crimes = PinAnnotation(title: "\(stringCrime)", subtitle: "\(dateCrime)", coordinate: locations)
         
         mapView.addAnnotation(crimes)
     }
-
-
+    
+    
 }
 
 

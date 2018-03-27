@@ -17,6 +17,7 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.reloadData()
@@ -45,14 +46,15 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         // Configure the cell...
-        cell.textLabel?.font = UIFont.init(name: "Menlo", size: 15.00)
-        
+        cell.textLabel?.font = UIFont(name: "Menlo", size: 15.00)
         let dates = CrimeData[indexPath.row].date
-
         let description = CrimeData[indexPath.row].crimeDescription
      
+        
+        //(Unfold to View) Function uses Ternary Operator to peform logic to assign images to cells.
+        func imageForCellRow() {
        //THERE HAS TO BE A BETTER WAY TO IMPLEMENT THIS LOGIC //ALREADY TRIED SWITCH//IF/ELSE
-               description.contains("EOD") ? (cell.imageView?.image = #imageLiteral(resourceName: "explosive")) : (((cell.imageView?.image = nil) != nil))
+            description.contains("EOD") ? (cell.imageView?.image = #imageLiteral(resourceName: "explosive")) : (((cell.imageView?.image = nil) != nil))
             && description.contains("RECKLESS") ? (cell.imageView?.image = #imageLiteral(resourceName: "Reckless")) : (((cell.imageView?.image = nil) != nil))
             && description.contains("SUSPICIOUS") ? (cell.imageView?.image = #imageLiteral(resourceName: "Suspicious")) : (((cell.imageView?.image = nil) != nil))
             && description.contains("ARREST") ? (cell.imageView?.image = #imageLiteral(resourceName: "arrest")) : (((cell.imageView?.image = nil) != nil))
@@ -101,9 +103,8 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
             && description.contains("STALKING") ? (cell.imageView?.image = #imageLiteral(resourceName: "Suspicious")) : (((cell.imageView?.image = nil) != nil))
             && description.contains("MEDICAL") ? (cell.imageView?.image = #imageLiteral(resourceName: "medical")) : (cell.imageView?.image = nil)
         
-        
-        
-        
+        }
+        imageForCellRow()
         cell.textLabel?.text = description
         cell.detailTextLabel?.text = dates
         

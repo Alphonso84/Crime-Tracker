@@ -21,8 +21,8 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet weak var backgroundImageView: UIImageView!
     var AlamedaCountyCities = ["OAKLAND","FREMONT","HAYWARD","BERKELEY","SAN LEANDRO","LIVERMORE","PLEASANTON","ALAMEDA","UNION CITY","DUBLIN","NEWARK","EMERYVILLE","PIEDMONT"]
     
-
-   //PICKERVIEW TO CHOOSE CITIES
+    
+    //PICKERVIEW TO CHOOSE CITIES
     @IBOutlet weak var citySelection: UIPickerView?
     
     
@@ -46,30 +46,31 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     //  PICKERVIEW METHODS
     
-        //NUMBER OF SECTIONS
+    //NUMBER OF SECTIONS
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-        //NUMBER OF ROWS
+    //NUMBER OF ROWS
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-       
+        
         return AlamedaCountyCities.count
     }
-        //TITLE OF SAID ROWS
+    //TITLE OF SAID ROWS
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    
         return AlamedaCountyCities[row]
     }
-        //ASSIGN ROW VALUES TO GLOBAL VARIABLE CITY TO BE USED IN URL
+    //ASSIGN ROW VALUES TO GLOBAL VARIABLE CITY TO BE USED IN URL
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         city = AlamedaCountyCities[row]
     }
     
- 
+    
     
     //SETS VALUE IF USER DOESNT SELECT A CITY (DEFAULT)
     override func viewWillAppear(_ animated: Bool) {
         city = AlamedaCountyCities[0]
-    
+        
     }
     //VIEW DID LOAD
     override func viewDidLoad() {
@@ -77,25 +78,22 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         myMotionEffect(view: logoImage, min: -10, max: 10)
         myMotionEffect(view: shadowImage, min: 5, max: -5)
         
-           manager.delegate = self as? CLLocationManagerDelegate
-           manager.desiredAccuracy = kCLLocationAccuracyBest
-            manager.requestWhenInUseAuthorization()
-             manager.startUpdatingLocation()
-             
-           
-       
+        manager.delegate = self as? CLLocationManagerDelegate
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
         
         self.citySelection?.dataSource = self
         self.citySelection?.delegate = self
-       
+        
     }
     
     
-// GET DATA ACTION
+    // GET DATA ACTION
     @IBAction func GetCrimeDataButton(_ sender: Any) {
-       APIData().parseJSON()
-       
-       
+        APIData().parseJSON()
+        
+        
     }
     
     func myMotionEffect(view: UIView, min: CGFloat, max: CGFloat) {
@@ -113,8 +111,8 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         view.addMotionEffect(motionEffectGroup)
     }
 }
-    
-        
-    
+
+
+
 
 
