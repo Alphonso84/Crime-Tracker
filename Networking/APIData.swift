@@ -94,18 +94,18 @@ class APIData {
             guard let unwrappedData = data else {return}
             do {
               
-                let jsonDecoder = JSONDecoder()
-                let jsonData = try jsonDecoder.decode(Array<CrimeReport>.self, from: unwrappedData)
+//                let jsonDecoder = JSONDecoder()
+//                let jsonData = try jsonDecoder.decode(Array<CrimeReport>.self, from: unwrappedData)
                 //USE SERILIZATION BELOW IF DECODER DOESNT WORK
-                //JSONSerialization.jsonObject(with: unwrappedData, options: []) as? [[String:Any]]
+                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: [])
                 
                 //CRIMEDATA IS AN ARRAY OF STRUCT TYPE CRIMEREPORT
-                CrimeData = jsonData
+                CrimeData = jsonData as! [CrimeReport]
                 
                
                 //PRINT OUT ANY DATA COMBINATION HERE
                 
-                
+                print(jsonData)
                 
                 
                 } catch {

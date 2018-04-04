@@ -19,14 +19,14 @@ struct CrimeReport: Codable {
     var date: String
     var state: String
     
-    enum CodingKeys: String, CodingKey {
-        case block = "block"
-        case city = "city"
-        case crimeDescription = "crimedescription"
-        case date = "datetime"
-        case state = "state"
-        case location1 = "location_1"
-    }
+//    enum CodingKeys: String, CodingKey {
+//        case block = "block"
+//        case city = "city"
+//        case crimeDescription = "crimedescription"
+//        case date = "datetime"
+//        case state = "state"
+//        case location1 = "location_1"
+//    }
 }
 struct Location1: Codable {
     let type: String
