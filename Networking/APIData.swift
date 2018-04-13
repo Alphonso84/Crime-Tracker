@@ -14,7 +14,7 @@ var urlString = ""
 var locationURLString = ""
 //ARRAY OF MODEL TYPE CRIMEREPORT
 var CrimeData = [CrimeReport]()
-
+var NewData = [CrimeReport]()
 var Locations = [CLLocationCoordinate2D]()
 
 var latitude = [Double]()
@@ -39,7 +39,7 @@ class APIData {
    public func buildUrl(constructedUrl: String) -> URL{
         let baseURL = "https://data.acgov.org/resource/js8f-yfqf.json"
         //URL FILTER LIMITS RESULTS RETURNED
-        let numberOfResults = "&$limit=50"
+        let numberOfResults = "&$limit=20"
         //URL FILTER ORDERS BY MOST RECENT
         let sortOrder = "&$order=datetime DESC"
         //URL FILTER ORDERS RESULTS BY CITY(GLOBAL VARIABLE SET IN MAINVIEWCONTROLLER)
@@ -57,7 +57,7 @@ class APIData {
     public func buildLocationUrl(constructedUrl: String) -> URL{
         let baseURL = "https://data.acgov.org/resource/js8f-yfqf.json"
         //URL FILTER LIMITS RESULTS RETURNED
-        let numberOfResults = "&$limit=50"
+        let numberOfResults = "&$limit=20"
         //URL FILTER ORDERS BY MOST RECENT
         let sortOrder = "&$order=datetime DESC"
         //URL FILTER ORDERS RESULTS BY CITY(GLOBAL VARIABLE SET IN MAINVIEWCONTROLLER)
@@ -94,18 +94,20 @@ class APIData {
             guard let unwrappedData = data else {return}
             do {
               
-//                let jsonDecoder = JSONDecoder()
-//                let jsonData = try jsonDecoder.decode(Array<CrimeReport>.self, from: unwrappedData)
+                let jsonDecoder = JSONDecoder()
+                let jsonData = try jsonDecoder.decode(Array<CrimeReport>.self, from: unwrappedData)
                 //USE SERILIZATION BELOW IF DECODER DOESNT WORK
-                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: [])
-                
-                //CRIMEDATA IS AN ARRAY OF STRUCT TYPE CRIMEREPORT
-                CrimeData = jsonData as! [CrimeReport]
-                
+//                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as! NSArray
                
+                //CRIMEDATA IS AN ARRAY OF STRUCT TYPE CRIMEREPORT
+                CrimeData = jsonData
+                //NewData = [jsonData]
+                
+                
+               // CrimeData = NewData
                 //PRINT OUT ANY DATA COMBINATION HERE
                 
-                print(jsonData)
+               // print()
                 
                 
                 } catch {
@@ -132,11 +134,12 @@ class APIData {
                 CrimeData = jsonData
                 
                 //USING MAP METHOD TO TRANSFORM CRIMEDATA ARRAY INTO ARRAY OF GLOBAL VARIABLES
-                coordinatesArray = CrimeData.map {$0.location1.coordinates}
+                coordinatesArray = CrimeData.map {($0.location1.coordinates)} 
                 crimeTitle = CrimeData.map {$0.crimeDescription}
                 crimeDate = CrimeData.map {$0.date}
                 crimeBlock = CrimeData.map {$0.date}
                 
+            
                 //PRINT OUT ANY DATA COMBINATION HERE
                 
                 print("Hello")
