@@ -16,14 +16,36 @@ let manager = CLLocationManager()
 class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var logoImage: UIImageView!
     
+    @IBOutlet weak var SelectCityLabel: UILabel!
+    @IBOutlet weak var switchWasFlipped: UIBarButtonItem!
     @IBOutlet weak var shadowImage: UIImageView!
     //LIST OF CITIES TO CHOOSE FROM
+    //PICKERVIEW TO CHOOSE CITIES
+    @IBOutlet weak var citySelection: UIPickerView?
     @IBOutlet weak var backgroundImageView: UIImageView!
     var AlamedaCountyCities = ["OAKLAND","FREMONT","HAYWARD","BERKELEY","SAN LEANDRO","LIVERMORE","PLEASANTON","ALAMEDA","UNION CITY","DUBLIN","NEWARK","EMERYVILLE","PIEDMONT"]
     
+    @IBAction func `switch`(_ sender: UISwitch) {
+        if (sender.isOn) {
+            self.view.backgroundColor = UIColor.black
+            citySelection?.tintColor = UIColor.black
+            citySelection?.backgroundColor = UIColor.black
+            SelectCityLabel.textColor = UIColor.white
+            logoImage.image = #imageLiteral(resourceName: "Icon Dark")
+            
+        } else {
+            logoImage.image = #imageLiteral(resourceName: "Icon")
+            self.view.backgroundColor = UIColor.white
+            citySelection?.tintColor = UIColor.white
+            citySelection?.backgroundColor = UIColor.white
+            SelectCityLabel.textColor = UIColor.black
+        }
+    }
     
-    //PICKERVIEW TO CHOOSE CITIES
-    @IBOutlet weak var citySelection: UIPickerView?
+    
+    
+    
+    
     
     
     
