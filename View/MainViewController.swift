@@ -19,10 +19,9 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet weak var SelectCityLabel: UILabel!
     @IBOutlet weak var switchWasFlipped: UIBarButtonItem!
     @IBOutlet weak var shadowImage: UIImageView!
-    //LIST OF CITIES TO CHOOSE FROM
-    //PICKERVIEW TO CHOOSE CITIES
     @IBOutlet weak var citySelection: UIPickerView?
     @IBOutlet weak var backgroundImageView: UIImageView!
+    
     var AlamedaCountyCities = ["OAKLAND","FREMONT","HAYWARD","BERKELEY","SAN LEANDRO","LIVERMORE","PLEASANTON","ALAMEDA","UNION CITY","DUBLIN","NEWARK","EMERYVILLE","PIEDMONT"]
     
     @IBAction func `switch`(_ sender: UISwitch) {
@@ -32,6 +31,8 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             citySelection?.backgroundColor = UIColor.black
             SelectCityLabel.textColor = UIColor.white
             logoImage.image = #imageLiteral(resourceName: "Icon Dark")
+            navigationController?.navigationBar.barTintColor = UIColor.black
+            
             
         } else {
             logoImage.image = #imageLiteral(resourceName: "Icon")
@@ -39,6 +40,7 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             citySelection?.tintColor = UIColor.white
             citySelection?.backgroundColor = UIColor.white
             SelectCityLabel.textColor = UIColor.black
+            navigationController?.navigationBar.barTintColor = UIColor.white
         }
     }
     
