@@ -32,8 +32,7 @@ class APIData {
    
   
     //API TOKEN
-    private let token = "?$$app_token=BEyC2oP4D1T8CaKegklvf4ExN"
-    private let secretToken = "CcZhJkCwYWL4i6tAzfDw81u-MD4lGOYSJGen"
+    
     
     //METHOD FOR BUILDING API URL
    public func buildUrl(constructedUrl: String) -> URL{

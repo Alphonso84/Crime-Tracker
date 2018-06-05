@@ -13,6 +13,7 @@ import Foundation
 //USING GLOBAL VARIABLE SEEMS TO BE SIMPLEST SOLUTION
 var city = String()
 let manager = CLLocationManager()
+
 class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var logoImage: UIImageView!
     
@@ -32,7 +33,6 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             SelectCityLabel.textColor = UIColor.white
             logoImage.image = #imageLiteral(resourceName: "Icon Dark")
             navigationController?.navigationBar.barTintColor = UIColor.black
-            
             
         } else {
             logoImage.image = #imageLiteral(resourceName: "Icon")
