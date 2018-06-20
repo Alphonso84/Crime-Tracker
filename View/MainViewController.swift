@@ -27,20 +27,39 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     @IBAction func `switch`(_ sender: UISwitch) {
         if (sender.isOn) {
-            self.view.backgroundColor = UIColor.black
-            citySelection?.tintColor = UIColor.black
-            citySelection?.backgroundColor = UIColor.black
-            SelectCityLabel.textColor = UIColor.white
-            logoImage.image = #imageLiteral(resourceName: "Icon Dark")
-            navigationController?.navigationBar.barTintColor = UIColor.black
+            
+            UIView.animate(withDuration: 0.5, animations: {
+                self.view.backgroundColor = UIColor.black
+                self.citySelection?.tintColor = UIColor.black
+                self.citySelection?.backgroundColor = UIColor.black
+                self.SelectCityLabel.textColor = UIColor.white
+               UIView.animate(withDuration: 4.5, animations: {
+                self.logoImage.image = #imageLiteral(resourceName: "Icon Dark")
+                self.navigationController?.navigationBar.barTintColor = UIColor.black
+                self.navigationController?.navigationItem.titleView?.backgroundColor = UIColor.white
+               })
+                
+            })
+//            self.view.backgroundColor = UIColor.black
+//            citySelection?.tintColor = UIColor.black
+//            citySelection?.backgroundColor = UIColor.black
+//            SelectCityLabel.textColor = UIColor.white
+//            logoImage.image = #imageLiteral(resourceName: "Icon Dark")
+//            navigationController?.navigationBar.barTintColor = UIColor.black
             
         } else {
-            logoImage.image = #imageLiteral(resourceName: "Icon")
-            self.view.backgroundColor = UIColor.white
-            citySelection?.tintColor = UIColor.white
-            citySelection?.backgroundColor = UIColor.white
-            SelectCityLabel.textColor = UIColor.black
-            navigationController?.navigationBar.barTintColor = UIColor.white
+            
+            UIView.animate(withDuration: 0.5, animations: {
+                self.logoImage.image = #imageLiteral(resourceName: "Icon")
+                self.view.backgroundColor = UIColor.white
+                self.citySelection?.tintColor = UIColor.white
+                self.citySelection?.backgroundColor = UIColor.white
+                self.SelectCityLabel.textColor = UIColor.black
+                self.navigationController?.navigationBar.barTintColor = UIColor.white
+                
+                
+            })
+            
         }
     }
     
@@ -84,10 +103,16 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
         return AlamedaCountyCities[row]
     }
+    
+    
     //ASSIGN ROW VALUES TO GLOBAL VARIABLE CITY TO BE USED IN URL
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         city = AlamedaCountyCities[row]
     }
+    
+    
+    
+    
     
     
     
