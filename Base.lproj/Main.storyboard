@@ -736,7 +736,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hNO-hA-vGI">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="846"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -793,9 +793,9 @@
                                 <rect key="frame" x="67" y="110" width="241" height="254"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HRT-ia-JxC">
+                            <pickerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HRT-ia-JxC">
                                 <rect key="frame" x="64" y="456" width="240" height="115"/>
-                                <color key="backgroundColor" red="0.53327292203903198" green="0.53336817026138306" blue="0.53326696157455444" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="115" id="VJ6-Gh-nbD"/>
@@ -835,10 +835,6 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video-panel-shadow" translatesAutoresizingMaskIntoConstraints="NO" id="aE2-1e-JRa">
-                                <rect key="frame" x="67" y="325" width="241" height="62"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select A City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NgG-Zc-jz3">
                                 <rect key="frame" x="110" y="395" width="155" height="36"/>
                                 <constraints>
@@ -852,7 +848,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="HRT-ia-JxC" firstAttribute="top" secondItem="NgG-Zc-jz3" secondAttribute="bottom" constant="25" id="2IY-ge-qhe"/>
-                            <constraint firstItem="aE2-1e-JRa" firstAttribute="trailing" secondItem="zcK-Df-Pua" secondAttribute="trailing" id="2WQ-G9-Ml0"/>
                             <constraint firstItem="Wju-fO-5JT" firstAttribute="centerX" secondItem="zcK-Df-Pua" secondAttribute="centerX" id="3sS-LW-R2m"/>
                             <constraint firstItem="OBD-BU-q0W" firstAttribute="top" secondItem="you-Mf-Cbv" secondAttribute="bottom" constant="28" id="7aF-Ih-4RG"/>
                             <constraint firstItem="Fe8-Mc-dRr" firstAttribute="centerX" secondItem="HRT-ia-JxC" secondAttribute="centerX" id="9TN-Fc-298"/>
@@ -872,21 +867,13 @@
                             <constraint firstItem="OBD-BU-q0W" firstAttribute="centerX" secondItem="you-Mf-Cbv" secondAttribute="centerX" id="h71-AL-oyE"/>
                             <constraint firstItem="OBD-BU-q0W" firstAttribute="leading" secondItem="X4I-YM-OJV" secondAttribute="leading" constant="120" id="h8f-Hn-NEf"/>
                             <constraint firstAttribute="bottom" secondItem="you-Mf-Cbv" secondAttribute="bottom" constant="152" id="hDj-UV-wVh"/>
-                            <constraint firstItem="aE2-1e-JRa" firstAttribute="leading" secondItem="zcK-Df-Pua" secondAttribute="leading" id="hsq-QL-bUN"/>
-                            <constraint firstItem="HRT-ia-JxC" firstAttribute="top" secondItem="aE2-1e-JRa" secondAttribute="bottom" constant="69" id="m5T-bl-qOC"/>
                             <constraint firstItem="Fe8-Mc-dRr" firstAttribute="leading" secondItem="X4I-YM-OJV" secondAttribute="leading" constant="39" id="mh3-nM-eX8"/>
-                            <constraint firstItem="aE2-1e-JRa" firstAttribute="top" secondItem="X4I-YM-OJV" secondAttribute="top" constant="237" id="nLY-3j-UOv"/>
                             <constraint firstItem="Fe8-Mc-dRr" firstAttribute="top" secondItem="you-Mf-Cbv" secondAttribute="bottom" constant="65" id="npN-hL-szf"/>
                             <constraint firstItem="Wju-fO-5JT" firstAttribute="top" secondItem="X4I-YM-OJV" secondAttribute="top" id="paZ-To-XFq"/>
                             <constraint firstItem="NgG-Zc-jz3" firstAttribute="leading" secondItem="X4I-YM-OJV" secondAttribute="leading" constant="110" id="qiC-jk-zgt"/>
                             <constraint firstItem="X4I-YM-OJV" firstAttribute="trailing" secondItem="HRT-ia-JxC" secondAttribute="trailing" constant="71" id="wDl-l5-v5i"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X4I-YM-OJV"/>
-                        <variation key="widthClass=regular">
-                            <mask key="subviews">
-                                <exclude reference="aE2-1e-JRa"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Crime Tracker" id="Woa-tb-j1D">
                         <barButtonItem key="leftBarButtonItem" image="my location" id="BIZ-qF-i98">
@@ -911,7 +898,6 @@
                         <outlet property="backgroundImageView" destination="Wju-fO-5JT" id="R98-kr-PDj"/>
                         <outlet property="citySelection" destination="HRT-ia-JxC" id="kbq-bb-Ley"/>
                         <outlet property="logoImage" destination="zcK-Df-Pua" id="W2A-06-TIU"/>
-                        <outlet property="shadowImage" destination="aE2-1e-JRa" id="agF-N3-AZ6"/>
                         <outlet property="switchWasFlipped" destination="mAV-EG-3ML" id="9P2-ty-XbO"/>
                     </connections>
                 </viewController>
@@ -1014,13 +1000,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icon" width="266" height="266"/>
+        <image name="Icon" width="210" height="208"/>
         <image name="Image" width="435" height="87"/>
         <image name="Oakland" width="468" height="310"/>
         <image name="Untitled design-2" width="400" height="400"/>
         <image name="Untitled design-3" width="266" height="266"/>
         <image name="my location" width="66" height="66"/>
-        <image name="video-panel-shadow" width="347" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="y1j-1Q-cOt"/>

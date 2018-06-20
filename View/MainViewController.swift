@@ -28,28 +28,20 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBAction func `switch`(_ sender: UISwitch) {
         if (sender.isOn) {
             
-            UIView.animate(withDuration: 0.5, animations: {
+            UIView.animate(withDuration: 1.0, animations: {
                 self.view.backgroundColor = UIColor.black
                 self.citySelection?.tintColor = UIColor.black
                 self.citySelection?.backgroundColor = UIColor.black
                 self.SelectCityLabel.textColor = UIColor.white
-               UIView.animate(withDuration: 4.5, animations: {
                 self.logoImage.image = #imageLiteral(resourceName: "Icon Dark")
                 self.navigationController?.navigationBar.barTintColor = UIColor.black
                 self.navigationController?.navigationItem.titleView?.backgroundColor = UIColor.white
-               })
                 
             })
-//            self.view.backgroundColor = UIColor.black
-//            citySelection?.tintColor = UIColor.black
-//            citySelection?.backgroundColor = UIColor.black
-//            SelectCityLabel.textColor = UIColor.white
-//            logoImage.image = #imageLiteral(resourceName: "Icon Dark")
-//            navigationController?.navigationBar.barTintColor = UIColor.black
             
         } else {
             
-            UIView.animate(withDuration: 0.5, animations: {
+            UIView.animate(withDuration: 1.0, animations: {
                 self.logoImage.image = #imageLiteral(resourceName: "Icon")
                 self.view.backgroundColor = UIColor.white
                 self.citySelection?.tintColor = UIColor.white
@@ -100,7 +92,7 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     }
     //TITLE OF SAID ROWS
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-    
+        
         return AlamedaCountyCities[row]
     }
     
@@ -125,7 +117,7 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         myMotionEffect(view: logoImage, min: -10, max: 10)
-        myMotionEffect(view: shadowImage, min: 5, max: -5)
+        
         
         manager.delegate = self as? CLLocationManagerDelegate
         manager.desiredAccuracy = kCLLocationAccuracyBest
