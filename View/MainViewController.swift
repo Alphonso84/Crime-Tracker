@@ -15,8 +15,11 @@ var city = String()
 let manager = CLLocationManager()
 
 class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    @IBOutlet weak var logoImage: UIImageView!
     
+    
+   
+    
+    @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var SelectCityLabel: UILabel!
     @IBOutlet weak var switchWasFlipped: UIBarButtonItem!
     @IBOutlet weak var shadowImage: UIImageView!
@@ -27,21 +30,29 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     @IBAction func `switch`(_ sender: UISwitch) {
         if (sender.isOn) {
+            self.setNeedsStatusBarAppearanceUpdate()
+           
             
-            UIView.animate(withDuration: 1.0, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
+                
+                self.navigationController?.navigationBar.barTintColor = UIColor.black
+                self.navigationItem.titleView?.backgroundColor = UIColor.white
+            
+            })
+            
+            UIView.animate(withDuration: 0.5, animations: {
                 self.view.backgroundColor = UIColor.black
+             
                 self.citySelection?.tintColor = UIColor.black
                 self.citySelection?.backgroundColor = UIColor.black
                 self.SelectCityLabel.textColor = UIColor.white
                 self.logoImage.image = #imageLiteral(resourceName: "Icon Dark")
-                self.navigationController?.navigationBar.barTintColor = UIColor.black
-                self.navigationController?.navigationItem.titleView?.backgroundColor = UIColor.white
                 
             })
             
         } else {
             
-            UIView.animate(withDuration: 1.0, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 self.logoImage.image = #imageLiteral(resourceName: "Icon")
                 self.view.backgroundColor = UIColor.white
                 self.citySelection?.tintColor = UIColor.white
@@ -104,7 +115,12 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     
     
-    
+    override func setNeedsStatusBarAppearanceUpdate() {
+        var preferredStatusBarStyle: UIStatusBarStyle{
+            
+            return .lightContent
+        }
+    }
     
     
     
@@ -113,9 +129,14 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         city = AlamedaCountyCities[0]
         
     }
+   
     //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+      
+        
         myMotionEffect(view: logoImage, min: -10, max: 10)
         
         
