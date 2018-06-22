@@ -42,13 +42,15 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             
             UIView.animate(withDuration: 0.5, animations: {
                 self.view.backgroundColor = UIColor.black
-             
+               
                 self.citySelection?.tintColor = UIColor.black
                 self.citySelection?.backgroundColor = UIColor.black
                 self.SelectCityLabel.textColor = UIColor.white
                 self.logoImage.image = #imageLiteral(resourceName: "Icon Dark")
                 
             })
+            
+            
             
         } else {
             
@@ -62,6 +64,8 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
                 
                 
             })
+            
+            
             
         }
     }
@@ -89,6 +93,7 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     }
     
     
+    @IBOutlet weak var switchValue: UIBarButtonItem!
     
     //  PICKERVIEW METHODS
     
@@ -108,10 +113,21 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     }
     
     
+//    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+//        let string = "\(self.AlamedaCountyCities[row])"
+//        
+//        return NSAttributedString(string: string, attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+//       
+//    }
+    
+    
+    
     //ASSIGN ROW VALUES TO GLOBAL VARIABLE CITY TO BE USED IN URL
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         city = AlamedaCountyCities[row]
     }
+    
+    
     
     
     
