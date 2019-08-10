@@ -19,6 +19,7 @@
 		898821DB20287408004F0CD2 /* CrimeStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898821DA20287408004F0CD2 /* CrimeStats.swift */; };
 		898821DD2028AC42004F0CD2 /* SlideOverMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898821DC2028AC42004F0CD2 /* SlideOverMenu.swift */; };
 		8997E3AC202AA14600E9C066 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8997E3AB202AA14600E9C066 /* Controller.swift */; };
+		89AF2AD322FF2321001960F8 /* CrimeTrackerSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AF2AD222FF2321001960F8 /* CrimeTrackerSwiftUI.swift */; };
 		89B457142022FBBC00CAB64A /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B457132022FBBC00CAB64A /* PinAnnotation.swift */; };
 		89B599801FD13874009133B9 /* APIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B5997F1FD13874009133B9 /* APIData.swift */; };
 		89B599821FD13C61009133B9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B599811FD13C61009133B9 /* MenuViewController.swift */; };
@@ -41,6 +42,7 @@
 		898821DC2028AC42004F0CD2 /* SlideOverMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOverMenu.swift; sourceTree = "<group>"; };
 		8997E3AA202A446000E9C066 /* Crime Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Crime Tracker.entitlements"; sourceTree = "<group>"; };
 		8997E3AB202AA14600E9C066 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		89AF2AD222FF2321001960F8 /* CrimeTrackerSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeTrackerSwiftUI.swift; sourceTree = "<group>"; };
 		89B457132022FBBC00CAB64A /* PinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
 		89B5997F1FD13874009133B9 /* APIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIData.swift; sourceTree = "<group>"; };
 		89B599811FD13C61009133B9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				8938BDD61FB07DBE00A6D4FB /* Products */,
 				8938BDDC1FB07DBE00A6D4FB /* Main.storyboard */,
 				8938BDDF1FB07DBE00A6D4FB /* Assets.xcassets */,
+				89AF2AD222FF2321001960F8 /* CrimeTrackerSwiftUI.swift */,
 				8938BDE11FB07DBE00A6D4FB /* LaunchScreen.storyboard */,
 				8938BDE41FB07DBE00A6D4FB /* Info.plist */,
 				8997E3A7202A410D00E9C066 /* Frameworks */,
@@ -212,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89B599801FD13874009133B9 /* APIData.swift in Sources */,
+				89AF2AD322FF2321001960F8 /* CrimeTrackerSwiftUI.swift in Sources */,
 				8938BDDB1FB07DBE00A6D4FB /* MainViewController.swift in Sources */,
 				89B457142022FBBC00CAB64A /* PinAnnotation.swift in Sources */,
 				896924911FCC2257004A91AC /* CrimeList.swift in Sources */,
@@ -364,6 +368,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6257XTCRBF;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AlphonsoSensleyII.UI-Practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -380,6 +385,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6257XTCRBF;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AlphonsoSensleyII.UI-Practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";

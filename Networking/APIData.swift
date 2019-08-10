@@ -35,6 +35,19 @@ class APIData {
     private let token = "?$$app_token=BEyC2oP4D1T8CaKegklvf4ExN"
     private let secretToken = "CcZhJkCwYWL4i6tAzfDw81u-MD4lGOYSJGen"
     
+    //Oakland PD DataSet
+    public func OaklandURL(constructedUrl: String) -> URL {
+        let baseURL = "https://data.oaklandnet.com/resource/3xav-7geq.json"
+        let numberOfResults = "&$limit=20"
+        let sortOrder = "&$order=datetime DESC"
+        urlString = "\(baseURL)\(token)\(sortOrder)\(numberOfResults)"
+        
+        let FormattedUrlString = urlString.replacingOccurrences(of: " ", with: "%20")
+        let url = URL(string: FormattedUrlString)
+        
+        return url!
+    }
+    
     //METHOD FOR BUILDING API URL
    public func buildUrl(constructedUrl: String) -> URL{
         let baseURL = "https://data.acgov.org/resource/js8f-yfqf.json"
@@ -82,12 +95,30 @@ class APIData {
     }
     
     //URL SESSION PARSING JSON DATA
+    func parseOaklandJSON() {
+        let unwrappedURL = self.OaklandURL(constructedUrl: urlString)
+        let session = URLSession.shared
+        let task = session.dataTask(with: (unwrappedURL)) { (data, response, error) in
+            print("Start")
+            print(urlString)
+            guard let unwrappedData = data else {return}
+            do {
+                
+                let jsonDecoder = JSONDecoder()
+                let jsonData = try jsonDecoder.decode(Array<CrimeReport>.self, from: unwrappedData)
+                //USE SERILIZATION BELOW IF DECODER DOESNT WORK
+                //                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as! NSArray
+                //CRIMEDATA IS AN ARRAY OF STRUCT TYPE CRIMEREPORT
+                CrimeData = jsonData
+            } catch {
+                print(error)
+            }
+        }
+        task.resume()
+    }
     func parseJSON() {
         let unwrappedURL = self.buildUrl(constructedUrl: urlString)
-        //URL SESSION
         let session = URLSession.shared
-    
-        
         let task = session.dataTask(with: (unwrappedURL)) { (data, response, error) in
             print("Start")
             print(urlString)
@@ -97,19 +128,10 @@ class APIData {
                 let jsonDecoder = JSONDecoder()
                 let jsonData = try jsonDecoder.decode(Array<CrimeReport>.self, from: unwrappedData)
                 //USE SERILIZATION BELOW IF DECODER DOESNT WORK
-//                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as! NSArray
+//              let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as! NSArray
                
                 //CRIMEDATA IS AN ARRAY OF STRUCT TYPE CRIMEREPORT
                 CrimeData = jsonData
-                //NewData = [jsonData]
-                
-                
-               // CrimeData = NewData
-                //PRINT OUT ANY DATA COMBINATION HERE
-                
-               // print()
-                
-                
                 } catch {
                 print(error)
                 }

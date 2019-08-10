@@ -57,7 +57,7 @@ class CrimeList: UIViewController, UITableViewDelegate, UITableViewDataSource {
             (description.contains("EOD")) ? (cell.imageView?.image = #imageLiteral(resourceName: "explosive")) : (((cell.imageView?.image = nil) != nil))
                  && (description.contains("RECKLESS")) ? (cell.imageView?.image = #imageLiteral(resourceName: "Reckless")) : (((cell.imageView?.image = nil) != nil))
                 && (description.contains("SUSPICIOUS")) ? (cell.imageView?.image = #imageLiteral(resourceName: "Suspicious")) : (((cell.imageView?.image = nil) != nil))
-                && (description.contains("ARREST")) ? (cell.imageView?.image = #imageLiteral(resourceName: "arrest")) : (((cell.imageView?.image = nil) != nil))
+                && (description.contains("ARREST")) ? (cell.imageView?.image = UIImage(named: "arrest")) : (((cell.imageView?.image = nil) != nil))
                 && (description.contains("STOLEN AUTO")) ? (cell.imageView?.image = #imageLiteral(resourceName: "stolen vehicle")) : (((cell.imageView?.image = nil) != nil))
                 && (description.contains("TAKE VEHICLE")) ? (cell.imageView?.image = #imageLiteral(resourceName: "stolen vehicle")) : (((cell.imageView?.image = nil) != nil))
                 && (description.contains("TRAFFIC COLLISION")) ? (cell.imageView?.image = #imageLiteral(resourceName: "Collision")) : (((cell.imageView?.image = nil) != nil))

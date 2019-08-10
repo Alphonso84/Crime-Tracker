@@ -17,8 +17,7 @@ class SlideOverMenu: UIViewController {
         self.dismiss(animated: true)
         
     }
-    
-    
+
     override func viewWillAppear(_ animated: Bool) {
         latitude = [manager.location!.coordinate.latitude]
         longitude = [manager.location!.coordinate.longitude]

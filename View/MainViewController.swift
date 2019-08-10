@@ -17,8 +17,6 @@ let manager = CLLocationManager()
 class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     
-   
-    
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var SelectCityLabel: UILabel!
     @IBOutlet weak var switchWasFlipped: UIBarButtonItem!
@@ -31,26 +29,24 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBAction func `switch`(_ sender: UISwitch) {
         if (sender.isOn) {
             self.setNeedsStatusBarAppearanceUpdate()
-           
+            
             
             UIView.animate(withDuration: 0.5, animations: {
                 
                 self.navigationController?.navigationBar.barTintColor = UIColor.black
                 self.navigationItem.titleView?.backgroundColor = UIColor.white
-            
+                
             })
             
             UIView.animate(withDuration: 0.5, animations: {
                 self.view.backgroundColor = UIColor.black
-               
+                
                 self.citySelection?.tintColor = UIColor.black
                 self.citySelection?.backgroundColor = UIColor.black
                 self.SelectCityLabel.textColor = UIColor.white
                 self.logoImage.image = #imageLiteral(resourceName: "Icon Dark")
                 
             })
-            
-            
             
         } else {
             
@@ -61,21 +57,9 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
                 self.citySelection?.backgroundColor = UIColor.white
                 self.SelectCityLabel.textColor = UIColor.black
                 self.navigationController?.navigationBar.barTintColor = UIColor.white
-                
-                
             })
-            
-            
-            
         }
     }
-    
-    
-    
-    
-    
-    
-    
     
     
     let myLocation = CLLocationCoordinate2D()
@@ -112,24 +96,10 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         return AlamedaCountyCities[row]
     }
     
-    
-//    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-//        let string = "\(self.AlamedaCountyCities[row])"
-//        
-//        return NSAttributedString(string: string, attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
-//       
-//    }
-    
-    
-    
     //ASSIGN ROW VALUES TO GLOBAL VARIABLE CITY TO BE USED IN URL
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         city = AlamedaCountyCities[row]
     }
-    
-    
-    
-    
     
     override func setNeedsStatusBarAppearanceUpdate() {
         var preferredStatusBarStyle: UIStatusBarStyle{
@@ -145,22 +115,16 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         city = AlamedaCountyCities[0]
         
     }
-   
+    
     //VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-      
-        
         myMotionEffect(view: logoImage, min: -10, max: 10)
-        
-        
         manager.delegate = self as? CLLocationManagerDelegate
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
-        
         self.citySelection?.dataSource = self
         self.citySelection?.delegate = self
         
@@ -170,8 +134,6 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     // GET DATA ACTION
     @IBAction func GetCrimeDataButton(_ sender: Any) {
         APIData().parseJSON()
-        
-        
     }
     
     func myMotionEffect(view: UIView, min: CGFloat, max: CGFloat) {
