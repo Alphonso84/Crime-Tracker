@@ -35,16 +35,14 @@ struct CrimeTrackerSwiftUI: View {
                 .padding(110.0)
                 .frame(width: 400.00, height: 200.00, alignment: .center)
                        }
-                
-                
             }
             Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                 Text("Get Crime Results")
-                    .foregroundColor(.black)
+                .foregroundColor(.black)
                     
             } .foregroundColor(.gray)
         }
-}
+    }
 }
 
 #if DEBUG
