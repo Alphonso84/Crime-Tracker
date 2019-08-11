@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wWR-Hw-jxg">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -229,10 +228,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Untitled design-3" translatesAutoresizingMaskIntoConstraints="NO" id="PTr-uw-G2T">
-                                <rect key="frame" x="0.0" y="555" width="375" height="266"/>
+                                <rect key="frame" x="0.0" y="475.33333333333326" width="375" height="345.66666666666674"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Block, City, State" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1M-Ke-0kw">
-                                <rect key="frame" x="26" y="304" width="323" height="102"/>
+                                <rect key="frame" x="26" y="304" width="323" height="22.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="77" id="Zes-Vc-h6E"/>
                                 </constraints>
@@ -256,7 +255,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfP-J9-fo9">
-                                <rect key="frame" x="147" y="414" width="81.333333333333314" height="35"/>
+                                <rect key="frame" x="147" y="334.33333333333331" width="81.333333333333314" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="3Wh-DV-5LU"/>
                                     <constraint firstAttribute="height" constant="35" id="pKf-nS-mu2"/>
@@ -284,7 +283,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VW8-uZ-SDj">
-                                <rect key="frame" x="26" y="457" width="323" height="60"/>
+                                <rect key="frame" x="26" y="377.33333333333331" width="323" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="19K-gw-zNf"/>
                                     <constraint firstAttribute="height" constant="60" id="TPw-fC-kJe"/>
@@ -369,7 +368,7 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSg-ko-TE4">
-                                <rect key="frame" x="112" y="587" width="151" height="61"/>
+                                <rect key="frame" x="112" y="507.33333333333331" width="151" height="140.66666666666669"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="c3O-7E-R6h"/>
@@ -873,7 +872,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X4I-YM-OJV"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Crime Tracker" id="Woa-tb-j1D">
+                    <navigationItem key="navigationItem" id="Woa-tb-j1D">
                         <barButtonItem key="leftBarButtonItem" image="my location" id="BIZ-qF-i98">
                             <connections>
                                 <segue destination="ECb-LF-BlX" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="QDH-Rd-Dlg"/>
@@ -883,12 +882,13 @@
                             <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="8pr-E7-nvu">
                                 <rect key="frame" x="308" y="6.6666666666666679" width="51" height="31.000000000000004"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="onTintColor" red="0.22250128188321727" green="1" blue="0.12119754149813045" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="onTintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="switch:" destination="Xmc-DG-nUi" eventType="valueChanged" id="x8G-qK-cB2"/>
                                 </connections>
                             </switch>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

@@ -23,25 +23,27 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet weak var shadowImage: UIImageView!
     @IBOutlet weak var citySelection: UIPickerView?
     @IBOutlet weak var backgroundImageView: UIImageView!
+    var switchChanged = false
     
     var AlamedaCountyCities = ["OAKLAND","FREMONT","HAYWARD","BERKELEY","SAN LEANDRO","LIVERMORE","PLEASANTON","ALAMEDA","UNION CITY","DUBLIN","NEWARK","EMERYVILLE","PIEDMONT"]
     
     @IBAction func `switch`(_ sender: UISwitch) {
+        switchChanged = !switchChanged
+        setNeedsStatusBarAppearanceUpdate()
         if (sender.isOn) {
-            self.setNeedsStatusBarAppearanceUpdate()
             
             
             UIView.animate(withDuration: 0.5, animations: {
-                
                 self.navigationController?.navigationBar.barTintColor = UIColor.black
-                self.navigationItem.titleView?.backgroundColor = UIColor.white
+                self.navigationItem.titleView?.setValue(UIColor.white, forKey: "tintColor")
+                
                 
             })
             
             UIView.animate(withDuration: 0.5, animations: {
                 self.view.backgroundColor = UIColor.black
                 
-                self.citySelection?.tintColor = UIColor.black
+                self.citySelection?.setValue(UIColor.white, forKey: "textColor")
                 self.citySelection?.backgroundColor = UIColor.black
                 self.SelectCityLabel.textColor = UIColor.white
                 self.logoImage.image = #imageLiteral(resourceName: "Icon Dark")
@@ -51,16 +53,32 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         } else {
             
             UIView.animate(withDuration: 0.5, animations: {
-                self.logoImage.image = #imageLiteral(resourceName: "Icon")
-                self.view.backgroundColor = UIColor.white
-                self.citySelection?.tintColor = UIColor.white
-                self.citySelection?.backgroundColor = UIColor.white
-                self.SelectCityLabel.textColor = UIColor.black
-                self.navigationController?.navigationBar.barTintColor = UIColor.white
+                self.setupView()
             })
         }
     }
+    override func setNeedsStatusBarAppearanceUpdate() {
+        var preferredStatusBarStyle: UIStatusBarStyle{
+            return .default
+        }
+        if switchChanged == true {
+            var preferredStatusBarStyle: UIStatusBarStyle{
+                return .default
+            }
+        }
+    }
     
+    
+    func setupView() {
+        self.logoImage.image = #imageLiteral(resourceName: "Icon")
+        self.view.backgroundColor = UIColor.white
+        self.citySelection?.setValue(UIColor.black, forKey: "textColor")
+        self.citySelection?.backgroundColor = UIColor.white
+        self.SelectCityLabel.textColor = UIColor.black
+        self.navigationController?.navigationBar.barTintColor = UIColor.white
+        self.navigationItem.titleView?.largeContentTitle = "Crime Tracker"
+        self.navigationItem.titleView?.setValue(UIColor.black, forKey: "tintColor")
+    }
     
     let myLocation = CLLocationCoordinate2D()
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) ->CLLocationCoordinate2D {
@@ -101,19 +119,14 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         city = AlamedaCountyCities[row]
     }
     
-    override func setNeedsStatusBarAppearanceUpdate() {
-        var preferredStatusBarStyle: UIStatusBarStyle{
-            
-            return .lightContent
-        }
-    }
+    
     
     
     
     //SETS VALUE IF USER DOESNT SELECT A CITY (DEFAULT)
     override func viewWillAppear(_ animated: Bool) {
         city = AlamedaCountyCities[0]
-        
+        setupView()
     }
     
     //VIEW DID LOAD
@@ -127,6 +140,7 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         manager.startUpdatingLocation()
         self.citySelection?.dataSource = self
         self.citySelection?.delegate = self
+        
         
     }
     

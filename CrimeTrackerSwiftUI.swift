@@ -17,12 +17,8 @@ struct CrimeTrackerSwiftUI: View {
         VStack {
             VStack {
                 Image("Icon").resizable().frame(width: 222.00, height: 222.00, alignment: .leading)
-                    
-                
                 Text("Select A City")
                
-                
-            
             Section {
                 Picker(selection: $cityIndex, label: Text(""))
                            {
