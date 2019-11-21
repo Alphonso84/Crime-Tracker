@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wWR-Hw-jxg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wWR-Hw-jxg">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,9 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oakland" translatesAutoresizingMaskIntoConstraints="NO" id="dQy-OF-Ebt">
-                                <rect key="frame" x="0.0" y="144" width="375" height="668"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="r28-Au-pph">
                                 <rect key="frame" x="0.0" y="144" width="375" height="666"/>
                                 <subviews>
@@ -26,50 +23,54 @@
                                         <subviews>
                                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGT-WM-3VO">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="222"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="31"/>
                                                 <state key="normal" title="Contact Police">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="nJ2-hL-6Qk" kind="show" id="p4A-Uk-drN"/>
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WJf-9s-lHp">
                                         <rect key="frame" x="0.0" y="222" width="375" height="222"/>
                                         <subviews>
                                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTm-ga-kM5">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="222"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="31"/>
                                                 <state key="normal" title="Crime List">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="BoL-Pm-ZDZ" kind="show" id="eci-aR-cpY"/>
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="center" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="k7z-bk-dph">
                                         <rect key="frame" x="0.0" y="444" width="375" height="222"/>
                                         <subviews>
                                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPf-jT-qpr">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="222"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="31"/>
                                                 <state key="normal" title="Crime Stats">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="thu-yV-GvU" kind="show" id="5Qq-II-tEb"/>
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GK3-RU-2Xf">
                                 <rect key="frame" x="0.0" y="88" width="375" height="56"/>
@@ -82,17 +83,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="r28-Au-pph" firstAttribute="top" secondItem="GK3-RU-2Xf" secondAttribute="bottom" id="3fR-PW-ei0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dQy-OF-Ebt" secondAttribute="bottom" constant="-34" id="4Xe-n5-34V"/>
                             <constraint firstItem="GK3-RU-2Xf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LuB-7X-rf6"/>
                             <constraint firstItem="GK3-RU-2Xf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MA2-MC-yoi"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dQy-OF-Ebt" secondAttribute="trailing" id="Udx-qF-GRe"/>
-                            <constraint firstItem="dQy-OF-Ebt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="V7d-ps-vAd"/>
                             <constraint firstAttribute="trailing" secondItem="r28-Au-pph" secondAttribute="trailing" id="ZvJ-85-Qpd"/>
                             <constraint firstItem="r28-Au-pph" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="32" id="k7W-Co-B5Y"/>
-                            <constraint firstItem="dQy-OF-Ebt" firstAttribute="top" secondItem="GK3-RU-2Xf" secondAttribute="bottom" id="oQj-32-lbt"/>
                             <constraint firstItem="GK3-RU-2Xf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pOg-l7-o8c"/>
                             <constraint firstItem="r28-Au-pph" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vNY-rW-R8j"/>
                         </constraints>
@@ -100,7 +97,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Alameda County Sheriff Crime Report" id="sEw-kI-msV"/>
                     <connections>
-                        <outlet property="cityBackGroundImage" destination="dQy-OF-Ebt" id="vuu-JQ-wKH"/>
                         <outlet property="cityLabel" destination="GK3-RU-2Xf" id="RjF-GG-LhA"/>
                     </connections>
                 </viewController>
@@ -228,10 +224,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Untitled design-3" translatesAutoresizingMaskIntoConstraints="NO" id="PTr-uw-G2T">
-                                <rect key="frame" x="0.0" y="475.33333333333326" width="375" height="345.66666666666674"/>
+                                <rect key="frame" x="0.0" y="554.33333333333337" width="375" height="266.66666666666663"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Block, City, State" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1M-Ke-0kw">
-                                <rect key="frame" x="26" y="304" width="323" height="22.333333333333314"/>
+                                <rect key="frame" x="26" y="304" width="323" height="101.33333333333331"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="77" id="Zes-Vc-h6E"/>
                                 </constraints>
@@ -255,7 +251,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfP-J9-fo9">
-                                <rect key="frame" x="147" y="334.33333333333331" width="81.333333333333314" height="35"/>
+                                <rect key="frame" x="147" y="413.33333333333331" width="81.333333333333314" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="3Wh-DV-5LU"/>
                                     <constraint firstAttribute="height" constant="35" id="pKf-nS-mu2"/>
@@ -283,7 +279,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VW8-uZ-SDj">
-                                <rect key="frame" x="26" y="377.33333333333331" width="323" height="60"/>
+                                <rect key="frame" x="26" y="456.33333333333331" width="323" height="59.999999999999943"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="19K-gw-zNf"/>
                                     <constraint firstAttribute="height" constant="60" id="TPw-fC-kJe"/>
@@ -368,7 +364,7 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSg-ko-TE4">
-                                <rect key="frame" x="112" y="507.33333333333331" width="151" height="140.66666666666669"/>
+                                <rect key="frame" x="112" y="586.33333333333337" width="151" height="61.666666666666629"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="c3O-7E-R6h"/>
@@ -799,7 +795,7 @@
                                 </connections>
                             </pickerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="zcK-Df-Pua">
-                                <rect key="frame" x="67" y="110" width="241" height="254"/>
+                                <rect key="frame" x="67" y="110" width="241" height="254.00000000000006"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="you-Mf-Cbv">
@@ -873,22 +869,11 @@
                         <viewLayoutGuide key="safeArea" id="X4I-YM-OJV"/>
                     </view>
                     <navigationItem key="navigationItem" id="Woa-tb-j1D">
-                        <barButtonItem key="leftBarButtonItem" image="my location" id="BIZ-qF-i98">
+                        <barButtonItem key="leftBarButtonItem" image="location.fill" catalog="system" id="BIZ-qF-i98">
+                            <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
                                 <segue destination="ECb-LF-BlX" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="QDH-Rd-Dlg"/>
                             </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="mAV-EG-3ML">
-                            <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="8pr-E7-nvu">
-                                <rect key="frame" x="308" y="6.6666666666666679" width="51" height="31.000000000000004"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="onTintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="switch:" destination="Xmc-DG-nUi" eventType="valueChanged" id="x8G-qK-cB2"/>
-                                </connections>
-                            </switch>
-                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -896,8 +881,6 @@
                         <outlet property="backgroundImageView" destination="Wju-fO-5JT" id="R98-kr-PDj"/>
                         <outlet property="citySelection" destination="HRT-ia-JxC" id="kbq-bb-Ley"/>
                         <outlet property="logoImage" destination="zcK-Df-Pua" id="W2A-06-TIU"/>
-                        <outlet property="switchValue" destination="mAV-EG-3ML" id="Arq-u1-0T2"/>
-                        <outlet property="switchWasFlipped" destination="mAV-EG-3ML" id="9P2-ty-XbO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nLo-gF-aL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1000,10 +983,9 @@
     <resources>
         <image name="Icon" width="210.66667175292969" height="208.66667175292969"/>
         <image name="Image" width="435" height="87.666664123535156"/>
-        <image name="Oakland" width="468" height="310"/>
         <image name="Untitled design-2" width="400" height="400"/>
         <image name="Untitled design-3" width="266.66665649414062" height="266.66665649414062"/>
-        <image name="my location" width="66.666664123535156" height="66.666664123535156"/>
+        <image name="location.fill" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eci-aR-cpY"/>

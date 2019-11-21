@@ -19,7 +19,6 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var SelectCityLabel: UILabel!
-    @IBOutlet weak var switchWasFlipped: UIBarButtonItem!
     @IBOutlet weak var shadowImage: UIImageView!
     @IBOutlet weak var citySelection: UIPickerView?
     @IBOutlet weak var backgroundImageView: UIImageView!
@@ -27,57 +26,17 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     var AlamedaCountyCities = ["OAKLAND","FREMONT","HAYWARD","BERKELEY","SAN LEANDRO","LIVERMORE","PLEASANTON","ALAMEDA","UNION CITY","DUBLIN","NEWARK","EMERYVILLE","PIEDMONT"]
     
-    @IBAction func `switch`(_ sender: UISwitch) {
-        switchChanged = !switchChanged
-        setNeedsStatusBarAppearanceUpdate()
-        if (sender.isOn) {
-            
-            
-            UIView.animate(withDuration: 0.5, animations: {
-                self.navigationController?.navigationBar.barTintColor = UIColor.black
-                self.navigationItem.titleView?.setValue(UIColor.white, forKey: "tintColor")
-                
-                
-            })
-            
-            UIView.animate(withDuration: 0.5, animations: {
-                self.view.backgroundColor = UIColor.black
-                
-                self.citySelection?.setValue(UIColor.white, forKey: "textColor")
-                self.citySelection?.backgroundColor = UIColor.black
-                self.SelectCityLabel.textColor = UIColor.white
-                self.logoImage.image = #imageLiteral(resourceName: "Icon Dark")
-                
-            })
-            
-        } else {
-            
-            UIView.animate(withDuration: 0.5, animations: {
-                self.setupView()
-            })
-        }
-    }
-    override func setNeedsStatusBarAppearanceUpdate() {
-        var preferredStatusBarStyle: UIStatusBarStyle{
-            return .default
-        }
-        if switchChanged == true {
-            var preferredStatusBarStyle: UIStatusBarStyle{
-                return .default
-            }
-        }
-    }
-    
-    
+ 
+
     func setupView() {
         self.logoImage.image = #imageLiteral(resourceName: "Icon")
-        self.view.backgroundColor = UIColor.white
-        self.citySelection?.setValue(UIColor.black, forKey: "textColor")
-        self.citySelection?.backgroundColor = UIColor.white
-        self.SelectCityLabel.textColor = UIColor.black
-        self.navigationController?.navigationBar.barTintColor = UIColor.white
+        self.view.backgroundColor = UIColor.systemBackground
+        self.citySelection?.setValue(UIColor.label, forKey: "textColor")
+        self.citySelection?.backgroundColor = UIColor.systemBackground
+        self.SelectCityLabel.textColor = UIColor.label
+        self.navigationController?.navigationBar.barTintColor = UIColor.systemBackground
         self.navigationItem.titleView?.largeContentTitle = "Crime Tracker"
-        self.navigationItem.titleView?.setValue(UIColor.black, forKey: "tintColor")
+        self.navigationItem.titleView?.setValue(UIColor.systemBackground, forKey: "tintColor")
     }
     
     let myLocation = CLLocationCoordinate2D()
