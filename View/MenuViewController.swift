@@ -21,6 +21,8 @@ class MenuViewController: UIViewController {
         cityLabel.textColor = UIColor.label
         //SETS MENU VIEW BACKGROUND IMAGE TO IMAGE OF SELECTED CITY
         self.view.backgroundColor = UIColor.systemBackground
+//        self.navigationItem.titleView?.setValue(UIColor.systemBackground, forKey: "tintColor")
+        self.navigationItem.backBarButtonItem?.setValue(UIColor.label, forKey: "color")
     }
     
    
