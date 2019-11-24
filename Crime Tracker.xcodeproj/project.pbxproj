@@ -24,6 +24,7 @@
 		89B599801FD13874009133B9 /* APIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B5997F1FD13874009133B9 /* APIData.swift */; };
 		89B599821FD13C61009133B9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B599811FD13C61009133B9 /* MenuViewController.swift */; };
 		89E172CB1FF0C8C900605539 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E172CA1FF0C8C900605539 /* Model.swift */; };
+		D0DFA114238AEF2800055AC6 /* CrimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DFA113238AEF2800055AC6 /* CrimeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		89B5997F1FD13874009133B9 /* APIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIData.swift; sourceTree = "<group>"; };
 		89B599811FD13C61009133B9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		89E172CA1FF0C8C900605539 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D0DFA113238AEF2800055AC6 /* CrimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				898821DC2028AC42004F0CD2 /* SlideOverMenu.swift */,
 				89B599811FD13C61009133B9 /* MenuViewController.swift */,
 				896924901FCC2257004A91AC /* CrimeList.swift */,
+				D0DFA113238AEF2800055AC6 /* CrimeTableViewCell.swift */,
 				897FD3C61FF19DB4007B6FED /* CrimeInstanceView.swift */,
 				896924921FCC22B8004A91AC /* CrimeMap.swift */,
 				89B457132022FBBC00CAB64A /* PinAnnotation.swift */,
@@ -224,6 +227,7 @@
 				8938BDD91FB07DBE00A6D4FB /* AppDelegate.swift in Sources */,
 				8997E3AC202AA14600E9C066 /* Controller.swift in Sources */,
 				896924931FCC22B8004A91AC /* CrimeMap.swift in Sources */,
+				D0DFA114238AEF2800055AC6 /* CrimeTableViewCell.swift in Sources */,
 				898821DD2028AC42004F0CD2 /* SlideOverMenu.swift in Sources */,
 				896924951FCC22D2004A91AC /* ReportCrime.swift in Sources */,
 				89E172CB1FF0C8C900605539 /* Model.swift in Sources */,
