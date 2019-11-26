@@ -28,6 +28,9 @@ struct CrimeReport: Decodable {
         case location1 = "location_1"
     }
 }
+
+let AlamedaCountyCities = ["OAKLAND","FREMONT","HAYWARD","BERKELEY","SAN LEANDRO","LIVERMORE","PLEASANTON","ALAMEDA","UNION CITY","DUBLIN","NEWARK","EMERYVILLE","PIEDMONT"]
+
 struct Location1: Decodable {
     let type: String
     let coordinates: [Double]

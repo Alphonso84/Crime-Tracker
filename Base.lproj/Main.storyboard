@@ -16,55 +16,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="r28-Au-pph">
-                                <rect key="frame" x="0.0" y="144" width="375" height="666"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="710"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gEW-tv-p7y">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="222"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="236.66666666666666"/>
                                         <subviews>
                                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGT-WM-3VO">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="222"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="236.66666666666666"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="31"/>
                                                 <state key="normal" title="Contact Police">
                                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
-                                                <connections>
-                                                    <segue destination="nJ2-hL-6Qk" kind="show" id="p4A-Uk-drN"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WJf-9s-lHp">
-                                        <rect key="frame" x="0.0" y="222" width="375" height="222"/>
+                                        <rect key="frame" x="0.0" y="236.66666666666669" width="375" height="236.66666666666669"/>
                                         <subviews>
                                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTm-ga-kM5">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="222"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="236.66666666666666"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="31"/>
                                                 <state key="normal" title="Crime List">
                                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
-                                                <connections>
-                                                    <segue destination="BoL-Pm-ZDZ" kind="show" id="eci-aR-cpY"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="center" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="k7z-bk-dph">
-                                        <rect key="frame" x="0.0" y="444" width="375" height="222"/>
+                                        <rect key="frame" x="0.0" y="473.33333333333343" width="375" height="236.66666666666669"/>
                                         <subviews>
                                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPf-jT-qpr">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="222"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="236.66666666666666"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="31"/>
                                                 <state key="normal" title="Crime Stats">
                                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
-                                                <connections>
-                                                    <segue destination="thu-yV-GvU" kind="show" id="5Qq-II-tEb"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -73,7 +64,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GK3-RU-2Xf">
-                                <rect key="frame" x="0.0" y="88" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="56"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="bcC-0l-tHx"/>
@@ -102,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="504.80000000000001" y="79.802955665024641"/>
+            <point key="canvasLocation" x="574" y="-232"/>
         </scene>
         <!--Contact Police-->
         <scene sceneID="9XQ-Vb-5RO">
@@ -113,7 +104,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8B-H1-nVg">
-                                <rect key="frame" x="0.0" y="128" width="375" height="684"/>
+                                <rect key="frame" x="0.0" y="84" width="375" height="728"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -125,7 +116,7 @@
                                 <color key="color" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BN5-4K-Xxg">
-                                <rect key="frame" x="0.0" y="88" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="56"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="GwF-sR-5Ri"/>
@@ -208,6 +199,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yut-NO-sdC"/>
                     </view>
+                    <navigationItem key="navigationItem" id="nEB-H8-DAk"/>
                     <connections>
                         <outlet property="tableView" destination="XAf-AH-KsT" id="g84-qn-cjp"/>
                         <segue destination="cdt-ea-OCv" kind="show" identifier="DetailSegue" id="Ljy-Jj-N7e"/>
@@ -663,6 +655,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="C8f-2J-mbt"/>
                     <connections>
                         <outlet property="blockCityStateLabel" destination="G1M-Ke-0kw" id="0V4-ti-zbJ"/>
                         <outlet property="crimeDescriptionLabel" destination="hdr-8C-MZ2" id="izM-zP-kRR"/>
@@ -694,7 +687,7 @@
                                 <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W32-cX-RWh">
-                                <rect key="frame" x="0.0" y="88" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="56"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="sAa-tT-mxH"/>
@@ -749,6 +742,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jVq-w8-7UP"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xtT-XP-qwC"/>
                     <connections>
                         <outlet property="mapView" destination="hNO-hA-vGI" id="QL2-Gf-EAd"/>
                     </connections>
@@ -824,7 +818,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="GetCrimeDataButton:" destination="Xmc-DG-nUi" eventType="touchUpInside" id="fIR-IL-XJQ"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="Igj-nn-IHu"/>
+                                    <segue destination="BoL-Pm-ZDZ" kind="show" id="xIe-Pe-8Lp"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Fe8-Mc-dRr">
@@ -928,7 +922,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="getLocationCrimes:" destination="SUB-8K-Ltn" eventType="touchUpInside" id="G6l-Zz-Vbm"/>
-                                            <segue destination="BoL-Pm-ZDZ" kind="show" id="y1j-1Q-cOt"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -995,7 +988,4 @@
         <image name="Untitled design-3" width="266.66665649414062" height="266.66665649414062"/>
         <image name="location.fill" catalog="system" width="64" height="56"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="eci-aR-cpY"/>
-    </inferredMetricsTieBreakers>
 </document>

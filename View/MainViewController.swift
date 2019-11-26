@@ -24,7 +24,7 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet weak var backgroundImageView: UIImageView!
     var switchChanged = false
     
-    var AlamedaCountyCities = ["OAKLAND","FREMONT","HAYWARD","BERKELEY","SAN LEANDRO","LIVERMORE","PLEASANTON","ALAMEDA","UNION CITY","DUBLIN","NEWARK","EMERYVILLE","PIEDMONT"]
+    
     
  
 
@@ -69,7 +69,7 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     }
     //TITLE OF SAID ROWS
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
+//        APIData().parseJSON()
         return AlamedaCountyCities[row]
     }
     
@@ -86,6 +86,7 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     override func viewWillAppear(_ animated: Bool) {
         city = AlamedaCountyCities[0]
         setupView()
+        APIData().parseJSON()
     }
     
     //VIEW DID LOAD
@@ -106,7 +107,7 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     // GET DATA ACTION
     @IBAction func GetCrimeDataButton(_ sender: Any) {
-        APIData().parseJSON()
+        
     }
     
     func myMotionEffect(view: UIView, min: CGFloat, max: CGFloat) {

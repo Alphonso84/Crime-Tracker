@@ -47,17 +47,37 @@ class APIData {
         
         return url!
     }
+    public func buildLocationUrl(constructedUrl: String) -> URL{
+           let baseURL = "https://data.acgov.org/resource/js8f-yfqf.json"
+           //URL FILTER LIMITS RESULTS RETURNED
+           let numberOfResults = "&$limit=20"
+           //URL FILTER ORDERS BY MOST RECENT
+           let sortOrder = "&$order=datetime DESC"
+           //URL FILTER ORDERS RESULTS BY CITY(GLOBAL VARIABLE SET IN MAINVIEWCONTROLLER)
+           let userCity = "&city=\(city)"
+           
+           let locationQuery = "$where=within_circle(location_1, \(latitude[0]), \(longitude[0]), 8000)"
+           // print(MainViewController.CityString().city)
+           
+           urlString = "\(baseURL)\(token)\(userCity)\(sortOrder)\(numberOfResults)"
+           locationURLString = "\(baseURL)?\(locationQuery)\(sortOrder)\(numberOfResults)"
+           print(locationURLString)
+           let FormattedUrlString = locationURLString.replacingOccurrences(of: " ", with: "%20")
+           let url = URL(string: FormattedUrlString)
+           
+           return url!
+           
+       }
     
     //METHOD FOR BUILDING API URL
-   public func buildUrl(constructedUrl: String) -> URL{
+   public func buildUrl(cityInArray: String) -> URL{
         let baseURL = "https://data.acgov.org/resource/js8f-yfqf.json"
         //URL FILTER LIMITS RESULTS RETURNED
         let numberOfResults = "&$limit=20"
         //URL FILTER ORDERS BY MOST RECENT
         let sortOrder = "&$order=datetime DESC"
         //URL FILTER ORDERS RESULTS BY CITY(GLOBAL VARIABLE SET IN MAINVIEWCONTROLLER)
-        let userCity = "&city=\(city)"
-    
+        let userCity = "&city=\(cityInArray)"
 
         urlString = "\(baseURL)\(token)\(userCity)\(sortOrder)\(numberOfResults)"
     
@@ -65,32 +85,6 @@ class APIData {
         let url = URL(string: FormattedUrlString)
     
         return url!
-        
-    }
-    public func buildLocationUrl(constructedUrl: String) -> URL{
-        let baseURL = "https://data.acgov.org/resource/js8f-yfqf.json"
-        //URL FILTER LIMITS RESULTS RETURNED
-        let numberOfResults = "&$limit=20"
-        //URL FILTER ORDERS BY MOST RECENT
-        let sortOrder = "&$order=datetime DESC"
-        //URL FILTER ORDERS RESULTS BY CITY(GLOBAL VARIABLE SET IN MAINVIEWCONTROLLER)
-        let userCity = "&city=\(city)"
-        
-        let locationQuery = "$where=within_circle(location_1, \(latitude[0]), \(longitude[0]), 8000)"
-        // print(MainViewController.CityString().city)
-        
-        urlString = "\(baseURL)\(token)\(userCity)\(sortOrder)\(numberOfResults)"
-        locationURLString = "\(baseURL)?\(locationQuery)\(sortOrder)\(numberOfResults)"
-        print(locationURLString)
-        let FormattedUrlString = locationURLString.replacingOccurrences(of: " ", with: "%20")
-        let url = URL(string: FormattedUrlString)
-        
-        return url!
-        
-    }
-    
-  func viewDidLoad() {
-    
         
     }
     
@@ -106,8 +100,6 @@ class APIData {
                 
                 let jsonDecoder = JSONDecoder()
                 let jsonData = try jsonDecoder.decode(Array<CrimeReport>.self, from: unwrappedData)
-                //USE SERILIZATION BELOW IF DECODER DOESNT WORK
-                //                let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as! NSArray
                 //CRIMEDATA IS AN ARRAY OF STRUCT TYPE CRIMEREPORT
                 CrimeData = jsonData
             } catch {
@@ -116,20 +108,30 @@ class APIData {
         }
         task.resume()
     }
-    func parseJSON() {
-        let unwrappedURL = self.buildUrl(constructedUrl: urlString)
+    
+    //RETURNING ARRAY OF URL
+    func buildURLArray() -> [URL] {
+        
+        var urlRequestArray = [URL]()
+        for city in AlamedaCountyCities {
+            let unwrappedURL = self.buildUrl(cityInArray: city)
+            urlRequestArray.append(unwrappedURL)
+        }
+        return urlRequestArray
+    }
+    
+// MARK: -    //TODO: NEED TO BE ABLE TO REQUEST ALL CITIES
+    func parseJSON(withURL:URL) {
+        
         let session = URLSession.shared
-        let task = session.dataTask(with: (unwrappedURL)) { (data, response, error) in
+        let task = session.dataTask(with: (withURL)) { (data, response, error) in
             print("Start")
             print(urlString)
             guard let unwrappedData = data else {return}
             do {
-              
                 let jsonDecoder = JSONDecoder()
                 let jsonData = try jsonDecoder.decode(Array<CrimeReport>.self, from: unwrappedData)
                 //USE SERILIZATION BELOW IF DECODER DOESNT WORK
-//              let jsonData = try JSONSerialization.jsonObject(with: unwrappedData, options: []) as! NSArray
-               
                 //CRIMEDATA IS AN ARRAY OF STRUCT TYPE CRIMEREPORT
                 CrimeData = jsonData
                 } catch {
@@ -137,6 +139,7 @@ class APIData {
                 }
             }
         task.resume()
+        
     }
     func parseJSONLocation() {
         let unwrappedURL = self.buildLocationUrl(constructedUrl: locationURLString)
